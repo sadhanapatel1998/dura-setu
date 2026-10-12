@@ -67,9 +67,7 @@
     </div> -->
     <!-- .end preloader -->
 
-    <?php require_once("include/header.php"); ?>
-    <?= $content ?? ''; ?>
-    <?php require_once("include/footer.php"); ?>
+
 
 
     <!-- scroll-top -->

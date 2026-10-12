@@ -1,148 +1,78 @@
-
-      <!-- start: Footer Section -->
-      <footer class="footer-section footer-1 section-gap-top">
-        <div class="footer-inner">
-          <div class="footer-cta">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="cta-area">
-                    <div class="sec-heading sec-heading-center">
-                      <span class="sec-subtitle tj-fade-anim" data-direction="top"><i class="ti-subtitle"></i> Chose
-                        categories</span>
-                      <h2 class="sec-title tj-fade-anim" data-delay=".3">Transform Future Using Online.</h2>
-                      <div class="btn-area tj-fade-anim" data-delay=".4">
-                        <a class="tj-btn-primary flip-text-wrap" href="#">
-                          <span class="btn-text">Start learning free</span>
-                          <span class="btn-icon"><i class="ti-arrow-right-2"></i></span>
-                        </a>
-                        <a class="tj-btn-primary tj-btn-primary-light flip-text-wrap" href="#">
-                          <span class="btn-text">Explore courses</span>
-                          <span class="btn-icon"><i class="ti-arrow-right-2"></i></span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="cta-user-img cta-user-1 tj-fade-anim" data-direction="right"><img
-                        src="assets/images/users/user-img-1.png" alt=""></div>
-                    <div class="cta-user-img cta-user-2 tj-fade-anim" data-direction="right"><img
-                        src="assets/images/users/user-img-2.png" alt=""></div>
-                    <div class="cta-user-img cta-user-3 tj-fade-anim" data-direction="right"><img
-                        src="assets/images/users/user-img-6.png" alt=""></div>
-                    <div class="cta-user-img cta-user-4 tj-fade-anim" data-direction="left"><img
-                        src="assets/images/users/user-img-3.png" alt=""></div>
-                    <div class="cta-user-img cta-user-5 tj-fade-anim" data-direction="left" data-offset="80"><img
-                        src="assets/images/users/user-img-5.png" alt=""></div>
-                    <div class="cta-user-img cta-user-6 tj-fade-anim" data-direction="left" data-offset="100"><img
-                        src="assets/images/users/user-img-4.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
+  <!-- Start Footer Section -->
+  <footer class="cs_footer_style_1 cs_black_bg">
+    <div class="container">
+      <div class="cs_footer_row">
+        <div class="cs_footer_widget cs_footer_about">
+          <a class="cs_footer_logo" href="index.html" aria-label="Website home">
+            <img src="assets/img/logo-footer.svg" alt="Logo">
+          </a>
+          <p class="cs_footer_about_text cs_fs_14">Unlock your potential with next‑gen learning. AI‑powered courses,
+            certificates, and a thriving community.</p>
+          <div class="cs_footer_app">
+            <h2 class="cs_footer_widget_title cs_fs_20 cs_semibold cs_border_color">Download Lerntix App</h2>
+            <div class="cs_app_btns">
+              <a href="#" class="cs_app_btn" aria-label="Get it on Google Play">
+                <i class="ri-google-play-fill"></i>
+              </a>
+              <a href="#" class="cs_app_btn" aria-label="Download on the App Store">
+                <i class="ri-apple-fill"></i>
+              </a>
             </div>
           </div>
-          <div class="footer-main-wrapper">
-            <div class="bg-img" data-bg-image="assets/images/footer/footer-bg.png"></div>
-            <div class="footer-main-area">
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="footer-widget-wrapper">
-                      <div class="footer-widget footer-widget-subscribe tj-fade-anim">
-                        <h3 class="title">Subscribe for Latest Learning Update.</h3>
-                        <div class="subscribe-form">
-                          <form action="#">
-                            <span class="icon"><i class="ti-envelope"></i></span>
-                            <input type="email" name="email" placeholder="Enter email">
-                            <button type="submit"><i class="ti-arrow-right-2"></i></button>
-                            <label for="agree"><input id="agree" type="checkbox">agree to our <a href="#">Terms &
-                                Condition?</a></label>
-                          </form>
-                        </div>
-
-                      </div>
-                      <div class="footer-widget footer-widget-nav-menu tj-fade-anim" data-delay=".3">
-                        <div class="title">Programs</div>
-                        <ul>
-                          <li><a href="courses-details.html"><span>Financial planning</span></a></li>
-                          <li><a href="courses-details.html"><span>Web development</span></a></li>
-                          <li><a href="courses-details.html"><span>Digital marketing</span></a></li>
-                          <li><a href="courses-details.html"><span>Graphic design</span></a></li>
-                          <li><a href="courses-details.html"><span>Business strategy</span></a></li>
-                          <li><a href="courses-details.html"><span>Content writing</span></a></li>
-                        </ul>
-                      </div>
-                      <div class="footer-widget footer-widget-nav-menu tj-fade-anim" data-delay=".5">
-                        <div class="title">Resourses</div>
-                        <ul>
-                          <li><a href="contact.html"><span>Contact us</span></a></li>
-                          <li><a href="privacy-policy.html"><span>Privacy policy</span></a></li>
-                          <li><a href="about.html"><span>Recognitions</span></a></li>
-                          <li><a href="contact.html"><span>Careers</span></a></li>
-                          <li><a href="courses.html"><span>Course</span></a></li>
-                          <li><a href="blog.html"><span>News</span></a></li>
-                        </ul>
-                      </div>
-                      <div class="footer-widget footer-widget-contact tj-fade-anim" data-delay="0.7">
-                        <div class="title">Contact us</div>
-                        <div class="footer-contact">
-                          <div class="footer-info">
-                            189 Congress, Suite 300 TX 78701, USA
-                          </div>
-                          <a href="tel:+1(009)544-7818" class="footer-info">+1 (009) 544-7818</a>
-                          <a href="mailto:hello@edunex.com" class="footer-info">hello@edunex.com</a>
-                        </div>
-                        <div class="footer-socials">
-                          <ul class="tj-socials tj-socials-dark">
-                            <li>
-                              <a href="https://facebook.com" target="_blank"><i class="ti-facebook"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://instagram.com" target="_blank"><i class="ti-instagram"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://x.com" target="_blank"><i class="ti-x-twitter"></i></a>
-                            </li>
-                            <li>
-                              <a href="https://linkedin.com/" target="_blank"><i class="ti-linkedin"></i></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tj-copyright-area">
-              <div class="tj-copyright-wrap">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="tj-copyright-content-area tj-fade-anim" data-delay=".3">
-                        <div class="footer-logo">
-                          <a href="index.html">
-                            <img src="assets/images/logos/logo-2.png" alt="Logo">
-                          </a>
-                        </div>
-                        <div class="tj-copyright-text-wrapper">
-                          <div class="tj-copyright-text">
-                            <p> &copy;<span>2026</span> <a href="https://themeforest.net/user/theme-junction/portfolio"
-                                target="_blank">Edunex</a>. All rights reserved
-                            </p>
-                          </div>
-                        </div>
-                        <div class="download-buttons">
-                          <a href="https://play.google.com/store"><img src="assets/images/footer/play-store.svg"
-                              alt=""></a>
-                          <a href="https://www.apple.com/app-store"><img src="assets/images/footer/app-store.svg"
-                              alt=""></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        </div>
+        <div class="cs_footer_widget cs_footer_menu">
+          <h2 class="cs_footer_widget_title cs_fs_20 cs_semibold cs_border_color">Explore</h2>
+          <ul class="cs_footer_links cs_mp_0">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="career.html">Careers</a></li>
+            <li><a href="instructor.html">Instructor</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="cs_footer_widget cs_footer_menu">
+          <h2 class="cs_footer_widget_title cs_fs_20 cs_semibold cs_border_color">Support</h2>
+          <ul class="cs_footer_links cs_mp_0">
+            <li><a href="help-center.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pricing-plan.html">Pricing</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="cs_footer_widget cs_footer_newsletter">
+          <div class="cs_newsletter_box cs_radius_20">
+            <h2 class="cs_newsletter_title cs_fs_24 cs_semibold cs_white_color">Subscribe To Our Newsletter</h2>
+            <p class="cs_newsletter_text cs_fs_14">Get early access to new courses, free workshops, and learning tips.
+            </p>
+            <form class="cs_newsletter_form" action="#" method="post">
+              <input type="email" name="email" placeholder="Your email address" aria-label="Your email address"
+                autocomplete="off" required>
+              <button type="submit" class="cs_primary_btn cs_small_btn">
+                <span>Subscribe</span>
+                <span><i class="ri-arrow-right-s-line"></i></span>
+              </button>
+            </form>
+            <div class="cs_footer_social">
+              <span class="cs_social_label cs_fs_20 cs_semibold">Follow Us On:</span>
+              <div class="cs_footer_social_links">
+                <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                <a href="#" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- end: Footer Section -->
+      </div>
+      <div class="cs_footer_bottom">
+        <p class="cs_footer_copyright cs_fs_14 mb-0">© 2026 Lerntix. All rights reserved by <a href="#">Laralink</a></p>
+        <div class="cs_footer_bottom_links cs_fs_14">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span class="cs_footer_divider">|</span>
+          <a href="terms-condition.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Section -->
