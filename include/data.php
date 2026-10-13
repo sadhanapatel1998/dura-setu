@@ -1,5 +1,54 @@
 <?php
 
+$universities = [
+    [
+        'name' => 'Manipal University Jaipur',
+        'logo' => 'assets/img/university/manipal-logo-jaipur.png',
+        'alt' => 'Manipal University Jaipur Online'
+    ],
+    [
+        'name' => 'NMIMS Online',
+        'logo' => 'assets/img/university/nmims-logo.png',
+        'alt' => 'NMIMS Online University'
+    ],
+    [
+        'name' => 'IGNOU Online',
+        'logo' => 'assets/img/university/ignou-logo.png',
+        'alt' => 'IGNOU Online University'
+    ],
+    [
+        'name' => 'Jain University Online',
+        'logo' => 'assets/img/university/jain-logo.png',
+        'alt' => 'Jain University Online'
+    ],
+    [
+        'name' => 'Lovely Professional University',
+        'logo' => 'assets/img/university/lpu-logo.png',
+        'alt' => 'Lovely Professional University Online'
+    ],
+    [
+        'name' => 'VIT Online',
+        'logo' => 'assets/img/university/vit-logo.png',
+        'alt' => 'VIT Online University'
+    ],
+    [
+        'name' => 'Uttaranchal University Online',
+        'logo' => 'assets/img/university/uttaranchal-logo.png',
+        'alt' => 'Uttaranchal University Online'
+    ],
+    [
+        'name' => 'Sikkim Manipal University Online',
+        'logo' => 'assets/img/university/sikkim-manipal-logo.png',
+        'alt' => 'Sikkim Manipal University Online'
+    ],
+    [
+        'name' => 'Sharda University Online',
+        'logo' => 'assets/img/university/sharda-logo.png',
+        'alt' => 'Sharda University Online'
+    ]
+];
+
+
 $categories = [
     [
         'title' => 'Online MBA',
@@ -197,5 +246,74 @@ $universities = [
         'tag_theme' => 'blue',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
         'url' => 'university/sharda-university-online.php'
+    ]
+];
+
+$popular_courses = [
+    [
+        'title' => 'Online MBA',
+        'subtitle' => 'Master of Business Administration',
+        'desc' => 'Advance your career with leadership skills, strategic thinking, and global business insights.',
+        'duration' => '2 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-briefcase-4-line',
+        'image' => 'assets/img/course/mba.jpg',
+        'fallback_image' => 'assets/img/course-img-1.jpg',
+        'url' => 'courses/online-mba.php'
+    ],
+    [
+        'title' => 'Online MCA',
+        'subtitle' => 'Master of Computer Applications',
+        'desc' => 'Master software development, cloud computing, and advanced computing technologies.',
+        'duration' => '2 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-code-s-slash-line',
+        'image' => 'assets/img/course/mca.jpg',
+        'fallback_image' => 'assets/img/course-img-2.jpg',
+        'url' => 'courses/online-mca.php'
+    ],
+    [
+        'title' => 'Online M.Com',
+        'subtitle' => 'Master of Commerce',
+        'desc' => 'Gain in-depth expertise in financial analysis, taxation, accounting, and commerce management.',
+        'duration' => '2 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-line-chart-line',
+        'image' => 'assets/img/course/mcom.jpg',
+        'fallback_image' => 'assets/img/course-img-3.jpg',
+        'url' => 'courses/online-mcom.php'
+    ],
+    [
+        'title' => 'Online BBA',
+        'subtitle' => 'Bachelor of Business Administration',
+        'desc' => 'Build a solid foundation in business management, marketing, entrepreneurship, and operations.',
+        'duration' => '3 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-building-4-line',
+        'image' => 'assets/img/course/bba.jpg',
+        'fallback_image' => 'assets/img/course-img-4.jpg',
+        'url' => 'courses/online-bba.php'
+    ],
+    [
+        'title' => 'Online BCA',
+        'subtitle' => 'Bachelor of Computer Applications',
+        'desc' => 'Kickstart your IT career with essential coding skills, web development, and database systems.',
+        'duration' => '3 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-terminal-box-line',
+        'image' => 'assets/img/course/bca.jpg',
+        'fallback_image' => 'assets/img/course-img-5.jpg',
+        'url' => 'courses/online-bca.php'
+    ],
+    [
+        'title' => 'Online B.Com',
+        'subtitle' => 'Bachelor of Commerce',
+        'desc' => 'Develop strong analytical skills in accounting, financial management, corporate law, and trade.',
+        'duration' => '3 Years',
+        'mode' => 'Online',
+        'icon' => 'ri-funds-line',
+        'image' => 'assets/img/course/bcom.jpg',
+        'fallback_image' => 'assets/img/course-img-6.jpg',
+        'url' => 'courses/online-bcom.php'
     ]
 ];

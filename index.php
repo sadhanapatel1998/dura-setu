@@ -44,57 +44,36 @@ include("include/data.php");
     </div>
     <!-- End Hero Section -->
 
-    <!-- Start Partners Section -->
-    <section class="cs_partners_section" data-aos="fade-up">
+    <!-- Start Universities Section -->
+    <section class="cs_partners_section durasetu_universities_section" data-aos="fade-up">
         <div class="container">
             <div class="cs_partners_wrap">
-                <h2 class="cs_partners_title cs_fs_20 cs_semibold mb-0">Our Trusted Global Partners</h2>
+                <h2 class="cs_partners_title cs_fs_20 cs_semibold mb-0">
+                    Top Online Universities
+                </h2>
                 <div class="cs_partners_marquee swiper" data-marquee="1" data-autoplay="1" data-speed="6000"
                     data-slides-per-view="responsive" data-gap="24" data-xxlg-gap="65" data-xsm-slides="2"
                     data-sm-slides="3" data-smd-slides="3" data-md-slides="4" data-lg-slides="5" data-xlg-slides="6"
                     data-xxlg-slides="6">
                     <div class="swiper-wrapper cs_partners_track">
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-1.svg" alt="Ciseco">
+                        <?php foreach ($universities as $university): ?>
+
+                            <div class="swiper-slide">
+                                <div class="cs_partner_logo durasetu_university_logo">
+
+                                    <img src="<?= htmlspecialchars($university['logo']); ?>"
+                                        alt="<?= htmlspecialchars($university['name']); ?>" loading="lazy">
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-2.svg" alt="Opturo">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-3.svg" alt="Shree">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-4.svg" alt="Aquila">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-5.svg" alt="Merify">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-6.svg" alt="Oeur">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cs_partner_logo">
-                                <img src="assets/img/partner-logo-3.svg" alt="Ciseco">
-                            </div>
-                        </div>
+
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Partners Section -->
+    <!-- End Universities Section -->
 
     <!-- Start Categories Section -->
     <section class="cs_categories_section cs_section_padding">
@@ -111,10 +90,8 @@ include("include/data.php");
                 <?php foreach ($categories as $category): ?>
                     <a href="<?php echo htmlspecialchars($category['url']); ?>"
                         class="cs_category_card_1 cs_cat_v2 cs_cat_v2_<?php echo htmlspecialchars($category['color']); ?> cs_radius_10"
-                        data-aos="fade-up"
-                        <?php if ($category['delay'] > 0): ?>
-                        data-aos-delay="<?php echo $category['delay']; ?>"
-                        <?php endif; ?>>
+                        data-aos="fade-up" <?php if ($category['delay'] > 0): ?>
+                        data-aos-delay="<?php echo $category['delay']; ?>" <?php endif; ?>>
                         <div class="cs_category_info">
                             <h3 class="cs_category_title cs_fs_20 cs_semibold">
                                 <?php echo htmlspecialchars($category['title']); ?>
@@ -127,8 +104,7 @@ include("include/data.php");
                         </div>
                         <div class="cs_cat_v2_right">
                             <div class="cs_cat_v2_icon">
-                                <img
-                                    src="<?php echo htmlspecialchars($category['image']); ?>"
+                                <img src="<?php echo htmlspecialchars($category['image']); ?>"
                                     onerror="this.onerror=null; this.src='<?php echo htmlspecialchars($category['fallback']); ?>';"
                                     alt="<?php echo htmlspecialchars($category['alt']); ?>">
 
@@ -162,7 +138,8 @@ include("include/data.php");
             <div class="cs_uni_heading_row" data-aos="fade-up">
                 <div class="cs_uni_heading_text">
                     <h2 class="cs_uni_title">Explore Top <span>Universities</span></h2>
-                    <p class="cs_uni_subtitle">Discover UGC-recognized universities offering flexible online degree programs.</p>
+                    <p class="cs_uni_subtitle">Discover UGC-recognized universities offering flexible online degree
+                        programs.</p>
                 </div>
                 <div class="cs_uni_heading_badges">
                     <!-- <div class="cs_uni_badge_pill">
@@ -187,9 +164,9 @@ include("include/data.php");
                         </div>
                     </div> -->
                     <a href="universities.php" class="cs_primary_btn cs_login_btn">
-                              <span class="cs_login_text">View All Universities</span>
-                              <span class="cs_user_icon"><i class="ri-arrow-right-line"></i></span>
-                          </a>
+                        <span class="cs_login_text">View All Universities</span>
+                        <span class="cs_user_icon"><i class="ri-arrow-right-line"></i></span>
+                    </a>
                 </div>
             </div>
 
@@ -204,19 +181,9 @@ include("include/data.php");
                     <i class="ri-arrow-right-s-line"></i>
                 </button>
 
-                <div class="cs_slider cs_slider_3 swiper"
-                    data-slides-per-view="responsive"
-                    data-xxlg-slides="4"
-                    data-xlg-slides="4"
-                    data-lg-slides="3"
-                    data-md-slides="2"
-                    data-sm-slides="1"
-                    data-xsm-slides="1"
-                    data-gap="20"
-                    data-speed="600"
-                    data-loop="1"
-                    data-autoplay="1"
-                    data-pagination-type="bullets">
+                <div class="cs_slider cs_slider_3 swiper" data-slides-per-view="responsive" data-xxlg-slides="4"
+                    data-xlg-slides="4" data-lg-slides="3" data-md-slides="2" data-sm-slides="1" data-xsm-slides="1"
+                    data-gap="20" data-speed="600" data-loop="1" data-autoplay="1" data-pagination-type="bullets">
                     <div class="swiper-wrapper">
                         <?php if (!empty($universities)): ?>
                             <?php foreach ($universities as $uni): ?>
@@ -237,9 +204,11 @@ include("include/data.php");
                                         <!-- Card Content -->
                                         <div class="cs_uni_card_body">
                                             <h3 class="cs_uni_card_title" title="<?php echo htmlspecialchars($uni['name']); ?>">
-                                                <a href="<?php echo htmlspecialchars($uni['url']); ?>"><?php echo htmlspecialchars($uni['name']); ?></a>
+                                                <a
+                                                    href="<?php echo htmlspecialchars($uni['url']); ?>"><?php echo htmlspecialchars($uni['name']); ?></a>
                                             </h3>
-                                            <p class="cs_uni_card_accred"><?php echo htmlspecialchars($uni['accreditation']); ?></p>
+                                            <p class="cs_uni_card_accred"><?php echo htmlspecialchars($uni['accreditation']); ?>
+                                            </p>
 
                                             <!-- Course tags -->
                                             <div class="cs_uni_tags cs_tags_<?php echo htmlspecialchars($uni['tag_theme']); ?>">
@@ -268,576 +237,192 @@ include("include/data.php");
     </section>
     <!-- End Universities Section -->
 
-    <!-- Start Features Section -->
-    <!-- <section class=" cs_bg_filed cs_section_padding feature-section" data-src="assets/img/bg/vector-bg-1.svg">
+    <!-- Start Trending / Popular Courses Section -->
+    <section class="cs_course_section cs_popular_courses_section cs_section_padding pb-0" data-aos="fade-up">
         <div class="container">
-            <div class="row cs_gap_y_40 justify-content-center">
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="cs_iconbox_style_1">
-                        <div class="cs_iconbox_icon cs_center cs_white_bg cs_radius_20">
-                            <img src="assets/img/icons/mentor-studio.svg" alt="AI Mentor Studio">
-                        </div>
-                        <div class="cs_iconbox_info">
-                            <h2 class="cs_iconbox_title cs_fs_24 cs_semibold cs_white_color">AI Mentor Studio</h2>
-                            <p class="cs_iconbox_subtitle cs_gray3_color mb-0">An adaptive AI coach that analyzes your
-                                progress,
-                                identifies weak spots, and delivers micro-lessons.</p>
-                        </div>
-                    </div>
+            <div class="cs_pop_heading_row mb-4 mb-lg-5">
+                <div class="cs_pop_heading_text">
+                    <h2 class="cs_pop_title cs_fs_42 cs_medium mb-2">Explore <span>Popular Courses</span></h2>
+                    <p class="cs_pop_subtitle cs_fs_16 cs_secondary_color mb-0">Choose from a wide range of
+                        career-focused online programs and find the right course for your future.</p>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs_iconbox_style_1">
-                        <div class="cs_iconbox_icon cs_center cs_white_bg cs_radius_20">
-                            <img src="assets/img/icons/live-insight.svg" alt="Live Insight Engine">
-                        </div>
-                        <div class="cs_iconbox_info">
-                            <h2 class="cs_iconbox_title cs_fs_24 cs_semibold cs_white_color">Live Insight Engine</h2>
-                            <p class="cs_iconbox_subtitle cs_gray3_color mb-0">Real-time knowledge heatmaps, predictive
-                                score
-                                analytics, and personalized study recommendations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cs_iconbox_style_1">
-                        <div class="cs_iconbox_icon cs_center cs_white_bg cs_radius_20">
-                            <img src="assets/img/icons/deep-learning.svg" alt="Deep Learning Analytics">
-                        </div>
-                        <div class="cs_iconbox_info">
-                            <h2 class="cs_iconbox_title cs_fs_24 cs_semibold cs_white_color">Deep Learning Analytics
-                            </h2>
-                            <p class="cs_iconbox_subtitle cs_gray3_color mb-0">Visualize strengths, weak spots, and time
-                                management
-                                with AI-driven weekly reports & recommendations.</p>
-                        </div>
-                    </div>
+                <div class="cs_pop_heading_btn">
+                    <a href="courses.php" class="cs_primary_btn cs_radius_50">
+                        <span>View All Courses</span>
+                        <span><i class="ri-arrow-right-line"></i></span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section> -->
-    <!-- End Features Section -->
-    <!-- Start Trending Courses Section -->
-    <section class="cs_course_section cs_section_padding pb-0">
-        <div class="container">
-            <div class="cs_section_heading_style_2 mb-4 mb-lg-5" data-aos="fade-up">
-                <div class="cs_section_heading_text">
-                    <h2 class="cs_fs_42 cs_medium mb-0">Trending Courses</h2>
-                    <p class="cs_fs_16 cs_secondary_color mt-2 mb-0">Join thousands of learners — most popular,
-                        highest‑rated &
-                        freshly updated content.</p>
+            <div class="cs_course_slider_wrap cs_pop_slider_wrapper slider-section position-relative">
+                <div class="cs_product_filter_slider swiper" data-slides-per-view="responsive" data-gap="20"
+                    data-autoplay="0" data-loop="1" data-speed="600" data-pagination-type="bullets" data-xsm-slides="1"
+                    data-sm-slides="2" data-smd-slides="2" data-md-slides="3" data-lg-slides="3" data-xlg-slides="4"
+                    data-xxlg-slides="4">
+                    <div class="swiper-wrapper">
+                        <?php if (!empty($popular_courses)): ?>
+                            <?php foreach ($popular_courses as $course): ?>
+                                <div class="swiper-slide">
+                                    <div class="cs_pop_card">
+                                        <div class="cs_pop_thumb_wrap">
+                                            <img src="<?php echo htmlspecialchars($course['image']); ?>"
+                                                alt="<?php echo htmlspecialchars($course['title']); ?>"
+                                                class="cs_pop_thumb_img">
+                                            <div class="cs_pop_corner_slope"></div>
+                                            <div class="cs_pop_icon_badge">
+                                                <i class="<?php echo htmlspecialchars($course['icon']); ?>"></i>
+                                            </div>
+                                        </div>
+
+                                        <!-- Card Body -->
+                                        <div class="cs_pop_card_body">
+                                            <h3 class="cs_pop_card_title">
+                                                <a href="<?php echo htmlspecialchars($course['url']); ?>">
+                                                    <?php echo htmlspecialchars($course['title']); ?>
+                                                </a>
+                                            </h3>
+                                            <h4 class="cs_pop_card_sub"><?php echo htmlspecialchars($course['subtitle']); ?>
+                                            </h4>
+                                            <p class="cs_pop_card_desc"><?php echo htmlspecialchars($course['desc']); ?></p>
+
+                                            <!-- Meta Details (Duration & Mode) -->
+                                            <div class="cs_pop_meta_row">
+                                                <div class="cs_pop_meta_item">
+                                                    <span class="cs_pop_meta_icon"><i class="ri-calendar-line"></i></span>
+                                                    <div class="cs_pop_meta_text">
+                                                        <strong><?php echo htmlspecialchars($course['duration']); ?></strong>
+                                                        <span>Duration</span>
+                                                    </div>
+                                                </div>
+                                                <div class="cs_pop_meta_item">
+                                                    <span class="cs_pop_meta_icon"><i class="ri-computer-line"></i></span>
+                                                    <div class="cs_pop_meta_text">
+                                                        <strong><?php echo htmlspecialchars($course['mode']); ?></strong>
+                                                        <span>Mode</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Card Button -->
+                                            <div class="cs_pop_btn_wrap">
+                                                <a href="<?php echo htmlspecialchars($course['url']); ?>"
+                                                    class="cs_pop_view_btn">
+                                                    <span>View Details</span>
+                                                    <i class="ri-arrow-right-line"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+
                 </div>
-                <a href="courses.html" class="cs_text_btn">
-                    <span class="cs_btn_text">View All Courses</span>
-                    <span><i class="ri-arrow-right-s-line"></i></span>
-                </a>
-            </div>
-            <div class="cs_grid_col_4">
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-1.jpg" alt="Ultimate Web Development Bootcamp 2025">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Bestseller</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                            <a href="course-details.html">Ultimate Web Development Bootcamp 2025</a>
-                        </h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Tammi Allison</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.9 (2,840)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$89.99</span>
-                            <del class="cs_price_old">$199.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Ultimate Web Development Bootcamp 2025</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Learn user-centered design, prototyping, and create
-                                stunning
-                                interfaces. Portfolio projects included.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>All Levels</li>
-                                <li><i class="ri-time-line"></i>32 hours</li>
-                                <li><i class="ri-video-on-line"></i>98 lectures</li>
-                                <li><i class="ri-star-line"></i>4.7 (5,400 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Design Thinking</li>
-                                <li>Wireframing</li>
-                                <li>Prototyping</li>
-                                <li>User Testing</li>
-                                <li>Portfolio Case Study</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$89.99</span>
-                                <del class="cs_price_old">$199.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-2.jpg" alt="UI/UX Design Pro (Figma + Adobe XD)">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Top Rated</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">UI/UX Design Pro
-                                (Figma +
-                                Adobe XD)</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Micheal Cabot</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (6,280)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$69.99</span>
-                            <del class="cs_price_old">$149.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">UI/UX Design Pro (Figma + Adobe XD)</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Design pixel‑perfect interfaces and prototypes with
-                                Figma and
-                                Adobe XD workflows.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Beginner</li>
-                                <li><i class="ri-time-line"></i>28 hours</li>
-                                <li><i class="ri-video-on-line"></i>180 lectures</li>
-                                <li><i class="ri-star-line"></i>4.8 (6,280 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Figma</li>
-                                <li>Adobe XD</li>
-                                <li>Wireframing</li>
-                                <li>Prototyping</li>
-                                <li>Design Systems</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$69.99</span>
-                                <del class="cs_price_old">$149.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-3.jpg" alt="Game Development with Unity and C#">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Creative</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">Game Development
-                                with Unity
-                                and C#</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Fannie Sargent</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.9 (2,840)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$84.99</span>
-                            <del class="cs_price_old">$149.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Game Development with Unity and C#</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Build 2D & 3D games with Unity and C#, from core
-                                mechanics to
-                                publishing.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                <li><i class="ri-time-line"></i>36 hours</li>
-                                <li><i class="ri-video-on-line"></i>240 lectures</li>
-                                <li><i class="ri-star-line"></i>4.9 (2,840 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Unity Engine</li>
-                                <li>C# Scripting</li>
-                                <li>2D & 3D</li>
-                                <li>Game Physics</li>
-                                <li>Publishing</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$84.99</span>
-                                <del class="cs_price_old">$149.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-4.jpg" alt="Digital Marketing & Growth Hacking">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Hot</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">Digital Marketing
-                                & Growth
-                                Hacking</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Dennis Churchwell</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.6 (10,320)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$59.99</span>
-                            <del class="cs_price_old">$129.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Digital Marketing & Growth Hacking</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">SEO, paid ads, funnels and growth tactics that scale
-                                real
-                                businesses fast.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                <li><i class="ri-time-line"></i>24 hours</li>
-                                <li><i class="ri-video-on-line"></i>160 lectures</li>
-                                <li><i class="ri-star-line"></i>4.6 (10,320 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>SEO</li>
-                                <li>Paid Ads</li>
-                                <li>Funnels</li>
-                                <li>Analytics</li>
-                                <li>Growth Hacking</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$59.99</span>
-                                <del class="cs_price_old">$129.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-5.jpg" alt="Cloud Computing (AWS + Azure)">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Expert</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">Cloud Computing
-                                (AWS +
-                                Azure)</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Ronda Campbell</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.7 (4,670)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$109.99</span>
-                            <del class="cs_price_old">$259.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Cloud Computing (AWS + Azure)</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Deploy, scale and secure apps across AWS and Azure
-                                with hands‑on
-                                labs.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                <li><i class="ri-time-line"></i>40 hours</li>
-                                <li><i class="ri-video-on-line"></i>300 lectures</li>
-                                <li><i class="ri-star-line"></i>4.7 (4,670 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>AWS</li>
-                                <li>Azure</li>
-                                <li>DevOps</li>
-                                <li>Security</li>
-                                <li>Hands-on Labs</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$109.99</span>
-                                <del class="cs_price_old">$259.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-6.jpg" alt="Financial Analysis and Investment">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">High Demand</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">Financial
-                                Analysis and
-                                Investment</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Mary Moore</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.6 (4,300)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$47.99</span>
-                            <del class="cs_price_old">$149.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Financial Analysis and Investment</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Analyze statements, value companies and build smart
-                                investment
-                                models.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                <li><i class="ri-time-line"></i>22 hours</li>
-                                <li><i class="ri-video-on-line"></i>150 lectures</li>
-                                <li><i class="ri-star-line"></i>4.6 (4,300 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Financial Statements</li>
-                                <li>Valuation</li>
-                                <li>Modeling</li>
-                                <li>Investing</li>
-                                <li>Excel</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$47.99</span>
-                                <del class="cs_price_old">$149.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-7.jpg" alt="English Speaking and Communication">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Popular</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">English Speaking
-                                and
-                                Communication</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Sandra Hicks</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.5 (15,200)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$39.99</span>
-                            <del class="cs_price_old">$99.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">English Speaking and Communication</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Speak fluently and confidently with real‑world
-                                conversation
-                                practice.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Advanced</li>
-                                <li><i class="ri-time-line"></i>18 hours</li>
-                                <li><i class="ri-video-on-line"></i>120 lectures</li>
-                                <li><i class="ri-star-line"></i>4.5 (15,200 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Speaking</li>
-                                <li>Pronunciation</li>
-                                <li>Vocabulary</li>
-                                <li>Fluency</li>
-                                <li>Confidence</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$39.99</span>
-                                <del class="cs_price_old">$99.99</del>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                    <div class="cs_course_thumbnail cs_radius_15">
-                        <img src="assets/img/course-img-8.jpg" alt="Product Management Zero to Hero">
-                        <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Best for career</span>
-                    </div>
-                    <div class="cs_course_body">
-                        <h3 class="cs_course_title cs_fs_20 cs_semibold"><a href="course-details.html">Product
-                                Management Zero to
-                                Hero</a></h3>
-                        <div class="cs_course_meta cs_fs_14">
-                            <span class="cs_course_author">Kathryn Woodbury</span>
-                            <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (3,150)</span>
-                        </div>
-                        <div class="cs_course_price">
-                            <span class="cs_price_new">$79.99</span>
-                            <del class="cs_price_old">$149.99</del>
-                        </div>
-                        <div class="cs_course_info cs_radius_20">
-                            <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                <a href="course-details.html">Product Management Zero to Hero</a>
-                            </h3>
-                            <p class="cs_course_info_text cs_fs_14">Go from idea to launch — strategy, roadmaps and
-                                stakeholder
-                                management.</p>
-                            <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                <li><i class="ri-graduation-cap-line"></i>Advanced</li>
-                                <li><i class="ri-time-line"></i>30 hours</li>
-                                <li><i class="ri-video-on-line"></i>210 lectures</li>
-                                <li><i class="ri-star-line"></i>4.8 (3,150 ratings)</li>
-                            </ul>
-                            <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                <li>Strategy</li>
-                                <li>Roadmaps</li>
-                                <li>Stakeholders</li>
-                                <li>Agile</li>
-                                <li>Launch</li>
-                            </ul>
-                            <div class="cs_action_btns">
-                                <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                    <span>Enroll Now</span>
-                                    <span><i class="ri-shopping-bag-line"></i></span>
-                                </button>
-                                <button type="button"
-                                    class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                    <span><i class="ri-heart-line"></i></span>
-                                </button>
-                            </div>
-                            <div class="cs_course_price">
-                                <span class="cs_price_new">$79.99</span>
-                                <del class="cs_price_old">$149.99</del>
-                            </div>
-                        </div>
-                    </div>
+                <div class="swiper-pagination cs_pop_pagination"></div>
+                <div class="cs_arrows_style_1">
+                    <button type="button" class="cs_slider_arrow slider-prev" aria-label="Previous courses">
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+                    <button type="button" class="cs_slider_arrow slider-next" aria-label="Next courses">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Trending Courses Section -->
+    <!-- End Latest Trending Courses Section -->
 
     <!-- Start Promo Banner Section -->
     <section class="cs_promo_section cs_section_padding pb-0" data-aos="fade-up">
         <div class="container">
-            <div class="cs_promo_banner_1 cs_radius_20">
+            <div class="cs_promo_banner_1 cs_radius_24">
                 <span class="cs_promo_pattern cs_bg_filed" data-src="assets/img/vector-bg-2.svg"></span>
-                <div class="cs_promo_content">
-                    <span class="cs_promo_badge cs_fs_14">For Passionate Instructors</span>
-                    <h2 class="cs_promo_title cs_semibold cs_white_color">Why Sell on Lerntix? Grow, Earn & Inspire</h2>
-                    <div class="cs_promo_testimonial cs_accent_bg cs_radius_10">
-                        <span class="cs_promo_quote" aria-hidden="true">
-                            <img src="assets/img/icons/quote.svg" alt="Quote icon">
-                        </span>
-                        <blockquote>"Lerntix helped me earn $15k in 6 months. The platform's tools are unmatched!"
-                        </blockquote>
-                        <p class="cs_promo_author">
-                            <span class="cs_author_name cs_white_color">Darren Treadway</span>, <span
-                                class="cs_author_role cs_fs_12 cs_gray3_color">Data Science Instructor</span>
+                <div class="cs_promo_grid">
+                    <!-- Left Column: Content -->
+                    <div class="cs_promo_col_left">
+                        <span class="cs_promo_badge_pill">For Ambitious Learners</span>
+                        <h2 class="cs_promo_main_title">
+                            Build Your Future With The <span>Right Degree</span>
+                        </h2>
+                        <p class="cs_promo_desc_text">
+                            Choose from UGC-recognized universities, flexible learning options and career-focused
+                            programs to achieve your goals.
                         </p>
+                        <div class="cs_promo_features_row">
+                            <div class="cs_promo_feat_item">
+                                <span class="cs_promo_feat_icon"><i class="ri-graduation-cap-line"></i></span>
+                                <span class="cs_promo_feat_text">UGC Recognized</span>
+                            </div>
+                            <span class="cs_promo_feat_sep"></span>
+                            <div class="cs_promo_feat_item">
+                                <span class="cs_promo_feat_icon"><i class="ri-book-open-line"></i></span>
+                                <span class="cs_promo_feat_text">Flexible Learning</span>
+                            </div>
+                            <span class="cs_promo_feat_sep"></span>
+                            <div class="cs_promo_feat_item">
+                                <span class="cs_promo_feat_icon"><i class="ri-line-chart-line"></i></span>
+                                <span class="cs_promo_feat_text">Career Growth</span>
+                            </div>
+                        </div>
+                        <div class="cs_promo_btn_box">
+                            <a href="courses.php" class="cs_primary_btn cs_login_btn">
+                                <span class="cs_login_text">Explore Online Degrees</span>
+                                <span class="cs_user_icon"><i class="ri-arrow-right-line"></i></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: Girl with background pattern combined image -->
+                    <div class="cs_promo_col_center">
+                        <div class="cs_promo_media_wrapper">
+                            <img src="assets/img/cta/png-bg-pattern-with-girl.png" alt="Student with books"
+                                class="cs_promo_media_girl">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3 Feature Cards -->
+                    <div class="cs_promo_col_right">
+                        <div class="cs_promo_card_item">
+                            <div class="cs_promo_card_icon">
+                                <img src="assets/img/cta/icon-1.jpg" alt="Top Universities">
+                            </div>
+                            <div class="cs_promo_card_text">
+                                <h3 class="cs_promo_card_title">Top Universities</h3>
+                                <p class="cs_promo_card_desc">Choose from UGC-recognized universities and
+                                    industry-relevant degree programs.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs_promo_card_item">
+                            <div class="cs_promo_card_icon">
+                                <img src="assets/img/cta/icon-2.jpg" alt="Learn Your Way">
+                            </div>
+                            <div class="cs_promo_card_text">
+                                <h3 class="cs_promo_card_title">Learn Your Way</h3>
+                                <p class="cs_promo_card_desc">Study anytime, anywhere with flexible online classes,
+                                    recorded lectures and digital resources.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs_promo_card_item">
+                            <div class="cs_promo_card_icon">
+                                <img src="assets/img/cta/icon-3.jpg" alt="Career-Focused Programs">
+                            </div>
+                            <div class="cs_promo_card_text">
+                                <h3 class="cs_promo_card_title">Career-Focused Programs</h3>
+                                <p class="cs_promo_card_desc">Build practical skills and earn a recognized degree that
+                                    supports your career goals.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="cs_promo_media">
-                    <span class="cs_promo_shape" aria-hidden="true">
-                        <img src="assets/img/wheel-2.svg" alt="Decorative shape">
-                    </span>
-                    <img class="cs_promo_person" src="assets/img/instructor-img-1.png"
-                        alt="Confident instructor standing with crossed arms">
-                </div>
-                <ul class="cs_promo_features cs_mp_0">
-                    <li class="cs_promo_feature">
-                        <span class="cs_promo_feature_icon">
-                            <img src="assets/img/icons/ai-tutor.svg" alt="AI Tutor for Students">
-                        </span>
-                        <div class="cs_promo_feature_info">
-                            <h3 class="cs_promo_feature_title cs_fs_24 cs_semibold cs_white_color">AI Tutor for Students
-                            </h3>
-                            <p class="cs_promo_feature_text cs_gray3_color mb-0">Boost engagement with 24/7 AI that
-                                answers
-                                questions about your course content</p>
-                        </div>
-                    </li>
-                    <li class="cs_promo_feature">
-                        <span class="cs_promo_feature_icon">
-                            <img src="assets/img/icons/smart-analysis.svg" alt="Smart Analytics">
-                        </span>
-                        <div class="cs_promo_feature_info">
-                            <h3 class="cs_promo_feature_title cs_fs_24 cs_semibold cs_white_color">Smart Analytics</h3>
-                            <p class="cs_promo_feature_text cs_gray3_color mb-0">Know your audience. Real-time insights
-                                & course
-                                performance dashboard.</p>
-                        </div>
-                    </li>
-                    <li class="cs_promo_feature">
-                        <span class="cs_promo_feature_icon">
-                            <img src="assets/img/icons/flexible-payout.svg" alt="Flexible Payout">
-                        </span>
-                        <div class="cs_promo_feature_info">
-                            <h3 class="cs_promo_feature_title cs_fs_24 cs_semibold cs_white_color">Flexible Payout</h3>
-                            <p class="cs_promo_feature_text cs_gray3_color mb-0">Set your own prices, coupons, and
-                                receive payouts
-                                directly.</p>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
     </section>
     <!-- End Promo Banner Section -->
-    <!-- Start Mentor Section -->
-    <section class="cs_mentor_section cs_section_padding pb-0">
+
+    <!-- Start How It Work Section -->
+    <section class="cs_work_process_section cs_type_1 cs_section_padding">
         <div class="container">
             <div class="cs_section_heading_style_1 cs_center_column text-center mb-4" data-aos="fade-up">
                 <h2 class="cs_section_title cs_fs_42 cs_medium mb-2">Meet Our Mentors</h2>
@@ -845,117 +430,56 @@ include("include/data.php");
                     to
                     your screen.</p>
             </div>
-            <div class="cs_grid_col_4">
-                <div class="cs_instructor_style_1 cs_radius_20" data-aos="fade-up">
-                    <div class="cs_instructor_thumbnail cs_radius_15">
-                        <img src="assets/img/instructor-img-2.jpg" alt="Darren Treadway">
-                        <div class="cs_instructor_social">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
+            <div class="cs_work_process_steps">
+                <div class="cs_work_step_1">
+                    <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">01</span>
+                    <div class="cs_work_step_card">
+                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Pick a Live Track</h3>
+                        <p class="cs_work_step_text cs_fs_14">Browse AI, Data Science, or Full-stack tracks. Choose your
+                            schedule & mentor.</p>
+                        <div class="cs_work_step_thumb cs_center">
+                            <img src="assets/img/work-img-5.png" alt="Instructor applying online">
                         </div>
-                    </div>
-                    <div class="cs_instructor_body">
-                        <h3 class="cs_instructor_name cs_fs_20 cs_semibold">
-                            <a href="instructor-details.html">Darren Treadway</a>
-                        </h3>
-                        <span class="cs_instructor_designation cs_fs_14">Data Science Instructor</span>
-                        <ul class="cs_instructor_stats">
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">28k+</span><span
-                                    class="cs_stat_label cs_fs_14">Students</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">8</span><span
-                                    class="cs_stat_label cs_fs_14">Courses</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">98%</span><span
-                                    class="cs_stat_label cs_fs_14">5-star</span></li>
-                        </ul>
                     </div>
                 </div>
-                <div class="cs_instructor_style_1 cs_radius_20" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs_instructor_thumbnail cs_radius_15">
-                        <img src="assets/img/instructor-img-3.jpg" alt="Tammi Allison">
-                        <div class="cs_instructor_social">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
+                <div class="cs_work_step_1">
+                    <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">02</span>
+                    <div class="cs_work_step_card">
+                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Attend Immersive Labs</h3>
+                        <p class="cs_work_step_text cs_fs_14">Real-time whiteboarding, code reviews, and live Q&A with
+                            industry experts.</p>
+                        <div class="cs_work_step_thumb cs_center">
+                            <img src="assets/img/work-img-6.png" alt="Instructor reviewing a course curriculum">
                         </div>
-                    </div>
-                    <div class="cs_instructor_body">
-                        <h3 class="cs_instructor_name cs_fs_20 cs_semibold">
-                            <a href="instructor-details.html">Tammi Allison</a>
-                        </h3>
-                        <span class="cs_instructor_designation cs_fs_14">UI/UX Design Mentor</span>
-                        <ul class="cs_instructor_stats">
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">19k+</span><span
-                                    class="cs_stat_label cs_fs_14">Students</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">12</span><span
-                                    class="cs_stat_label cs_fs_14">Courses</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">96%</span><span
-                                    class="cs_stat_label cs_fs_14">5-star</span></li>
-                        </ul>
                     </div>
                 </div>
-                <div class="cs_instructor_style_1 cs_radius_20" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cs_instructor_thumbnail cs_radius_15">
-                        <img src="assets/img/instructor-img-4.jpg" alt="Micheal Cabot">
-                        <div class="cs_instructor_social">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
+                <div class="cs_work_step_1">
+                    <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">03</span>
+                    <div class="cs_work_step_card">
+                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Build & Collaborate</h3>
+                        <p class="cs_work_step_text cs_fs_14">Work on real-world capstones, peer reviews, & get feedback
+                            from mentors.</p>
+                        <div class="cs_work_step_thumb cs_center">
+                            <img src="assets/img/work-img-7.png" alt="Instructor recording a live course">
                         </div>
-                    </div>
-                    <div class="cs_instructor_body">
-                        <h3 class="cs_instructor_name cs_fs_20 cs_semibold">
-                            <a href="instructor-details.html">Micheal Cabot</a>
-                        </h3>
-                        <span class="cs_instructor_designation cs_fs_14">Full‑Stack Web Instructor</span>
-                        <ul class="cs_instructor_stats">
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">24k+</span><span
-                                    class="cs_stat_label cs_fs_14">Students</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">10</span><span
-                                    class="cs_stat_label cs_fs_14">Courses</span></li>
-                            <li><span class="cs_stat_value cs_fs_20 cs_semibold">97%</span><span
-                                    class="cs_stat_label cs_fs_14">5-star</span></li>
-                        </ul>
                     </div>
                 </div>
-                <div class="cs_instructor_style_1 cs_radius_20" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cs_instructor_thumbnail cs_radius_15">
-                        <img src="assets/img/instructor-img-5.jpg" alt="Sofia Bennett">
-                        <div class="cs_instructor_social">
-                            <a href="#"><i class="ri-facebook-fill"></i></a>
-                            <a href="#"><i class="ri-twitter-x-fill"></i></a>
-                            <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#"><i class="ri-instagram-line"></i></a>
+                <div class="cs_work_step_1">
+                    <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">04</span>
+                    <div class="cs_work_step_card">
+                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Earn Credentials</h3>
+                        <p class="cs_work_step_text cs_fs_14">Receive industry-recognized certificate + portfolio
+                            projects & career coaching.</p>
+                        <div class="cs_work_step_thumb cs_center">
+                            <img src="assets/img/work-img-8.png" alt="Instructor launching a new course">
                         </div>
-                    </div>
-                    <div class="cs_instructor_body">
-                        <h3 class="cs_instructor_name cs_fs_20 cs_semibold">
-                            <a href="instructor-details.html">Sofia Bennett</a>
-                        </h3>
-                        <span class="cs_instructor_designation cs_fs_14">Marketing & Growth Coach</span>
-                        <ul class="cs_instructor_stats">
-                            <li>
-                                <span class="cs_stat_value cs_fs_20 cs_semibold">31k+</span>
-                                <span class="cs_stat_label cs_fs_14">Students</span>
-                            </li>
-                            <li>
-                                <span class="cs_stat_value cs_fs_20 cs_semibold">9</span>
-                                <span class="cs_stat_label cs_fs_14">Courses</span>
-                            </li>
-                            <li>
-                                <span class="cs_stat_value cs_fs_20 cs_semibold">95%</span>
-                                <span class="cs_stat_label cs_fs_14">5-star</span>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Mentor Section -->
+    <!-- End How It Work Section -->
+
 
     <!-- Start Testimonial Section -->
     <section class="cs_testimonial_section cs_section_padding">
@@ -1210,610 +734,7 @@ include("include/data.php");
         </div>
     </section>
     <!-- End Events Section -->
-    <!-- Start Latest Trending Courses Section -->
-    <section class="cs_course_section cs_latest_course_section data_filter cs_section_padding pt-0">
-        <div class="container">
-            <div class="cs_section_heading_style_1 text-center" data-aos="fade-up">
-                <h2 class="cs_fs_42 cs_medium mb-0">Latest Trending Courses</h2>
-                <p class="cs_fs_16 cs_secondary_color mt-2 mb-0">Fresh content, expert instructors, and real-world
-                    projects —
-                    updated weekly.</p>
-            </div>
-            <ul class="cs_course_filter_nav cs_fs_16 cs_medium cs_mp_0 mb-4">
-                <li><button type="button" class="cs_filter_btn" data-filter="business">Business</button></li>
-                <li><button type="button" class="cs_filter_btn" data-filter="it">IT</button></li>
-                <li><button type="button" class="cs_filter_btn active" data-filter="python">Python</button></li>
-                <li><button type="button" class="cs_filter_btn" data-filter="data-analytics">Data Analytics</button>
-                </li>
-                <li><button type="button" class="cs_filter_btn" data-filter="project-management">Project
-                        Management</button>
-                </li>
-                <li><button type="button" class="cs_filter_btn" data-filter="cyber-security">Cyber Security</button>
-                </li>
-            </ul>
-            <div class="cs_course_slider_wrap slider-section">
-                <div class="cs_product_filter_slider swiper" data-slides-per-view="responsive" data-gap="24"
-                    data-autoplay="0" data-loop="1" data-speed="600" data-pagination="0" data-xsm-slides="1"
-                    data-sm-slides="1" data-smd-slides="2" data-md-slides="2" data-lg-slides="3" data-xlg-slides="4"
-                    data-xxlg-slides="4">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-category="python">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-1.jpg" alt="Python Zero to Mastery">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Advanced</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Python Zero to Mastery</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Darlene Reeves</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (350)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$89.99</span>
-                                        <del class="cs_price_old">$179.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Python Zero to Mastery</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Master Python from the ground up —
-                                            syntax, OOP, and real
-                                            projects you can ship.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>All Levels</li>
-                                            <li><i class="ri-time-line"></i>36 hours</li>
-                                            <li><i class="ri-video-on-line"></i>240 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.8 (350 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Core Python</li>
-                                            <li>OOP</li>
-                                            <li>APIs</li>
-                                            <li>Testing</li>
-                                            <li>Projects</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$89.99</span>
-                                            <del class="cs_price_old">$179.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="python">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-2.jpg" alt="Data Science with Python">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Data
-                                        Focus</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Data Science with Python</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Judith Culp</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (750)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$99.99</span>
-                                        <del class="cs_price_old">$199.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Data Science with Python</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Turn raw data into insight with Pandas,
-                                            NumPy and machine
-                                            learning workflows.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                            <li><i class="ri-time-line"></i>42 hours</li>
-                                            <li><i class="ri-video-on-line"></i>265 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.8 (750 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Pandas</li>
-                                            <li>NumPy</li>
-                                            <li>Visualization</li>
-                                            <li>Machine Learning</li>
-                                            <li>Case Studies</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$99.99</span>
-                                            <del class="cs_price_old">$199.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="python">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-3.jpg" alt="Django Mastery: Full-Stack">
-                                    <span
-                                        class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Development</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Django Mastery: Full-Stack</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Larry Beale</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.9 (4,670)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$109.99</span>
-                                        <del class="cs_price_old">$219.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Django Mastery: Full-Stack</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Build and deploy production-ready web
-                                            apps with Django,
-                                            REST APIs and PostgreSQL.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Advanced</li>
-                                            <li><i class="ri-time-line"></i>38 hours</li>
-                                            <li><i class="ri-video-on-line"></i>228 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.9 (4,670 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Django ORM</li>
-                                            <li>REST API</li>
-                                            <li>Auth</li>
-                                            <li>PostgreSQL</li>
-                                            <li>Deployment</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$109.99</span>
-                                            <del class="cs_price_old">$219.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="python">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-4.jpg" alt="Automation with Python">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Expert</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Automation with Python</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Miguel Robinson</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (1,775)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$59.99</span>
-                                        <del class="cs_price_old">$129.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Automation with Python</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Automate boring tasks — files,
-                                            spreadsheets, emails and
-                                            web scraping with scripts.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Expert</li>
-                                            <li><i class="ri-time-line"></i>24 hours</li>
-                                            <li><i class="ri-video-on-line"></i>160 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.8 (1,775 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Scripting</li>
-                                            <li>Web Scraping</li>
-                                            <li>Excel</li>
-                                            <li>Selenium</li>
-                                            <li>Scheduling</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$59.99</span>
-                                            <del class="cs_price_old">$129.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="business">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-5.jpg" alt="Startup Growth & Business Strategy">
-                                    <span
-                                        class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Bestseller</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Startup Growth & Business Strategy</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Tammi Allison</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.7 (2,140)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$74.99</span>
-                                        <del class="cs_price_old">$159.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Startup Growth & Business Strategy</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Validate ideas, find product-market fit
-                                            and scale growth
-                                            with proven frameworks.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>All Levels</li>
-                                            <li><i class="ri-time-line"></i>26 hours</li>
-                                            <li><i class="ri-video-on-line"></i>145 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.7 (2,140 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Market Fit</li>
-                                            <li>Growth Loops</li>
-                                            <li>Pricing</li>
-                                            <li>Pitching</li>
-                                            <li>Metrics</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$74.99</span>
-                                            <del class="cs_price_old">$159.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="business">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-6.jpg" alt="Financial Modeling for Founders">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">New</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Financial Modeling for Founders</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Dennis Churchwell</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.6 (980)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$64.99</span>
-                                        <del class="cs_price_old">$139.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Financial Modeling for Founders</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Build investor-ready models — forecasts,
-                                            cap tables and
-                                            valuation from scratch.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                            <li><i class="ri-time-line"></i>22 hours</li>
-                                            <li><i class="ri-video-on-line"></i>130 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.6 (980 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Forecasting</li>
-                                            <li>Cap Tables</li>
-                                            <li>Valuation</li>
-                                            <li>Unit Economics</li>
-                                            <li>Excel</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$64.99</span>
-                                            <del class="cs_price_old">$139.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="it">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-7.jpg" alt="Cloud Computing with AWS">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Top Rated</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Cloud Computing with AWS</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Micheal Cabot</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.9 (5,320)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$94.99</span>
-                                        <del class="cs_price_old">$189.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Cloud Computing with AWS</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Design, deploy and secure scalable cloud
-                                            infrastructure on
-                                            AWS — hands-on labs.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Advanced</li>
-                                            <li><i class="ri-time-line"></i>40 hours</li>
-                                            <li><i class="ri-video-on-line"></i>252 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.9 (5,320 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>EC2 & S3</li>
-                                            <li>Networking</li>
-                                            <li>Serverless</li>
-                                            <li>IAM Security</li>
-                                            <li>Certification</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$94.99</span>
-                                            <del class="cs_price_old">$189.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="data-analytics">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-8.jpg" alt="Power BI & SQL for Analysts">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Hot</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Power BI & SQL for Analysts</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Fannie Sargent</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.8 (3,410)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$79.99</span>
-                                        <del class="cs_price_old">$149.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Power BI & SQL for Analysts</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Query, model and visualize business data
-                                            with SQL and
-                                            interactive Power BI dashboards.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Intermediate</li>
-                                            <li><i class="ri-time-line"></i>30 hours</li>
-                                            <li><i class="ri-video-on-line"></i>195 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.8 (3,410 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>SQL Joins</li>
-                                            <li>Data Modeling</li>
-                                            <li>DAX</li>
-                                            <li>Dashboards</li>
-                                            <li>Reporting</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$79.99</span>
-                                            <del class="cs_price_old">$149.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="project-management">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-9.jpg" alt="Agile & Scrum Master Complete">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Certified</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Agile & Scrum Master Complete</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Judith Culp</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.7 (6,120)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$69.99</span>
-                                        <del class="cs_price_old">$144.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Agile & Scrum Master Complete</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Lead agile teams with confidence —
-                                            sprints, ceremonies and
-                                            certification prep.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>All Levels</li>
-                                            <li><i class="ri-time-line"></i>27 hours</li>
-                                            <li><i class="ri-video-on-line"></i>175 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.7 (6,120 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Scrum</li>
-                                            <li>Kanban</li>
-                                            <li>Backlogs</li>
-                                            <li>Retrospectives</li>
-                                            <li>Certification</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$69.99</span>
-                                            <del class="cs_price_old">$144.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-category="cyber-security">
-                            <div class="cs_course_style_1 cs_white_bg cs_radius_20">
-                                <div class="cs_course_thumbnail cs_radius_15">
-                                    <img src="assets/img/course-img-10.jpg" alt="Ethical Hacking Fundamentals">
-                                    <span class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color">Advanced</span>
-                                </div>
-                                <div class="cs_course_body">
-                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                        <a href="course-details.html">Ethical Hacking Fundamentals</a>
-                                    </h3>
-                                    <div class="cs_course_meta cs_fs_14">
-                                        <span class="cs_course_author">Larry Beale</span>
-                                        <span class="cs_course_rating"><i class="ri-star-fill"></i> 4.9 (2,860)</span>
-                                    </div>
-                                    <div class="cs_course_price">
-                                        <span class="cs_price_new">$84.99</span>
-                                        <del class="cs_price_old">$169.99</del>
-                                    </div>
-                                    <div class="cs_course_info cs_radius_20">
-                                        <h3 class="cs_course_title cs_fs_20 cs_semibold">
-                                            <a href="course-details.html">Ethical Hacking Fundamentals</a>
-                                        </h3>
-                                        <p class="cs_course_info_text cs_fs_14">Think like an attacker — recon,
-                                            exploitation and defence
-                                            in a safe lab environment.</p>
-                                        <ul class="cs_course_info_list cs_fs_12 cs_mp_0">
-                                            <li><i class="ri-graduation-cap-line"></i>Advanced</li>
-                                            <li><i class="ri-time-line"></i>34 hours</li>
-                                            <li><i class="ri-video-on-line"></i>205 lectures</li>
-                                            <li><i class="ri-star-line"></i>4.9 (2,860 ratings)</li>
-                                        </ul>
-                                        <ul class="cs_course_features cs_fs_14 cs_mp_0">
-                                            <li>Recon</li>
-                                            <li>Network Security</li>
-                                            <li>Web Exploits</li>
-                                            <li>Kali Linux</li>
-                                            <li>Reporting</li>
-                                        </ul>
-                                        <div class="cs_action_btns">
-                                            <button type="button" class="cs_primary_btn cs_radius_3 enrollBtn">
-                                                <span>Enroll Now</span>
-                                                <span><i class="ri-shopping-bag-line"></i></span>
-                                            </button>
-                                            <button type="button"
-                                                class="cs_wishlist_btn cs_gray3_bg cs_black_color cs_radius_3 wishlistBtn">
-                                                <span><i class="ri-heart-line"></i></span>
-                                            </button>
-                                        </div>
-                                        <div class="cs_course_price">
-                                            <span class="cs_price_new">$84.99</span>
-                                            <del class="cs_price_old">$169.99</del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs_arrows_style_1">
-                    <button type="button" class="cs_slider_arrow slider-prev" aria-label="Previous courses">
-                        <i class="ri-arrow-left-line"></i>
-                    </button>
-                    <button type="button" class="cs_slider_arrow slider-next" aria-label="Next courses">
-                        <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Latest Trending Courses Section -->
+
     <!-- Start Join Banner Section -->
     <section class="cs_join_section">
         <div class="container">

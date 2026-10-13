@@ -6107,12 +6107,11 @@ input[type=number] {
 .cs_promo_banner_1 {
   position: relative;
   z-index: 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 64px;
+  display: block;
+  padding: 0px 52px 0;
   overflow: hidden;
-  background: linear-gradient(109.29deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: linear-gradient(109.29deg, #032152 0%, #011835 100%);
+  border-radius: 24px;
 }
 
 .cs_promo_banner_1 .cs_promo_pattern {
@@ -6120,197 +6119,295 @@ input[type=number] {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+      opacity: .4;
 }
 
-.cs_promo_banner_1 {
-  /* Left column */
-}
-
-.cs_promo_banner_1 .cs_promo_content {
+/* Grid Layout for cs_promo_banner_1 */
+.cs_promo_grid {
   position: relative;
   z-index: 2;
-  flex-shrink: 0;
-  width: calc(50% - 136px);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.95fr;
+  align-items: center;
+  gap: 20px;
 }
 
-.cs_promo_banner_1 .cs_promo_badge {
+/* --- Left Column --- */
+.cs_promo_col_left {
+  padding-bottom:0px;
+}
+
+.cs_promo_col_left .cs_promo_badge_pill {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  padding: 5px 10px;
+    padding: 2px 18px;
   border-radius: 50px;
-  color: var(--white-color);
-  background-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #a3b8d8;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.3px;
 }
 
-.cs_promo_banner_1 .cs_promo_title {
-  margin-bottom: 32px;
-  font-size: 32px;
-  line-height: 1.1875em;
+.cs_promo_main_title {
+    font-size: 43px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
-.cs_promo_banner_1 .cs_promo_testimonial {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  background-color: var(--accent-color);
+.cs_promo_main_title span {
+  color: #ff8a00;
 }
 
-.cs_promo_banner_1 .cs_promo_testimonial .cs_promo_quote {
-  width: 50px;
-  height: 50px;
+.cs_promo_desc_text {
+  font-size: 15px;
+  line-height: 1.6;
+    color: #f2f7ff;
+  margin-bottom: 24px;
+  max-width: 440px;
 }
 
-.cs_promo_banner_1 .cs_promo_testimonial .cs_promo_quote img {
-  width: 100%;
-  height: 100%;
+/* Feature highlights row (UGC, Flexible Learning, Career Growth) */
+.cs_promo_features_row {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
 }
 
-.cs_promo_banner_1 .cs_promo_testimonial blockquote {
-  margin-bottom: 7px;
-  font-size: 20px;
-  line-height: 1.5em;
-  font-weight: 500;
-  color: var(--gray3-color);
-  font-family: var(--secondary-font);
+.cs_promo_feat_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.cs_promo_banner_1 .cs_promo_testimonial .cs_author_name {
+.cs_promo_feat_icon {
+  color: #ff9900;
   font-size: 18px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
-.cs_promo_banner_1 {
-  /* Center media */
+.cs_promo_feat_text {
+    font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.cs_promo_banner_1 .cs_promo_media {
-  position: relative;
-  z-index: 1;
-  flex: 1 1 auto;
-  align-self: stretch;
-  min-width: 0;
+.cs_promo_feat_sep {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.25);
 }
 
-.cs_promo_banner_1 .cs_promo_shape {
-  position: absolute;
-  top: 28%;
-  left: 50%;
-  z-index: 0;
-  width: 228px;
-  height: 224px;
-  transform: translate(-50%, -50%);
+/* CTA button */
+.cs_promo_btn_box {
+  margin-top: 4px;
 }
 
-.cs_promo_banner_1 .cs_promo_shape img {
-  width: 100%;
+.cs_promo_cta_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 32px;
+  border-radius: 50px;
+  background: #ff8a00;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(255, 138, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cs_promo_cta_btn i {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.cs_promo_cta_btn:hover {
+  background: #ff7700;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 138, 0, 0.55);
+}
+
+.cs_promo_cta_btn:hover i {
+  transform: translateX(4px);
+}
+
+/* --- Center Media Column --- */
+.cs_promo_col_center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   height: 100%;
-  animation: halfRotation 20s linear infinite;
 }
 
-.cs_promo_banner_1 .cs_promo_person {
-  position: absolute;
-  bottom: -64px;
-  left: 50%;
-  z-index: 1;
-  width: 250px;
-  height: auto;
-  transform: translateX(-50%);
+.cs_promo_media_wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.cs_promo_banner_1 {
-  /* Right column */
-}
-
-.cs_promo_banner_1 .cs_promo_features {
+/* Girl Photo with background pattern from CTA Folder */
+.cs_promo_media_girl {
   position: relative;
   z-index: 2;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+
+/* --- Right Column: Feature Cards --- */
+.cs_promo_col_right {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  width: calc(50% - 136px);
-  max-width: 450px;
+  gap: 22px;
+  padding-bottom: 0px;
 }
 
-.cs_promo_banner_1 .cs_promo_feature {
+.cs_promo_card_item {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 18px;
 }
 
-.cs_promo_banner_1 .cs_promo_feature .cs_promo_feature_icon {
+.cs_promo_card_icon {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.cs_promo_banner_1 .cs_promo_feature .cs_promo_feature_icon img {
-  width: 100%;
-  height: 100%;
+.cs_promo_card_item:hover .cs_promo_card_icon {
+  transform: translateY(-2px) scale(1.05);
 }
 
-.cs_promo_banner_1 .cs_promo_feature .cs_promo_feature_title {
-  margin-bottom: 8px;
+.cs_promo_card_icon img
+ {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    display: block;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    padding: 5px;
 }
 
-.cs_promo_banner_1 .cs_promo_feature:hover .cs_promo_feature_icon img {
-  animation: bubbleUp 0.6s cubic-bezier(0.47, 0.25, 0.25, 0.75);
+.cs_promo_card_text {
+  flex: 1;
 }
 
+.cs_promo_card_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+
+.cs_promo_card_desc {
+    font-size: 14px;
+  line-height: 1.5;
+  color: #a3b8d8;
+  margin-bottom: 0;
+}
+
+/* Responsive queries for cs_promo_banner_1 */
 @media (max-width: 1399px) {
   .cs_promo_banner_1 {
-    padding: 64px 30px;
+    padding: 44px 35px 0;
+  }
+  .cs_promo_main_title {
+         font-size: 37px;
+  }
+  .cs_promo_card_icon {
+    width: 62px;
+    height: 62px;
   }
 }
 
 @media (max-width: 1199px) {
   .cs_promo_banner_1 {
-    padding: 64px 20px;
+    padding: 40px 25px 0;
   }
-
-  .cs_promo_banner_1 .cs_promo_feature {
-    gap: 16px;
+  .cs_promo_main_title {
+    font-size: 30px;
   }
-
-  .cs_promo_banner_1 .cs_promo_testimonial blockquote,
-  .cs_promo_banner_1 .cs_promo_testimonial .cs_author_name {
-    font-size: 16px;
+  .cs_promo_media_girl {
+    max-width: 380px;
   }
 }
 
 @media (max-width: 991px) {
   .cs_promo_banner_1 {
-    flex-direction: column;
-    gap: 30px;
-    padding: 50px 20px;
+    padding: 40px 25px 30px;
   }
-
-  .cs_promo_banner_1 .cs_promo_content,
-  .cs_promo_banner_1 .cs_promo_features {
-    width: 100%;
+  .cs_promo_grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .cs_promo_col_left {
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .cs_promo_desc_text {
     max-width: 100%;
   }
-
-  .cs_promo_banner_1 .cs_promo_media {
-    order: 2;
-    align-self: stretch;
-    min-height: auto;
-    display: flex;
+  .cs_promo_features_row {
     justify-content: center;
   }
-
-  .cs_promo_banner_1 .cs_promo_person {
-    position: initial;
-    left: initial;
-    transform: translateX(0);
-    margin-bottom: -50px;
+  .cs_promo_col_center {
+    min-height: 360px;
+  }
+  .cs_promo_col_right {
+    padding-bottom: 0;
   }
 }
 
 @media (max-width: 575px) {
   .cs_promo_banner_1 {
-    padding: 50px 15px;
+    padding: 30px 18px 25px;
+    border-radius: 18px;
+  }
+  .cs_promo_main_title {
+    font-size: 26px;
+  }
+  .cs_promo_features_row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cs_promo_feat_sep {
+    display: none;
+  }
+  .cs_promo_cta_btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .cs_promo_card_icon {
+    width: 50px;
+    height: 50px;
+  }
+  .cs_promo_card_title {
+    font-size: 17px;
   }
 }
 
@@ -12724,8 +12821,8 @@ input[type=number] {
 }
 
 .cs_partners_wrap .cs_partner_logo img {
-  height: 40px;
-  width: auto;
+  height: auto;
+  width: 140px;
   display: block;
 }
 
@@ -22698,5 +22795,286 @@ font-size: 15px;
   }
   .cs_uni_slider_nav {
     display: none;
+  }
+}
+
+/*=====================================================
+  Popular Courses Section — Reference Design
+=======================================================*/
+
+.cs_popular_courses_section {
+  position: relative;
+  background-color: #f7f9fc;
+}
+
+.cs_pop_heading_row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cs_pop_heading_text {
+  max-width: 620px;
+}
+
+.cs_pop_title {
+  color: #022567;
+  line-height: 1.25;
+}
+
+.cs_pop_title span {
+  color: #ff8a00;
+}
+
+.cs_pop_subtitle {
+  color: #556987;
+  line-height: 1.6;
+}
+
+.cs_pop_slider_wrapper {
+  padding-bottom: 50px;
+}
+
+/* Popular Course Card */
+.cs_pop_card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(2, 37, 103, 0.07);
+  border: 1px solid rgba(2, 37, 103, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+
+.cs_pop_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(2, 37, 103, 0.14);
+  border-color: rgba(255, 138, 0, 0.4);
+}
+
+/* Card Top Thumbnail */
+.cs_pop_thumb_wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #f1f4f9;
+}
+
+.cs_pop_thumb_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cs_pop_card:hover .cs_pop_thumb_img {
+  transform: scale(1.08);
+}
+
+/* Orange Corner Slope */
+.cs_pop_corner_slope {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, transparent 50%, #ff8a00 50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Floating Icon Badge */
+.cs_pop_icon_badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ff8a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  z-index: 3;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.cs_pop_card:hover .cs_pop_icon_badge {
+  transform: rotate(10deg) scale(1.06);
+  background: #ff8a00;
+  color: #ffffff;
+}
+
+/* Card Body */
+.cs_pop_card_body {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cs_pop_card_title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.cs_pop_card_title a {
+  color: #022567;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.cs_pop_card_title a:hover {
+  color: #ff8a00;
+}
+
+.cs_pop_card_sub {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff8a00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cs_pop_card_desc {
+  font-size: 15px;
+  color: #556987;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 44px;
+}
+
+/* Meta Details Row */
+.cs_pop_meta_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #eef2f6;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.cs_pop_meta_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs_pop_meta_icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 138, 0, 0.12);
+  color: #ff8a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cs_pop_meta_text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.cs_pop_meta_text strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #022567;
+}
+
+.cs_pop_meta_text span {
+  font-size: 13px;
+  color: #7b8ba5;
+}
+
+/* Card Button */
+.cs_pop_btn_wrap {
+  margin-top: auto;
+}
+
+.cs_pop_view_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 18px;
+    border-radius: 9px;
+  background: #022567;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.cs_pop_view_btn i {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.cs_pop_view_btn:hover {
+  background: #ff8a00;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 138, 0, 0.35);
+}
+
+.cs_pop_view_btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Pagination Dots */
+.cs_pop_pagination {
+  margin-top: 25px;
+  position: static !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cs_pop_pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #022567;
+  opacity: 0.35;
+  margin: 0 !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cs_pop_pagination .swiper-pagination-bullet-active {
+  background: #ff8a00 !important;
+  opacity: 1 !important;
+  transform: scale(1.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .cs_pop_heading_row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
