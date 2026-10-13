@@ -206,7 +206,7 @@ include("include/data.php");
 
                 <div class="cs_slider cs_slider_3 swiper"
                     data-slides-per-view="responsive"
-                    data-xxlg-slides="3"
+                    data-xxlg-slides="4"
                     data-xlg-slides="4"
                     data-lg-slides="3"
                     data-md-slides="2"

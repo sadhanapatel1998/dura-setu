@@ -102,9 +102,9 @@ $universities = [
     [
         'name' => 'Manipal University Jaipur Online',
         'accreditation' => 'UGC Recognized | NAAC A+',
-        'image' => 'assets/img/university/manipal-campus.jpg',
+        'image' => 'assets/img/university/jaipur-manipal-campus.jpg',
         'fallback_image' => 'assets/img/course-img-1.jpg',
-        'logo' => 'assets/img/university/manipal-logo.png',
+        'logo' => 'assets/img/university/manipal-logo-jaipur.png',
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'yellow',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
@@ -179,13 +179,13 @@ $universities = [
     [
         'name' => 'Sikkim Manipal University Online',
         'accreditation' => 'UGC Recognized | NAAC A+',
-        'image' => 'assets/img/university/smu-campus.jpg',
-        'fallback_image' => 'assets/img/course-img-2.jpg',
-        'logo' => 'assets/img/university/smu-logo.png',
+        'image' => 'assets/img/university/sikkim-manipal-campus.jpg',
+        'fallback_image' => 'assets/img/course-img-1.jpg',
+        'logo' => 'assets/img/university/sikkim-manipal-logo.png',
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
-        'tag_theme' => 'purple',
+        'tag_theme' => 'orange',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/sikkim-manipal-university-online.php'
+        'url' => 'university/sikkim-manipal-university.php'
     ],
     [
         'name' => 'Sharda University Online',
