@@ -52,21 +52,18 @@ include("include/data.php");
                     Top Online Universities
                 </h2>
                 <div class="cs_partners_marquee swiper" data-marquee="1" data-autoplay="1" data-speed="6000"
-                    data-slides-per-view="responsive" data-gap="24" data-xxlg-gap="65" data-xsm-slides="2"
+                    data-slides-per-view="responsive" data-gap="24" data-xxlg-gap="65" data-xsm-slides="3"
                     data-sm-slides="3" data-smd-slides="3" data-md-slides="4" data-lg-slides="5" data-xlg-slides="6"
                     data-xxlg-slides="6">
                     <div class="swiper-wrapper cs_partners_track">
                         <?php foreach ($universities as $university): ?>
-
                             <div class="swiper-slide">
                                 <div class="cs_partner_logo durasetu_university_logo">
-
                                     <img src="<?= htmlspecialchars($university['logo']); ?>"
                                         alt="<?= htmlspecialchars($university['name']); ?>" loading="lazy">
 
                                 </div>
                             </div>
-
                         <?php endforeach; ?>
                     </div>
                 </div>
@@ -349,10 +346,10 @@ include("include/data.php");
                             programs to achieve your goals.
                         </p>
                         <div class="cs_promo_features_row">
-                            <div class="cs_promo_feat_item">
+                            <!-- <div class="cs_promo_feat_item">
                                 <span class="cs_promo_feat_icon"><i class="ri-graduation-cap-line"></i></span>
                                 <span class="cs_promo_feat_text">UGC Recognized</span>
-                            </div>
+                            </div> -->
                             <span class="cs_promo_feat_sep"></span>
                             <div class="cs_promo_feat_item">
                                 <span class="cs_promo_feat_icon"><i class="ri-book-open-line"></i></span>
@@ -425,53 +422,84 @@ include("include/data.php");
     <section class="cs_work_process_section cs_type_1 cs_section_padding">
         <div class="container">
             <div class="cs_section_heading_style_1 cs_center_column text-center mb-4" data-aos="fade-up">
-                <h2 class="cs_section_title cs_fs_42 cs_medium mb-2">Meet Our Mentors</h2>
-                <p class="cs_section_subtitle mb-0">Learn from industry experts who bring real‑world experience straight
-                    to
-                    your screen.</p>
+                <h2 class="cs_pop_title cs_fs_42 cs_medium mb-2">
+                    How DuraSetu Makes Your <span>Journey Simple</span>
+                </h2>
+                <p class="cs_section_subtitle mb-0">
+                    From exploring courses to getting admitted, we guide you at every step.
+                </p>
             </div>
             <div class="cs_work_process_steps">
-                <div class="cs_work_step_1">
+                <!-- Step 1 -->
+                <div class="cs_work_step_1 cs_step_theme_blue">
                     <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">01</span>
-                    <div class="cs_work_step_card">
-                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Pick a Live Track</h3>
-                        <p class="cs_work_step_text cs_fs_14">Browse AI, Data Science, or Full-stack tracks. Choose your
-                            schedule & mentor.</p>
-                        <div class="cs_work_step_thumb cs_center">
-                            <img src="assets/img/work-img-5.png" alt="Instructor applying online">
+                    <div class="card-border-blue">
+                        <div class="cs_work_step_card">
+                            <div class="cs_step_icon_badge">
+                                <i class="ri-search-line"></i>
+                            </div>
+                            <h3 class="cs_work_step_title cs_fs_22 cs_semibold">Explore Courses</h3>
+                            <p class="cs_work_step_text cs_fs_14">Discover a wide range of online programs across top
+                                universities. Use filters to find the right course as per your career goals.</p>
+                            <div class="cs_work_step_thumb cs_center">
+                                <img src="assets/img/step/step-1.png" alt="Explore Courses">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cs_work_step_1">
+
+                <!-- Step 2 -->
+                <div class="cs_work_step_1 cs_step_theme_orange">
                     <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">02</span>
-                    <div class="cs_work_step_card">
-                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Attend Immersive Labs</h3>
-                        <p class="cs_work_step_text cs_fs_14">Real-time whiteboarding, code reviews, and live Q&A with
-                            industry experts.</p>
-                        <div class="cs_work_step_thumb cs_center">
-                            <img src="assets/img/work-img-6.png" alt="Instructor reviewing a course curriculum">
+                    <div class="card-border-yellow">
+                        <div class="cs_work_step_card">
+                            <div class="cs_step_icon_badge">
+                                <i class="ri-scales-3-line"></i>
+                            </div>
+                            <h3 class="cs_work_step_title cs_fs_22 cs_semibold">Compare & Evaluate</h3>
+                            <p class="cs_work_step_text cs_fs_14">Compare universities, fees, program details, duration,
+                                and accreditations — all in one place.</p>
+                            <div class="cs_work_step_thumb cs_center">
+                                <img src="assets/img/step/step-2.png" alt="Compare & Evaluate">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cs_work_step_1">
+
+                <!-- Step 3 -->
+                <div class="cs_work_step_1 cs_step_theme_blue">
                     <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">03</span>
-                    <div class="cs_work_step_card">
-                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Build & Collaborate</h3>
-                        <p class="cs_work_step_text cs_fs_14">Work on real-world capstones, peer reviews, & get feedback
-                            from mentors.</p>
-                        <div class="cs_work_step_thumb cs_center">
-                            <img src="assets/img/work-img-7.png" alt="Instructor recording a live course">
+                    <div class="card-border-blue">
+                        <div class="cs_work_step_card">
+                            <div class="cs_step_icon_badge">
+                                <i class="ri-file-check-line"></i>
+                            </div>
+                            <h3 class="cs_work_step_title cs_fs_22 cs_semibold">Get Expert Guidance</h3>
+                            <p class="cs_work_step_text cs_fs_14">Our education experts help you choose the best
+                                university and course as per your interests, budget, and career goals.</p>
+                            <div class="cs_work_step_thumb cs_center">
+                                <img src="assets/img/step/step-3.png" alt="Get Expert Guidance">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cs_work_step_1">
+
+                <!-- Step 4 -->
+                <div class="cs_work_step_1 cs_step_theme_orange">
                     <span class="cs_work_step_number cs_center cs_fs_24 cs_semibold">04</span>
-                    <div class="cs_work_step_card">
-                        <h3 class="cs_work_step_title cs_fs_20 cs_semibold">Earn Credentials</h3>
-                        <p class="cs_work_step_text cs_fs_14">Receive industry-recognized certificate + portfolio
-                            projects & career coaching.</p>
-                        <div class="cs_work_step_thumb cs_center">
-                            <img src="assets/img/work-img-8.png" alt="Instructor launching a new course">
+                    <div class="card-border-yellow">
+                        <div class="cs_work_step_card">
+                            <div class="cs_step_icon_badge">
+                                <i class="ri-file-check-line"></i>
+                            </div>
+                            <h3 class="cs_work_step_title cs_fs_22 cs_semibold">Apply & Get Admitted</h3>
+                            <p class="cs_work_step_text cs_fs_14">
+                                We guide you through documentation, applications, and admission for a smooth enrollment
+                                experience.
+                            </p>
+                            <div class="cs_work_step_thumb cs_center">
+                                <img src="assets/img/step/step-4.png" alt="Apply & Get Admitted">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -480,479 +508,468 @@ include("include/data.php");
     </section>
     <!-- End How It Work Section -->
 
-
     <!-- Start Testimonial Section -->
-    <section class="cs_testimonial_section cs_section_padding">
+    <section class="cs_testimonial_section cs_white_bg">
         <div class="container">
-            <div class="cs_section_heading_style_2 cs_testimonial_heading mb-4 mb-lg-5" data-aos="fade-up">
-                <div class="cs_section_heading_text">
-                    <h2 class="cs_fs_42 cs_medium mb-0">Top Voices of Lerntix Community</h2>
-                    <p class="cs_fs_16 mt-2 mb-0">Real stories, real impact — see why learners love our platform.</p>
-                </div>
-                <span class="cs_testimonial_trust cs_fs_14 cs_primary_color">
-                    <span class="cs_rating" data-rating="5">
-                        <span class="cs_rating_percentage"></span>
-                    </span>
-                    <span>Trusted by 10,000+ happy learners</span>
-                </span>
-            </div>
-            <div class="cs_testimonial_wrap">
-                <div class="cs_video_review">
-                    <div class="cs_video_review_media cs_radius_20">
-                        <video class="cs_video_review_video" src="assets/video/review.mp4"
-                            poster="assets/img/testimonial-img-1.jpg" autoplay muted loop playsinline preload="auto"
-                            aria-label="Eric Westerfield sharing his Lerntix experience">
-                        </video>
-                    </div>
-                    <div class="cs_video_review_footer">
-                        <div class="cs_video_review_person">
-                            <h3 class="cs_avatar_name cs_fs_18 cs_medium">Eric Westerfield</h3>
-                            <span class="cs_fs_14 cs_primary_color">Senior Frontend Engineer</span>
-                        </div>
-                        <span class="cs_rating" data-rating="5">
-                            <span class="cs_rating_percentage"></span>
+            <div class="cs_testimonial_panel cs_primary_bg cs_radius_20 cs_bg_filed slider-section"
+                data-src="assets/img/vector-bg-2.svg">
+                <div class="cs_section_heading_style_2 cs_type_1 mb-4" data-aos="fade-up">
+                    <div>
+                        <span class="cs_section_label cs_fs_14 cs_primary_color mb-2 px-2">
+                            <span>Testimonials</span>
                         </span>
+                        <h2 class="cs_fs_42 cs_semibold cs_white_color mb-0">What Students Say About DuraSetu</h2>
+                    </div>
+                    <div class="cs_arrows_style_1 cs_demo_arrows">
+                        <button type="button" class="cs_demo_arrow slider-prev cs_radius_3 cs_center"
+                            aria-label="Previous testimonial"><i class="ri-arrow-left-s-line"></i>
+                        </button>
+                        <button type="button" class="cs_demo_arrow slider-next cs_radius_3 cs_center"
+                            aria-label="Next testimonial"><i class="ri-arrow-right-s-line"></i>
+                        </button>
                     </div>
                 </div>
-                <!-- Right: Text review list -->
-                <ul class="cs_review_list cs_mp_0">
-                    <li class="cs_review_card cs_radius_20">
-                        <div class="cs_review_card_head">
-                            <span class="cs_review_avatar rounded-circle">
-                                <img src="assets/img/avatar-1.jpg" alt="Daniel Bowers">
+                <div class="row">
+                    <div class="col-lg-5 align-self-end" data-aos="fade-up">
+                        <div class="cs_testimonial_art" aria-hidden="true">
+                            <span class="cs_testimonial_art_outer"></span>
+                            <span class="cs_testimonial_art_inner"></span>
+                            <span class="cs_testimonial_art_img">
+                                <img src="assets/img/student.png" alt="Smiling student holding a Bag and notebook">
                             </span>
-                            <div class="cs_review_person">
-                                <div>
-                                    <h3 class="cs_avatar_name cs_fs_18 cs_medium">Daniel Bowers</h3>
-                                    <span class="cs_fs_14 cs_primary_color">Creative Director</span>
-                                </div>
-                                <span class="cs_rating" data-rating="5">
-                                    <span class="cs_rating_percentage"></span>
-                                </span>
-                            </div>
                         </div>
-                        <p class="cs_review_text cs_medium cs_black_color mb-0">“The No-Code & Webflow course helped me
-                            prototype
-                            faster than ever. My team adopted new tools thanks to Lerntix. Amazing content & vibes!”</p>
-                    </li>
-                    <li class="cs_review_card cs_radius_20">
-                        <div class="cs_review_card_head">
-                            <span class="cs_review_avatar rounded-circle">
-                                <img src="assets/img/avatar-2.jpg" alt="Jenny Jones">
-                            </span>
-                            <div class="cs_review_person">
-                                <div>
-                                    <h3 class="cs_avatar_name cs_fs_18 cs_medium">Jenny Jones</h3>
-                                    <span class="cs_fs_14 cs_primary_color">Product Designer, Figma</span>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cs_testimonial_panel_in">
+                            <div class="swiper" data-slides-per-view="responsive" data-xsm-slides="1" data-sm-slides="1"
+                                data-smd-slides="1" data-md-slides="1" data-lg-slides="1" data-xlg-slides="2"
+                                data-xxlg-slides="2" data-gap="24" data-loop="1">
+
+                                <div class="swiper-wrapper">
+                                    <?php foreach ($testimonials as $testimonial): ?>
+                                        <div class="swiper-slide">
+                                            <article class="cs_testimonial_style_1 cs_radius_15">
+                                                <!-- Author -->
+                                                <div class="cs_testimonial_author">
+                                                    <span class="cs_testimonial_avatar">
+                                                        <img src="<?= htmlspecialchars($testimonial['image']); ?>"
+                                                            alt="<?= htmlspecialchars($testimonial['name']); ?>"
+                                                            loading="lazy">
+                                                    </span>
+                                                    <div class="cs_testimonial_author_text">
+                                                        <h3 class="cs_testimonial_name cs_fs_18 cs_medium mb-0">
+                                                            <?= htmlspecialchars($testimonial['name']); ?>
+                                                        </h3>
+                                                        <p class="cs_testimonial_role cs_fs_14 cs_primary_color mb-0">
+                                                            <?= htmlspecialchars($testimonial['role']); ?>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <!-- Rating -->
+                                                <span class="cs_rating" data-rating="<?= (int) $testimonial['rating']; ?>">
+                                                    <span class="cs_rating_percentage"></span>
+                                                </span>
+                                                <!-- Testimonial -->
+                                                <p class="cs_testimonial_text mb-0">
+                                                    "<?= htmlspecialchars($testimonial['message']); ?>"
+                                                </p>
+                                            </article>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
-                                <span class="cs_rating" data-rating="5">
-                                    <span class="cs_rating_percentage"></span>
-                                </span>
                             </div>
+                            <ul class="cs_testimonial_trust cs_mp_0">
+                                <li class="cs_fs_14 cs_white_color">
+                                    <img src="assets/img/icons/learner-satisfaction.svg" alt="">
+                                    Expert Course Guidance
+                                </li>
+
+                                <li class="cs_fs_14 cs_white_color">
+                                    <img src="assets/img/icons/active-members.svg" alt="">
+                                    Top Online Universities
+                                </li>
+
+                                <li class="cs_fs_14 cs_white_color">
+                                    <img src="assets/img/icons/industry-recognized.svg" alt="">
+                                    Hassle-Free Admission Support
+                                </li>
+                            </ul>
                         </div>
-                        <p class="cs_review_text cs_medium cs_black_color mb-0">“Flexibility + world-class content. I
-                            completed
-                            the UX/UI specialization while working full-time. The interactive projects gave me a
-                            portfolio that
-                            landed my dream design role.”</p>
-                    </li>
-                    <li class="cs_review_card cs_radius_20">
-                        <div class="cs_review_card_head">
-                            <span class="cs_review_avatar rounded-circle">
-                                <img src="assets/img/avatar-3.jpg" alt="Nathaniel Marini">
-                            </span>
-                            <div class="cs_review_person">
-                                <div>
-                                    <h3 class="cs_avatar_name cs_fs_18 cs_medium">Nathaniel Marini</h3>
-                                    <span class="cs_fs_14 cs_primary_color">Security Analyst</span>
-                                </div>
-                                <span class="cs_rating" data-rating="5">
-                                    <span class="cs_rating_percentage"></span>
-                                </span>
-                            </div>
-                        </div>
-                        <p class="cs_review_text cs_medium cs_black_color mb-0">“Cybersecurity track is top-tier!
-                            Real-world
-                            attack sims and zero to hero structure. I passed the certification with confidence. Thanks,
-                            Lerntix
-                            team!”</p>
-                    </li>
-                    <li class="cs_review_card cs_radius_20">
-                        <div class="cs_review_card_head">
-                            <span class="cs_review_avatar rounded-circle">
-                                <img src="assets/img/avatar-4.jpg" alt="Vicki Kirby">
-                            </span>
-                            <div class="cs_review_person">
-                                <div>
-                                    <h3 class="cs_avatar_name cs_fs_18 cs_medium">Vicki Kirby</h3>
-                                    <span class="cs_fs_14 cs_primary_color">Data Analyst</span>
-                                </div>
-                                <span class="cs_rating" data-rating="5">
-                                    <span class="cs_rating_percentage"></span>
-                                </span>
-                            </div>
-                        </div>
-                        <p class="cs_review_text cs_medium cs_black_color mb-0">“Lerntix completely transformed how I
-                            learn. The
-                            AI-driven recommendations and hands-on labs helped me land my first data role within 4
-                            months. Absolute
-                            game changer!”</p>
-                    </li>
-                    <li class="cs_review_card cs_radius_20">
-                        <div class="cs_review_card_head">
-                            <span class="cs_review_avatar rounded-circle">
-                                <img src="assets/img/avatar-5.jpg" alt="David Gregor">
-                            </span>
-                            <div class="cs_review_person">
-                                <div>
-                                    <h3 class="cs_avatar_name cs_fs_18 cs_medium">David Gregor</h3>
-                                    <span class="cs_fs_14 cs_primary_color">Game Developer</span>
-                                </div>
-                                <span class="cs_rating" data-rating="5">
-                                    <span class="cs_rating_percentage"></span>
-                                </span>
-                            </div>
-                        </div>
-                        <p class="cs_review_text cs_medium cs_black_color mb-0">“Unity & C# course was incredible! I
-                            built my
-                            first mobile game and published it. The instructors are super responsive. 10/10 Lerntix!”
-                        </p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- End Testimonial Section -->
-    <!-- Start Events Section -->
-    <section class="cs_event_section cs_section_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8">
-                    <div class="cs_section_heading_style_2 mb-4" data-aos="fade-up">
-                        <div class="cs_section_heading_text">
-                            <h2 class="cs_fs_42 cs_medium mb-0">Upcoming Live Events</h2>
-                            <p class="cs_fs_16 cs_secondary_color mt-2 mb-0">Join mentors, industry experts, and global
-                                learners in
-                                real‑time sessions.</p>
-                        </div>
-                        <a href="events.html" class="cs_text_btn">
-                            <span class="cs_btn_text">View All Event</span>
-                            <span><i class="ri-arrow-right-s-line"></i></span>
-                        </a>
-                    </div>
-                    <ul class="cs_event_list cs_mp_0">
-                        <li class="cs_event_card cs_radius_15 cs_bg_filed" data-src="assets/img/vector-bg-3.svg">
-                            <div class="cs_event_card_top">
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-calendar-line"></i> Jul 02,
-                                    2026</span>
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-map-pin-line"></i> Singapore</span>
-                            </div>
-                            <h3 class="cs_event_title cs_fs_24 cs_semibold">
-                                <a href="event-details.html">Web3 Builder's Meetup</a>
-                            </h3>
-                            <div class="cs_event_card_bottom">
-                                <p class="cs_event_price cs_fs_14 mb-0"><span
-                                        class="cs_event_price_value cs_semibold">$79</span> /
-                                    networking</p>
-                                <a href="event-details.html" class="cs_text_btn cs_event_btn cs_fs_14">
-                                    <span class="cs_btn_text">Reserve Spot</span>
-                                    <span><i class="ri-arrow-right-s-line"></i></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cs_event_card cs_radius_15 cs_bg_filed" data-src="assets/img/vector-bg-3.svg">
-                            <div class="cs_event_card_top">
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-calendar-line"></i> Jul 10,
-                                    2026</span>
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-map-pin-line"></i> Online (Zoom +
-                                    Discord)</span>
-                            </div>
-                            <h3 class="cs_event_title cs_fs_24 cs_semibold">
-                                <a href="event-details.html">Data Science Bootcamp</a>
-                            </h3>
-                            <div class="cs_event_card_bottom">
-                                <p class="cs_event_price cs_fs_14 mb-0"><span
-                                        class="cs_event_price_value cs_semibold">Free</span> /
-                                    limited seats</p>
-                                <a href="event-details.html" class="cs_text_btn cs_event_btn cs_fs_14">
-                                    <span class="cs_btn_text">Reserve Spot</span>
-                                    <span><i class="ri-arrow-right-s-line"></i></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cs_event_card cs_radius_15 cs_bg_filed" data-src="assets/img/vector-bg-3.svg">
-                            <div class="cs_event_card_top">
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-calendar-line"></i> Jul 20,
-                                    2026</span>
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-map-pin-line"></i> Berlin &
-                                    Online</span>
-                            </div>
-                            <h3 class="cs_event_title cs_fs_24 cs_semibold">
-                                <a href="event-details.html">UI/UX Design Hackathon</a>
-                            </h3>
-                            <div class="cs_event_card_bottom">
-                                <p class="cs_event_price cs_fs_14 mb-0"><span
-                                        class="cs_event_price_value cs_semibold">$49</span> /
-                                    early bird</p>
-                                <a href="event-details.html" class="cs_text_btn cs_event_btn cs_fs_14">
-                                    <span class="cs_btn_text">Reserve Spot</span>
-                                    <span><i class="ri-arrow-right-s-line"></i></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="cs_event_card cs_radius_15 cs_bg_filed" data-src="assets/img/vector-bg-3.svg">
-                            <div class="cs_event_card_top">
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-calendar-line"></i> Jul 28,
-                                    2026</span>
-                                <span class="cs_event_meta cs_fs_12"><i class="ri-map-pin-line"></i> Virtual +
-                                    Global</span>
-                            </div>
-                            <h3 class="cs_event_title cs_fs_24 cs_semibold">
-                                <a href="event-details.html">No-Code Hackathon</a>
-                            </h3>
-                            <div class="cs_event_card_bottom">
-                                <p class="cs_event_price cs_fs_14 mb-0"><span
-                                        class="cs_event_price_value cs_semibold">$15</span> /
-                                    student discount</p>
-                                <a href="event-details.html" class="cs_text_btn cs_event_btn cs_fs_14">
-                                    <span class="cs_btn_text">Reserve Spot</span>
-                                    <span><i class="ri-arrow-right-s-line"></i></span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xl-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs_event_media">
-                        <span class="cs_event_glow" aria-hidden="true">
-                            <img src="assets/img/wheel-4.svg" alt="Decorative shape">
-                        </span>
-                        <img src="assets/img/speaker-img-1.png" alt="Instructor ready to host a live event">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Events Section -->
 
-    <!-- Start Join Banner Section -->
-    <section class="cs_join_section">
-        <div class="container">
-            <div class="row cs_gap_y_16">
-                <div class="col-lg-6" data-aos="fade-up">
-                    <div class="cs_join_banner_1 cs_primary_bg cs_radius_20 cs_bg_filed"
-                        data-src="assets/img/vector-bg-4.svg">
-                        <div class="cs_join_content">
-                            <h3 class="cs_join_title cs_fs_24 cs_semibold cs_white_color">Become a Student</h3>
-                            <p class="cs_join_subtitle cs_fs_16 cs_gray3_color">Unlock 500+ expert-led courses, earn
-                                certificates,
-                                and join a global community of passionate learners.</p>
-                            <ul class="cs_join_features cs_fs_14 cs_mp_0">
-                                <li><i class="ri-checkbox-circle-fill"></i>Unlimited access to premium content</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Career-oriented projects & quizzes</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Shareable certificates & badges</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Peer collaboration & mentorship</li>
-                            </ul>
-                        </div>
-                        <a href="login.html" class="cs_primary_btn cs_small_btn cs_join_btn cs_fs_16">
-                            <span class="cs_btn_text">Join Now</span>
-                            <span><i class="ri-arrow-right-s-line"></i></span>
-                        </a>
-                        <span class="cs_join_shape cs_accent_bg" aria-hidden="true"></span>
-                        <img class="cs_join_person" src="assets/img/student-img-1.png"
-                            alt="Smiling student holding notebooks">
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs_join_banner_1 cs_type_1 cs_radius_20">
-                        <div class="cs_join_content">
-                            <h3 class="cs_join_title cs_fs_24 cs_semibold cs_white_color">Become an Instructor</h3>
-                            <p class="cs_join_subtitle cs_fs_16 cs_gray3_color">Empower thousands of students by sharing
-                                your
-                                knowledge. Build courses, and grow your brand.</p>
-                            <ul class="cs_join_features cs_fs_14 cs_mp_0">
-                                <li><i class="ri-checkbox-circle-fill"></i>Industry-leading revenue share</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Easy course creation tools</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Reach global learners</li>
-                                <li><i class="ri-checkbox-circle-fill"></i>Dedicated instructor support</li>
-                            </ul>
-                        </div>
-                        <a href="login.html" class="cs_primary_btn cs_small_btn cs_join_btn cs_fs_16">
-                            <span class="cs_btn_text">Join Now</span>
-                            <span><i class="ri-arrow-right-s-line"></i></span>
-                        </a>
-                        <span class="cs_join_shape cs_warning_bg" aria-hidden="true"></span>
-                        <img class="cs_join_person" src="assets/img/instructor-img-2.png"
-                            alt="Smiling student holding notebooks">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Join Banner Section -->
     <!-- Start FAQ Section -->
     <section class="cs_faq_section cs_section_padding">
         <div class="container">
-            <div class="cs_section_heading_style_1 cs_center_column text-center mb-4" data-aos="fade-up">
-                <h2 class="cs_section_title cs_fs_42 cs_medium mb-2">Frequently Asked Questions</h2>
-                <p class="cs_section_subtitle mb-0">Everything you need to know about Lerntix. Find clarity in seconds.
+            <div class="cs_section_heading_style_1 cs_center_column text-center mb-5" data-aos="fade-up">
+                <h2 class="cs_pop_title cs_fs_42 cs_medium mb-2">
+                    Frequently Asked <span>Questions</span>
+                </h2>
+                <p class="cs_section_subtitle mb-0">
+                    Find answers to common questions about universities, courses, fees, and admissions.
                 </p>
             </div>
             <div class="cs_faq_wrap">
-                <div class="cs_faq_media">
-                    <div class="cs_help_card cs_radius_20">
-                        <div class="cs_help_thumbnail cs_radius_15">
-                            <img src="assets/img/help-desk-1.jpg" alt="Laptop showing the Lerntix help desk">
+                <!-- Left Side Card -->
+                <div class="cs_faq_media_col" data-aos="fade-right">
+                    <div class="cs_faq_left_wrapper">
+                        <div class="cs_help_card">
+                            <div class="cs_help_thumbnail">
+                                <img src="assets/img/help-desk-1.jpg" alt="DuraSetu student guidance">
+                                <!-- Doodle burst rays on top-right of screen -->
+                                <span class="cs_help_doodle_burst" aria-hidden="true">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                        <path d="M5 23L1 27M14 15L14 8M21 19L27 15" stroke="#f59e0b" stroke-width="2.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="cs_help_content">
+                                <h3 class="cs_help_title">
+                                    Need Help <span>Choosing?</span>
+                                </h3>
+
+                                <p class="cs_help_text">
+                                    Not sure which university or course is right for you? Our experts can help you
+                                    compare your options and make a confident decision.
+                                </p>
+                                <a href="contact.php" class="cs_help_expert_btn">
+                                    <i class="ri-user-line"></i>
+                                    <span>Talk to an Expert</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                            <!-- Warm peach curved bottom-right accent -->
+                            <div class="cs_help_corner_accent" aria-hidden="true"></div>
                         </div>
-                        <h3 class="cs_help_title cs_fs_24 cs_semibold">Still Need Help?</h3>
-                        <p class="cs_help_text cs_fs_14">Our support team is available 24/7 to guide you through your
-                            learning
-                            journey.</p>
-                        <a href="mailto:hello@lerntix.com" class="cs_help_mail cs_fs_12">
-                            <i class="ri-mail-line"></i>
-                            <span>hello@lerntix.com</span>
-                        </a>
+                        <!-- Dotted pattern at bottom-left -->
+                        <div class="cs_help_dots_grid" aria-hidden="true"></div>
                     </div>
-                    <span class="cs_faq_shape" aria-hidden="true">
-                        <img src="assets/img/wheel.svg" alt="Decorative shape">
-                    </span>
                 </div>
-                <div class="cs_accordians_style_1 position-relative z-1">
+
+                <!-- Right Side Accordion -->
+                <div class="cs_accordians_style_1 position-relative z-1" data-aos="fade-left">
+
+                    <!-- FAQ 01 -->
                     <div class="cs_accordian active">
                         <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">What makes Lerntix different from
-                                other LMS
-                                platforms?</h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
-                        </div>
-                        <div class="cs_accordian_body">
-                            Lerntix combines AI-driven learning paths, hands-on labs, and real-time progress analytics.
-                            Unlike
-                            traditional LMS, we offer adaptive quizzes, industry-verified certificates, and a vibrant
-                            mentor
-                            community — all in one intuitive dashboard.
-                        </div>
-                    </div>
-                    <div class="cs_accordian">
-                        <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">Are the certificates recognized by
-                                employers?
+                            <h3 class="cs_accordian_title mb-0">
+                                How can DuraSetu help me choose the right university?
                             </h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
+                            <span class="cs_accordian_toggle" aria-hidden="true">
+                                <i class="ri-add-line cs_toggle_plus"></i>
+                                <i class="ri-subtract-line cs_toggle_minus"></i>
+                            </span>
                         </div>
                         <div class="cs_accordian_body">
-                            Every certificate is co-signed by our industry partners and comes with a verifiable link you
-                            can add
-                            straight to your LinkedIn profile or résumé.
+                            DuraSetu helps you explore and compare online universities, courses, fees, eligibility, and
+                            admission options so you can make an informed choice.
                         </div>
                     </div>
+
+                    <!-- FAQ 02 -->
                     <div class="cs_accordian">
                         <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">Can I try Lerntix before subscribing?
+                            <h3 class="cs_accordian_title mb-0">
+                                What courses can I explore on DuraSetu?
                             </h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
+                            <span class="cs_accordian_toggle" aria-hidden="true">
+                                <i class="ri-add-line cs_toggle_plus"></i>
+                                <i class="ri-subtract-line cs_toggle_minus"></i>
+                            </span>
                         </div>
                         <div class="cs_accordian_body">
-                            Yes. Start with a 7-day free trial that unlocks full access to every course, lab, and quiz —
-                            no card
-                            required to begin.
+                            You can explore popular online programs such as MBA, MCA, M.Com, BBA, BCA, and B.Com along
+                            with other available specializations.
                         </div>
                     </div>
+
+                    <!-- FAQ 03 -->
                     <div class="cs_accordian">
                         <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">Are the courses self-paced or live?
+                            <h3 class="cs_accordian_title mb-0">
+                                Can I compare different universities and courses?
                             </h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
+                            <span class="cs_accordian_toggle" aria-hidden="true">
+                                <i class="ri-add-line cs_toggle_plus"></i>
+                                <i class="ri-subtract-line cs_toggle_minus"></i>
+                            </span>
                         </div>
                         <div class="cs_accordian_body">
-                            Both. Most tracks are self-paced with lifetime access, while selected cohorts run weekly
-                            live sessions
-                            and Q & A with the instructor.
+                            Yes. You can compare important details such as universities, courses, fees, duration,
+                            eligibility, and other admission information.
                         </div>
                     </div>
+
+                    <!-- FAQ 04 -->
                     <div class="cs_accordian">
                         <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">Is there a mobile app for offline
-                                learning?</h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
-                        </div>
-                        <div class="cs_accordian_body">
-                            Our iOS and Android apps let you download lessons, keep your progress in sync, and pick up
-                            right where
-                            you left off — even without a connection.
-                        </div>
-                    </div>
-                    <div class="cs_accordian">
-                        <div class="cs_accordian_head">
-                            <h3 class="cs_accordian_title cs_fs_18 cs_medium mb-0">Can teams or businesses use Lerntix?
+                            <h3 class="cs_accordian_title mb-0">
+                                Do you provide admission guidance?
                             </h3>
-                            <span class="cs_accordian_toggle" aria-hidden="true"><i class="ri-add-line"></i></span>
+                            <span class="cs_accordian_toggle" aria-hidden="true">
+                                <i class="ri-add-line cs_toggle_plus"></i>
+                                <i class="ri-subtract-line cs_toggle_minus"></i>
+                            </span>
                         </div>
                         <div class="cs_accordian_body">
-                            Lerntix for Business adds seat management, custom learning paths, and team analytics so you
-                            can upskill
-                            your whole organisation from one dashboard.
+                            Yes. Our guidance is designed to help you understand the application process, documentation,
+                            eligibility, and next steps toward admission.
                         </div>
                     </div>
+
+                    <!-- FAQ 05 -->
+                    <div class="cs_accordian">
+                        <div class="cs_accordian_head">
+                            <h3 class="cs_accordian_title mb-0">
+                                Is DuraSetu suitable for working professionals?
+                            </h3>
+                            <span class="cs_accordian_toggle" aria-hidden="true">
+                                <i class="ri-add-line cs_toggle_plus"></i>
+                                <i class="ri-subtract-line cs_toggle_minus"></i>
+                            </span>
+                        </div>
+                        <div class="cs_accordian_body">
+                            Absolutely. Online programs can provide flexible learning options for working professionals
+                            looking to upskill, change careers, or continue their education.
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
     </section>
     <!-- End FAQ Section -->
+
     <!-- Start Funfact Section -->
-    <section class="cs_funfact_section cs_section_padding">
-        <div class="container">
-            <div class="cs_section_heading_style_1 cs_center_column text-center mb-4" data-aos="fade-up">
-                <h2 class="cs_section_title cs_fs_42 cs_medium mb-2">Loved by Teams Around the World</h2>
-                <p class="cs_section_subtitle mb-0">From ambitious individuals to Fortune 500 companies, millions rely
-                    on
-                    Lerntix to upskill and grow.</p>
+    <section class="container cs_funfact_section">
+        <div class="cs_funfact_decorations" aria-hidden="true">
+            <!-- Left doodle: graduation cap & paper plane -->
+            <div class="cs_funfact_doodle_left">
+                <svg class="cs_doodle_grad_cap" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <path d="M35 15L60 27L35 39L10 27L35 15Z" stroke="rgba(255,255,255,0.22)" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 32V48C20 48 26 53 35 53C44 53 50 48 50 48V32" stroke="rgba(255,255,255,0.22)"
+                        stroke-width="2" stroke-linecap="round" />
+                    <path d="M55 29.5V47" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <div class="cs_doodle_plane_wrap">
+                    <svg class="cs_doodle_plane_trail" width="130" height="50" viewBox="0 0 130 50" fill="none">
+                        <path d="M5 45C35 48 70 42 110 15" stroke="rgba(255, 255, 255, 0.28)" stroke-width="1.8"
+                            stroke-dasharray="4 4" />
+                    </svg>
+                    <svg class="cs_doodle_plane" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M25 3L11 17M25 3L16 25L11 17M25 3L3 12L11 17" fill="#FFAA00" stroke="#FFAA00"
+                            stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
             </div>
+
+            <!-- Right doodle: open book -->
+            <div class="cs_funfact_doodle_right">
+                <svg class="cs_doodle_book" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                    <path
+                        d="M32.5 48C26 44 17 44 10 47V15C17 12 26 12 32.5 16C39 12 48 12 55 15V47C48 44 39 44 32.5 48Z"
+                        stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M32.5 16V48" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="position-relative z-1">
+            <!-- <div class="cs_funfact_header text-center" data-aos="fade-up">
+                <div class="cs_funfact_eyebrow">
+                    <span class="cs_eyebrow_line cs_left"></span>
+                    <span class="cs_eyebrow_text">OUR IMPACT</span>
+                    <span class="cs_eyebrow_line cs_right"></span>
+                </div>
+
+                <h2 class="cs_funfact_title">
+                    Trusted by Learners <span class="cs_funfact_highlight">Worldwid</span>
+                </h2>
+
+                <p class="cs_funfact_desc mb-0">
+                    From ambitious students to leading organizations, millions rely on DuraSetu to explore, compare, and
+                    choose the right online universities.
+                </p>
+            </div> -->
+
             <div class="cs_funfact_wrapper">
-                <div class="cs_funfact_style_1 cs_center_column cs_radius_20 cs_bg_filed text-center"
-                    data-src="assets/img/vector-bg-5.svg" data-aos="fade-up">
-                    <div class="cs_funfact_icon cs_radius_20">
-                        <img src="assets/img/icons/learner.svg" alt="Active learners">
+
+                <!-- Stat 1 -->
+                <div class="cs_impact_card" data-aos="fade-up">
+                    <div class="cs_impact_card_main">
+                        <div class="cs_impact_icon_wrap">
+                            <div class="cs_impact_icon_inner">
+                                <i class="ri-graduation-cap-fill"></i>
+                            </div>
+                        </div>
+
+                        <div class="cs_impact_text">
+                            <h3 class="cs_impact_number mb-0">
+                                <span class="odometer" data-count-to="06">06 </span>&nbsp;+
+                            </h3>
+                            <p class="cs_impact_label mb-0">Popular Online Courses</p>
+                        </div>
                     </div>
-                    <h3 class="cs_funfact_number cs_fs_64 cs_medium  mb-0">
-                        <span class="odometer" data-count-to="1.2"></span>M+
-                    </h3>
-                    <p class="cs_funfact_label mb-0">Active learners</p>
-                </div>
-                <div class="cs_funfact_style_1 cs_center_column cs_radius_20 cs_bg_filed text-center"
-                    data-src="assets/img/vector-bg-5.svg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cs_funfact_icon cs_radius_20">
-                        <img src="assets/img/icons/globe.svg" alt="Countries">
+
+                    <div class="cs_impact_bottom_line">
+                        <span class="cs_impact_gold_bar"></span>
                     </div>
-                    <h3 class="cs_funfact_number cs_fs_64 cs_medium  mb-0">
-                        <span class="odometer" data-count-to="150"></span>+
-                    </h3>
-                    <p class="cs_funfact_label mb-0">Countries</p>
                 </div>
-                <div class="cs_funfact_style_1 cs_center_column cs_radius_20 cs_bg_filed text-center"
-                    data-src="assets/img/vector-bg-5.svg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cs_funfact_icon cs_radius_20">
-                        <img src="assets/img/icons/clients.svg" alt="Enterprise clients">
+
+
+                <!-- Stat 2 -->
+                <div class="cs_impact_card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cs_impact_card_main">
+                        <div class="cs_impact_icon_wrap">
+                            <div class="cs_impact_icon_inner">
+                                <i class="ri-building-4-fill"></i>
+                            </div>
+                        </div>
+
+                        <div class="cs_impact_text">
+                            <h3 class="cs_impact_number mb-0">
+                                <span class="odometer" data-count-to="09">09</span>&nbsp;+
+                            </h3>
+                            <p class="cs_impact_label mb-0">Online Universities</p>
+                        </div>
                     </div>
-                    <h3 class="cs_funfact_number cs_fs_64 cs_medium  mb-0">
-                        <span class="odometer" data-count-to="8.2"></span>k+
-                    </h3>
-                    <p class="cs_funfact_label mb-0">Enterprise clients</p>
-                </div>
-                <div class="cs_funfact_style_1 cs_center_column cs_radius_20 cs_bg_filed text-center"
-                    data-src="assets/img/vector-bg-5.svg" data-aos="fade-up">
-                    <div class="cs_funfact_icon cs_radius_20">
-                        <img src="assets/img/icons/certified-badge.svg" alt="Certificates issued">
+
+                    <div class="cs_impact_bottom_line">
+                        <span class="cs_impact_gold_bar"></span>
                     </div>
-                    <h3 class="cs_funfact_number cs_fs_64 cs_medium  mb-0">
-                        <span class="odometer" data-count-to="450"></span>k+
-                    </h3>
-                    <p class="cs_funfact_label mb-0">Certificates issued</p>
                 </div>
+
+
+                <!-- Stat 3 -->
+                <div class="cs_impact_card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cs_impact_card_main">
+                        <div class="cs_impact_icon_wrap">
+                            <div class="cs_impact_icon_inner">
+                                <i class="ri-book-open-fill"></i>
+                            </div>
+                        </div>
+
+                        <div class="cs_impact_text">
+                            <h3 class="cs_impact_number mb-0">
+                                <span class="odometer" data-count-to="08">08</span>&nbsp;+
+                            </h3>
+                            <p class="cs_impact_label mb-0">Course Options</p>
+                        </div>
+                    </div>
+
+                    <div class="cs_impact_bottom_line">
+                        <span class="cs_impact_gold_bar"></span>
+                    </div>
+                </div>
+
+
+                <!-- Stat 4 -->
+                <div class="cs_impact_card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cs_impact_card_main">
+                        <div class="cs_impact_icon_wrap">
+                            <div class="cs_impact_icon_inner">
+                                <i class="ri-shield-check-fill"></i>
+                            </div>
+                        </div>
+
+                        <div class="cs_impact_text">
+                            <h3 class="cs_impact_number mb-0">
+                                <span class="odometer" data-count-to="100">100</span>%
+                            </h3>
+                            <p class="cs_impact_label mb-0">Guidance Focused</p>
+                        </div>
+                    </div>
+
+                    <div class="cs_impact_bottom_line">
+                        <span class="cs_impact_gold_bar"></span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
     <!-- End Funfact Section -->
+
+    <!-- Start Blog Section -->
+    <section class="cs_demo_section cs_section_padding">
+        <div class="container">
+            <div class="cs_pop_heading_row mb-4 mb-lg-5">
+                <div class="cs_pop_heading_text">
+                    <h2 class="cs_pop_title cs_fs_42 cs_medium mb-2">Latest <span>Career Insights</span></h2>
+                    <p class="cs_pop_subtitle cs_fs_16 cs_secondary_color mb-0"> Explore expert insights, university updates, course guides,
+                        and tips to make smarter decisions about your online education.</p>
+                </div>
+                <div class="cs_pop_heading_btn">
+                    <a href="courses.php" class="cs_primary_btn cs_radius_50">
+                        <span>View All Blogs</span>
+                        <span><i class="ri-arrow-right-line"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Slider -->
+            <div class="cs_demo_slider_wrap slider-section">
+
+                <div class="swiper"
+                    data-slides-per-view="responsive"
+                    data-gap="24"
+                    data-loop="1"
+                    data-xsm-slides="1"
+                    data-sm-slides="1"
+                    data-smd-slides="2"
+                    data-md-slides="2"
+                    data-lg-slides="3"
+                    data-xlg-slides="3"
+                    data-xxlg-slides="3">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($blogs as $blog): ?>
+                            <div class="swiper-slide">
+                                <article class="cs_course_style_4 cs_radius_20">
+                                    <div class="cs_course_thumbnail cs_radius_15">
+                                        <img
+                                            src="<?= htmlspecialchars($blog['image']); ?>"
+                                            alt="<?= htmlspecialchars($blog['title']); ?>"
+                                            loading="lazy">
+                                        <span class="cs_course_badge cs_primary_bg cs_fs_14 cs_white_color">
+                                            <?= htmlspecialchars($blog['category']); ?>
+                                        </span>
+
+                                    </div>
+                                    <h3 class="cs_course_title cs_fs_20 cs_semibold">
+                                        <a href="<?= htmlspecialchars($blog['url']); ?>">
+                                            <?= htmlspecialchars($blog['title']); ?>
+                                        </a>
+                                    </h3>
+                                    <p class="cs_course_text">
+                                        <?= htmlspecialchars($blog['description']); ?>
+                                    </p>
+                                    <a href="<?= htmlspecialchars($blog['url']); ?>"
+                                        class="blog-btn">
+                                        <span class="cs_login_text">
+                                            Read More
+                                        </span>
+                                        <span class="cs_user_icon">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </span>
+                                    </a>
+                                </article>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Section -->
 </main>
 
 

@@ -317,3 +317,103 @@ $popular_courses = [
         'url' => 'courses/online-bcom.php'
     ]
 ];
+
+
+$testimonials = [
+    [
+        'name' => 'Ananya Sharma',
+        'role' => 'Online MBA Student',
+        'image' => 'assets/img/user-girl.png',
+        'rating' => 5,
+        'message' => 'DuraSetu made it much easier to compare universities, fees, and course options. The guidance helped me choose an MBA that suited my career goals.'
+    ],
+    [
+        'name' => 'Rahul Verma',
+        'role' => 'Online MCA Student',
+        'image' => 'assets/img/user-boy.png',
+        'rating' => 5,
+        'message' => 'I was confused about which university to choose for my MCA. DuraSetu helped me understand the options and make a more confident decision.'
+    ],
+    [
+        'name' => 'Priya Mehta',
+        'role' => 'Online BBA Student',
+        'image' => 'assets/img/user-girl.png',
+        'rating' => 5,
+        'message' => 'The course comparison made my search simple. I could easily understand the duration, fees, and admission requirements before applying.'
+    ],
+    [
+        'name' => 'Aman Singh',
+        'role' => 'Online B.Com Student',
+        'image' => 'assets/img/user-boy.png',
+        'rating' => 5,
+        'message' => 'The counselling support was really helpful. I got clear information about the admission process and felt much more confident about my choice.'
+    ],
+    [
+        'name' => 'Neha Kapoor',
+        'role' => 'Online BCA Student',
+        'image' => 'assets/img/user-girl.png',
+        'rating' => 5,
+        'message' => 'DuraSetu helped me explore different online universities in one place. It saved me time and made the admission decision much easier.'
+    ],
+    [
+        'name' => 'Vikram Malhotra',
+        'role' => 'Online M.Com Student',
+        'image' => 'assets/img/user-boy.png',
+        'rating' => 5,
+        'message' => 'The expert guidance helped me understand which course would be better for my career plans. The entire process felt simple and organised.'
+    ]
+];
+
+$blogs = [
+
+    [
+        'title' => 'How to Choose the Right Online MBA Program',
+        'category' => 'Career Guide',
+        'image' => 'assets/img/blog/online-mba-guide.jpg',
+        'description' => 'Explore important factors like university, fees, specializations, flexibility, and career opportunities before choosing an MBA.',
+        'url' => 'blog-details.php?slug=online-mba-guide'
+    ],
+
+    [
+        'title' => 'Online MCA: Eligibility, Duration & Career Scope',
+        'category' => 'Course Guide',
+        'image' => 'assets/img/blog/online-mca-guide.jpg',
+        'description' => 'Understand eligibility, course structure, learning options, and career opportunities after completing an online MCA.',
+        'url' => 'blog-details.php?slug=online-mca-guide'
+    ],
+
+    [
+        'title' => 'Online Degree vs Regular Degree: What Should You Choose?',
+        'category' => 'University Guide',
+        'image' => 'assets/img/blog/online-degree-guide.jpg',
+        'description' => 'Compare flexibility, learning experience, career planning, and other important factors before selecting your degree.',
+        'url' => 'blog-details.php?slug=online-degree-vs-regular-degree'
+    ],
+
+    // [
+    //     'title' => 'Is Online BBA a Good Choice After 12th?',
+    //     'category' => 'Student Guide',
+    //     'image' => 'assets/img/blog/online-bba-guide.jpg',
+    //     'description' => 'Discover what students should consider when choosing an online BBA and planning their future career.',
+    //     'url' => 'blog-details.php?slug=online-bba-after-12th'
+    // ],
+
+    // [
+    //     'title' => 'Career Opportunities After an Online BCA',
+    //     'category' => 'Career Tips',
+    //     'image' => 'assets/img/blog/online-bca-guide.jpg',
+    //     'description' => 'Learn about possible career paths, skills, and opportunities after completing an online BCA.',
+    //     'url' => 'blog-details.php?slug=career-after-online-bca'
+    // ],
+
+    // [
+    //     'title' => 'Things to Check Before Applying to an Online University',
+    //     'category' => 'Admission Guide',
+    //     'image' => 'assets/img/blog/online-university-guide.jpg',
+    //     'description' => 'Know the important factors to check before selecting an online university and starting your admission journey.',
+    //     'url' => 'blog-details.php?slug=online-university-admission-guide'
+    // ],
+
+];
+
+?>
