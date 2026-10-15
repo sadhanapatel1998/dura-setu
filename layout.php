@@ -1,14 +1,27 @@
+<?php include('seo.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- <meta http-equiv="content-type" content="text/html;charset=utf-8" /> -->
-
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Dura Setu</title>
+
+    <title><?= htmlspecialchars($pageMeta['title']) ?></title>
+
+    <meta name="description"
+        content="<?= htmlspecialchars($pageMeta['description']) ?>">
+
+    <meta name="keywords"
+        content="<?= htmlspecialchars($pageMeta['keywords']) ?>">
+
+    <meta name="robots"
+        content="<?= htmlspecialchars($pageMeta['robots']) ?>">
+
+    <?php if (!empty($pageMeta['canonical'])): ?>
+        <link rel="canonical"
+            href="<?= htmlspecialchars($pageMeta['canonical']) ?>">
+    <?php endif; ?>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -24,9 +37,9 @@
     <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-<link
-  href="https://db.onlinewebfonts.com/c/bf7f60c66ad9f354c959a42e7e80b139?family=BreveNews-SemiBold"
-  rel="stylesheet">
+    <link
+        href="https://db.onlinewebfonts.com/c/bf7f60c66ad9f354c959a42e7e80b139?family=BreveNews-SemiBold"
+        rel="stylesheet">
 </head>
 
 <body>

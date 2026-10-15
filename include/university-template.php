@@ -12,7 +12,7 @@ if (!isset($univ) || empty($univ)) {
                 <h1 class="cs_page_header_title cs_fs_48 cs_bold"><?= htmlspecialchars($univ['name']); ?></h1>
                 <ul class="cs_breadcrumb cs_mp_0 cs_fs_16">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="universities.php">Universities</a></li>
+                    <!-- <li><a href="universities.php">Universities</a></li> -->
                     <li><?= htmlspecialchars($univ['short_name']); ?></li>
                 </ul>
             </div>
@@ -47,14 +47,14 @@ if (!isset($univ) || empty($univ)) {
 
                             <!-- CTA Buttons -->
                             <div class="cs_unid_hero_btns">
-                                <a href="#counselling" class="cs_unid_btn_primary">
-                                    <span>Get Free Counselling</span>
-                                    <i class="ri-arrow-right-line"></i>
-                                </a>
-                                <a href="#admission" class="cs_unid_btn_secondary">
+                                <a href="contact.php" class="cs_unid_btn_primary">
                                     <span>Apply Now</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
+                                <!-- <a href="#admission" class="cs_unid_btn_secondary">
+                                    <span>Apply Now</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> -->
                             </div>
                         </div>
 
@@ -562,8 +562,8 @@ if (!isset($univ) || empty($univ)) {
                     <p class="cs_unid_sec_subtitle mb-0">Find answers to common questions about <?= htmlspecialchars($univ['name']); ?>.</p>
                 </div>
                 <div>
-                    <a href="#counselling" class="cs_unid_btn_secondary">
-                        <span>View All FAQs</span>
+                    <a href="contact.php" class="cs_unid_btn_secondary">
+                        <span>Get Appointment</span>
                         <i class="ri-arrow-right-line"></i>
                     </a>
                 </div>

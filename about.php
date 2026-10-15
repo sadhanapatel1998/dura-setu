@@ -25,12 +25,12 @@ include("include/data.php");
                 <div class="col-lg-5" data-aos="fade-up">
                     <div class="cs_about_collage">
                         <div class="cs_about_thumb cs_about_thumb_1 cs_radius_20">
-                            <img src="https://lerntix-html.vercel.app/assets/img/about-img-2.jpg"
+                            <img src="assets/img/about-two.jpg"
                                 alt="Instructor teaching an online class from a library desk">
                             <span class="cs_about_shape cs_about_shape_2"></span>
                         </div>
                         <div class="cs_about_thumb cs_about_thumb_2 cs_radius_20">
-                            <img src="https://lerntix-html.vercel.app/assets/img/about-img-1.jpg" alt="Two students waving during a live video lesson">
+                            <img src="assets/img/about-one.jpg" alt="Two students waving during a live video lesson">
                         </div>
                         <div class="cs_about_experience cs_center_column cs_radius_10 text-center">
                             <h2 class="cs_fs_32 cs_semibold cs_primary_color mb-0">15+</h2>
@@ -121,7 +121,7 @@ include("include/data.php");
                             courses, eligibility, fees, approvals and admission options.
                         </p>
 
-                        <a href="universities.html" class="cs_feature_link">
+                        <a href="universities.php" class="cs_feature_link">
                             Explore Universities
                             <i class="ri-arrow-right-line"></i>
                         </a>
@@ -149,7 +149,7 @@ include("include/data.php");
                             and other important details before making your choice.
                         </p>
 
-                        <a href="compare.html" class="cs_feature_link">
+                        <a href="courses.php" class="cs_feature_link">
                             Compare Options
                             <i class="ri-arrow-right-line"></i>
                         </a>
@@ -177,7 +177,7 @@ include("include/data.php");
                             choose a course that fits your career goals.
                         </p>
 
-                        <a href="contact.html" class="cs_feature_link">
+                        <a href="contact.php" class="cs_feature_link">
                             Talk to an Expert
                             <i class="ri-arrow-right-line"></i>
                         </a>

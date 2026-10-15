@@ -49,13 +49,13 @@ include("include/university-data.php");
                                 <img src="<?= htmlspecialchars($uni['campus_img']); ?>" alt="<?= htmlspecialchars($uni['name']); ?>" style="width:100%; height:160px; object-fit:cover;">
                             </div>
 
-                            <h3 style="font-size:18px; font-weight:700; color:#0b1e38; margin-bottom:6px;">
+                            <h3 style="font-size:20px; font-weight:700; color:#0b1e38; margin-bottom:6px;">
                                 <a href="<?= htmlspecialchars($uni['slug']); ?>" style="color:#0b1e38; text-decoration:none;">
                                     <?= htmlspecialchars($uni['name']); ?>
                                 </a>
                             </h3>
 
-                            <p style="font-size:13px; color:#64748b; line-height:1.5; margin-bottom:14px; flex-grow:1;">
+                            <p style="font-size:15px; color:#64748b; line-height:1.5; margin-bottom:14px; flex-grow:1;">
                                 <?= htmlspecialchars(substr($uni['hero_desc'], 0, 115)) . '...'; ?>
                             </p>
 

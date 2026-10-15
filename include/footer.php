@@ -2,10 +2,10 @@
   <footer class="cs_footer_style_1">
     <div class="container">
       <div class="cs_footer_row">
-        
+
         <!-- Column 1: Brand & Contact -->
         <div class="cs_footer_col cs_footer_col_brand">
-                    <!-- <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
+          <!-- <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
             <img src="assets/img/logo/logo.png" alt="Dura Setu">
           </a> -->
           <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
@@ -53,7 +53,7 @@
             </div>
           </div>
 
-          <div class="cs_footer_social_wrap">
+          <!-- <div class="cs_footer_social_wrap">
             <span class="cs_footer_social_title">Follow Us On</span>
             <div class="cs_footer_social_links">
               <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
@@ -62,7 +62,7 @@
               <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
               <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Column 2: Explore -->
@@ -70,7 +70,6 @@
           <h3 class="cs_footer_col_title">Explore</h3>
           <span class="cs_footer_title_line"></span>
           <ul class="cs_footer_nav_list">
-            <li><a href="universities.php"><i class="ri-arrow-right-s-line"></i><span>Top Universities</span></a></li>
             <li><a href="online-mba.php"><i class="ri-arrow-right-s-line"></i><span>Online MBA</span></a></li>
             <li><a href="online-mca.php"><i class="ri-arrow-right-s-line"></i><span>Online MCA</span></a></li>
             <li><a href="online-bba.php"><i class="ri-arrow-right-s-line"></i><span>Online BBA</span></a></li>
@@ -82,29 +81,59 @@
 
         <!-- Column 3: Resources -->
         <div class="cs_footer_col cs_footer_col_nav">
-          <h3 class="cs_footer_col_title">Resources</h3>
+          <h3 class="cs_footer_col_title">Top Universities</h3>
           <span class="cs_footer_title_line"></span>
+
           <ul class="cs_footer_nav_list">
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Compare Universities</span></a></li>
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Scholarships</span></a></li>
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Career Guidance</span></a></li>
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Admission Guide</span></a></li>
-            <li><a href="blog.php"><i class="ri-arrow-right-s-line"></i><span>Latest Career Insights</span></a></li>
-            <li><a href="#faq"><i class="ri-arrow-right-s-line"></i><span>FAQs</span></a></li>
+            <li>
+              <a href="manipal-university-jaipur.php">
+                <i class="ri-arrow-right-s-line"></i>
+                <span>Manipal University Jaipur Online</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="nmims-online.php">
+                <i class="ri-arrow-right-s-line"></i>
+                <span>NMIMS Online University</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="ignou-online.php">
+                <i class="ri-arrow-right-s-line"></i>
+                <span>IGNOU Online University</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="jain-university-online.php">
+                <i class="ri-arrow-right-s-line"></i>
+                <span>Jain University Online</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="universities.php">
+                <i class="ri-arrow-right-s-line"></i>
+                <span>View All Universities</span>
+              </a>
+            </li>
           </ul>
         </div>
 
         <!-- Column 4: Company -->
         <div class="cs_footer_col cs_footer_col_nav">
-          <h3 class="cs_footer_col_title">Company</h3>
+          <h3 class="cs_footer_col_title">Quick Links</h3>
           <span class="cs_footer_title_line"></span>
           <ul class="cs_footer_nav_list">
+            <li><a href="/"><i class="ri-arrow-right-s-line"></i><span>Home</span></a></li>
             <li><a href="about.php"><i class="ri-arrow-right-s-line"></i><span>About DuraSetu</span></a></li>
+            <li><a href="blogs.php"><i class="ri-arrow-right-s-line"></i><span>Blogs</span></a></li>
             <li><a href="contact.php"><i class="ri-arrow-right-s-line"></i><span>Contact Us</span></a></li>
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Careers</span></a></li>
-            <li><a href="#"><i class="ri-arrow-right-s-line"></i><span>Become a Partner</span></a></li>
-            <li><a href="privacy-policy.php"><i class="ri-arrow-right-s-line"></i><span>Privacy Policy</span></a></li>
-            <li><a href="terms-condition.php"><i class="ri-arrow-right-s-line"></i><span>Terms of Service</span></a></li>
+            <li><a href="courses.php"><i class="ri-arrow-right-s-line"></i><span>View All Courses</span></a>
+            </li>
+
           </ul>
         </div>
 
@@ -150,11 +179,21 @@
       <div class="cs_footer_bottom">
         <p class="cs_footer_copyright mb-0">
           © 2026 DuraSetu. All rights reserved.
+          <span class="ms-2">|</span>
+          Designed &amp; Developed by
+          <a href="https://hoverbusinessservices.com/" class="cs_footer_developer_link" target="_blank">Hover Business Services LLP</a>
         </p>
         <div class="cs_footer_bottom_links">
-          <a href="privacy-policy.php">Privacy Policy</a>
-          <span class="cs_footer_bsep">|</span>
-          <a href="terms-condition.php">Terms of Service</a>
+          <div class="cs_footer_social_wrap">
+            <span class="cs_footer_social_title">Follow Us On</span>
+            <div class="cs_footer_social_links">
+              <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
