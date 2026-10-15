@@ -157,7 +157,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'yellow',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/manipal-university-jaipur.php'
+        'url' => 'manipal-university-jaipur.php'
     ],
     [
         'name' => 'NMIMS Online University',
@@ -168,7 +168,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'blue',
         'courses' => ['MBA', 'MCA', 'BBA', 'B.Com'],
-        'url' => 'university/nmims-online.php'
+        'url' => 'nmims-online.php'
     ],
     [
         'name' => 'IGNOU Online University',
@@ -179,7 +179,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'teal',
         'courses' => ['MBA', 'MCA', 'BCA', 'BA'],
-        'url' => 'university/ignou-online.php'
+        'url' => 'ignou-online.php'
     ],
     [
         'name' => 'Jain University Online',
@@ -190,7 +190,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'purple',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/jain-university-online.php'
+        'url' => 'jain-university-online.php'
     ],
     [
         'name' => 'Online Lovely Professional University',
@@ -201,7 +201,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'blue',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/lpu-online.php'
+        'url' => 'lpu-online.php'
     ],
     [
         'name' => 'VIT Online University',
@@ -212,7 +212,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'yellow',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/vit-online.php'
+        'url' => 'vit-online.php'
     ],
     [
         'name' => 'Uttaranchal University Online',
@@ -223,7 +223,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'teal',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/uttaranchal-university-online.php'
+        'url' => 'uttaranchal-university-online.php'
     ],
     [
         'name' => 'Sikkim Manipal University Online',
@@ -234,7 +234,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'orange',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/sikkim-manipal-university.php'
+        'url' => 'sikkim-manipal-online.php'
     ],
     [
         'name' => 'Sharda University Online',
@@ -245,7 +245,7 @@ $universities = [
         'fallback_logo' => 'assets/img/icons/graduation-cap.svg',
         'tag_theme' => 'blue',
         'courses' => ['MBA', 'MCA', 'BBA', 'BCA'],
-        'url' => 'university/sharda-university-online.php'
+        'url' => 'sharda-university-online.php'
     ]
 ];
 
