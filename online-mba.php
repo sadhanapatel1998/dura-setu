@@ -1,167 +1,798 @@
 <?php
 ob_start();
 include("include/data.php");
+
+// Dedicated, robust data set for top accredited MBA universities
+$mba_universities = [
+    [
+        'name' => 'Manipal University Jaipur Online',
+        'logo' => 'assets/img/university/manipal-logo-jaipur.png',
+        'alt' => 'Manipal University Jaipur Online',
+        'badge' => 'UGC-DEB',
+        'accreditation' => 'NAAC A+',
+        'duration' => '2 Years',
+        'fee' => '₹1,50,000 Total',
+        'emi' => '₹6,250/mo'
+    ],
+    [
+        'name' => 'NMIMS Online University',
+        'logo' => 'assets/img/university/nmims-logo.png',
+        'alt' => 'NMIMS Online University',
+        'badge' => 'UGC-DEB',
+        'accreditation' => 'NAAC A+',
+        'duration' => '2 Years',
+        'fee' => '₹1,68,000 Total',
+        'emi' => '₹7,000/mo'
+    ],
+    [
+        'name' => 'IGNOU Online University',
+        'logo' => 'assets/img/university/ignou-logo.png',
+        'alt' => 'IGNOU Online University',
+        'badge' => 'Central Govt',
+        'accreditation' => 'NAAC A++',
+        'duration' => '2 Years',
+        'fee' => '₹62,000 Total',
+        'emi' => '₹2,580/mo'
+    ],
+    [
+        'name' => 'Jain University Online',
+        'logo' => 'assets/img/university/jain-logo.png',
+        'alt' => 'Jain University Online',
+        'badge' => 'UGC-DEB',
+        'accreditation' => 'NAAC A++',
+        'duration' => '2 Years',
+        'fee' => '₹1,40,000 Total',
+        'emi' => '₹5,830/mo'
+    ],
+    [
+        'name' => 'Online Lovely Professional University',
+        'logo' => 'assets/img/university/lpu-logo.png',
+        'alt' => 'Online Lovely Professional University',
+        'badge' => 'UGC-DEB',
+        'accreditation' => 'NIRF Top 30',
+        'duration' => '2 Years',
+        'fee' => '₹1,32,000 Total',
+        'emi' => '₹5,500/mo'
+    ],
+    [
+        'name' => 'VIT Online University',
+        'logo' => 'assets/img/university/vit-logo.png',
+        'alt' => 'VIT Online University',
+        'badge' => 'UGC-DEB',
+        'accreditation' => 'NAAC A++',
+        'duration' => '2 Years',
+        'fee' => '₹1,55,000 Total',
+        'emi' => '₹6,450/mo'
+    ]
+];
 ?>
 
 <main>
     <!-- Start Page Header -->
     <section class="cs_page_header cs_bg_filed" data-src="assets/img/breadcrumb-bg.jpg">
         <div class="container">
-            <div class="cs_page_header_text">
-                <h1 class="cs_page_header_title cs_fs_64">About Us</h1>
+            <div class="cs_page_header_text" data-aos="fade-up">
+                <h1 class="cs_page_header_title cs_fs_48 cs_bold">Online MBA Degree</h1>
                 <ul class="cs_breadcrumb cs_mp_0 cs_fs_16">
                     <li><a href="index.php">Home</a></li>
-                    <li>About Us</li>
+                    <li><a href="courses.php">Programs</a></li>
+                    <li>Online MBA</li>
                 </ul>
             </div>
         </div>
     </section>
     <!-- End Page Header -->
 
-    <!-- Start Course Details Section -->
-    <section class="cs_course_details_section cs_section_padding">
+    <!-- Start Sticky Navigation Tabs -->
+    <nav class="cs_course_sticky_nav" id="courseStickyNav">
         <div class="container">
-            <div class="row cs_gap_y_40">
-                <div class="col-lg-8">
-                    <!-- Start Course Intro -->
-                    <div class="cs_course_details_head">
-                        <h2 class="cs_course_details_title cs_fs_32 cs_semibold">UI/UX Design Pro (Figma + Adobe XD)
-                        </h2>
-                        <p class="cs_course_details_subtitle cs_fs_18 cs_secondary_color">Master industry‑leading tools,
-                            design systems, and user‑centered workflows. Build a stunning portfolio with hands-on
-                            projects & mentor feedback.</p>
-                        <ul class="cs_course_meta_list cs_mp_0 cs_fs_14">
-                            <li class="cs_course_meta_item cs_highlight">
-                                <i class="ri-git-branch-line"></i>
-                                <span>6 modules, 16 lessons</span>
-                            </li>
-                            <li class="cs_course_meta_item">
-                                <i class="ri-time-fill"></i>
-                                <span>28 hours on-demand</span>
-                            </li>
-                            <li class="cs_course_meta_item cs_reviews">
-                                <i class="ri-star-fill"></i>
-                                <span>4.8 (6,280)</span>
-                            </li>
-                            <li class="cs_course_meta_item">
-                                <i class="ri-group-3-line"></i>
-                                <span>12,450+ enrolled</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Course Intro -->
-                     
-                    <!-- Start What You'll Learn -->
-                    <div class="cs_course_details_block">
-                        <h2 class="cs_course_block_title cs_fs_24 cs_semibold">What you'll learn</h2>
-                        <ul class="cs_course_learn_list cs_mp_0">
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Create high-fidelity prototypes in Figma</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Master Adobe XD auto-animate & voice triggers</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Design systems & component libraries</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Usability testing & design handoff</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Real-world healthcare app case study</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>UX research & persona creation</span>
-                            </li>
-                        </ul>
-                        <h3 class="cs_course_block_subtitle cs_fs_20 cs_semibold">Description</h3>
-                        <p class="mb-0">This comprehensive UI/UX design course equips you with modern workflows using
-                            Figma and Adobe XD. Whether you're designing for telemedicine platforms, patient portals, or
-                            clinical dashboards — you'll gain hands-on skills. Includes downloadable assets, design
-                            challenges, and a final capstone project. Updated with latest design trends (2026).</p>
-                    </div>
-                    <!-- End What You'll Learn -->
+            <ul class="cs_course_nav_tabs cs_mp_0">
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#universities">Universities</a></li>
+                <li><a href="#specialisations">Specialisations</a></li>
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#syllabus">Syllabus</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Sticky Navigation Tabs -->
 
+    <!-- Start Overview Section -->
+    <section class="cs_mba_hero" id="overview">
+        <div class="container">
+            <div class="row align-items-center cs_gap_y_40">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="cs_mba_badge">
+                        <i class="ri-graduation-cap-line"></i> Postgraduate Degree Program
+                    </span>
+                    <h1 class="cs_mba_section_title">
+                        Master of Business Administration <span>(Online MBA)</span> 
+                    </h1>
+                    <p class="cs_mba_section_subtitle mb-0">
+                        An Online MBA is a 2-year UGC-DEB entitled master's degree program designed for working
+                        professionals and ambitious graduates. Gain industry-ready managerial competencies, learn
+                        from esteemed faculty, and elevate your career without putting your job on hold.
+                    </p>
+
+                    <div class="cs_mba_metrics_grid">
+                        <div class="cs_mba_metric_item">
+                            <div class="cs_mba_metric_icon">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <div class="cs_mba_metric_info">
+                                <h4>Duration</h4>
+                                <p>2 Years (4 Semesters)</p>
+                            </div>
+                        </div>
+
+                        <div class="cs_mba_metric_item">
+                            <div class="cs_mba_metric_icon">
+                                <i class="ri-computer-line"></i>
+                            </div>
+                            <div class="cs_mba_metric_info">
+                                <h4>Learning Mode</h4>
+                                <p>100% Online &amp; Self-Paced</p>
+                            </div>
+                        </div>
+
+                        <div class="cs_mba_metric_item">
+                            <div class="cs_mba_metric_icon">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            <div class="cs_mba_metric_info">
+                                <h4>Accreditation</h4>
+                                <p>UGC-DEB, AICTE, NAAC</p>
+                            </div>
+                        </div>
+
+                        <div class="cs_mba_metric_item">
+                            <div class="cs_mba_metric_icon">
+                                <i class="ri-user-star-line"></i>
+                            </div>
+                            <div class="cs_mba_metric_info">
+                                <h4>Eligibility</h4>
+                                <p>Graduation (Min 50%)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                        <a href="#counselling" class="cs_primary_btn">
+                            <span>Talk to an Expert</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="#universities" class="cs_secondary_btn">
+                            <span>Compare Universities</span>
+                            <i class="ri-arrow-down-line"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <!-- Start Course Purchase Card -->
-                    <aside class="cs_course_purchase_card cs_white_bg cs_radius_20" aria-label="Course purchase">
-                        <a href="https://www.youtube.com/embed/rRid6GCJtgc"
-                            class="cs_course_preview cs_video_open cs_radius_15" aria-label="Play course preview">
-                            <img src="assets/img/author-img-1.jpg" alt="UI/UX Design Pro (Figma + Adobe XD) preview">
-                            <span
-                                class="cs_course_badge cs_primary_bg cs_fs_12 cs_white_color cs_radius_50">Beginner</span>
-                            <span class="cs_play_btn">
-                                <i class="ri-play-large-fill"></i>
-                            </span>
-                        </a>
-                        <p class="cs_course_price mb-0">
-                            <span
-                                class="cs_price_new cs_fs_20 cs_semibold cs_primary_color cs_primary_font">$69.99</span>
-                            <del class="cs_price_old cs_fs_14 cs_secondary_color">$149.99</del>
-                        </p>
-                        <p class="cs_course_price_note">One-time purchase • Lifetime access</p>
-                        <button type="button" class="cs_primary_btn cs_purchase_btn addToCartBtn">
-                            <span>Add To Cart</span>
-                            <span><i class="ri-arrow-right-s-line"></i></span>
-                        </button>
-                        <a href="wishlist.html" class="cs_secondary_btn cs_purchase_btn">
-                            <span>Add to Wishlist</span>
-                            <span><i class="ri-arrow-right-s-line"></i></span>
-                        </a>
-                        <ul class="cs_course_feature_list cs_mp_0">
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Full lifetime access</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Downloadable resources (Figma file, XD kit)</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Accredited 12 CME credits</span>
-                            </li>
-                            <li>
-                                <img src="assets/img/icons/star-bullet.svg" alt="Star icon">
-                                <span>Private Slack community</span>
-                            </li>
-                        </ul>
-                        <span class="cs_course_guarantee cs_fs_14 cs_primary_color cs_radius_5">
-                            <i class="ri-refund-2-line"></i>
-                            <span>30-day money-back guarantee</span>
-                        </span>
-                        <ul class="cs_course_spec_list cs_mp_0">
-                            <li>
-                                <span>Students</span>
-                                <span>254</span>
-                            </li>
-                            <li>
-                                <span>Language</span>
-                                <span>English</span>
-                            </li>
-                            <li>
-                                <span>Level</span>
-                                <span>Beginner</span>
-                            </li>
-                        </ul>
-                    </aside>
-                    <!-- End Course Purchase Card -->
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="cs_mba_hero_media">
+                        <img src="assets/img/course/mba.jpg" alt="Online MBA Degree Program" class="cs_mba_hero_img" width="600" height="400" loading="eager">
+                        <div class="cs_mba_hero_pill cs_top_pill">
+                            <i class="ri-verified-badge-fill text-primary"></i>
+                            <span>UGC Entitled Degree</span>
+                        </div>
+                        <div class="cs_mba_hero_pill cs_bottom_pill">
+                            <i class="ri-line-chart-fill"></i>
+                            <span>Avg. 65% Career Growth</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Course Details Section -->
+    <!-- End Overview Section -->
+
+    <!-- Start Universities Section -->
+    <section class="cs_uni_section cs_section_padding cs_gray_bg" id="universities">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="cs_mba_badge">
+                    <i class="ri-building-line"></i> Top Accredited Institutions
+                </span>
+                <h2 class="cs_mba_section_title">Top Universities Offering Online MBA</h2>
+                <p class="cs_mba_section_subtitle mx-auto">
+                    Compare and choose from India's premier UGC-entitled universities offering recognized online MBA degrees.
+                </p>
+            </div>
+
+            <div class="cs_uni_grid">
+                <?php foreach ($mba_universities as $uni): ?>
+                    <div class="cs_uni_card" data-aos="fade-up">
+                        <div class="cs_uni_card_top">
+                            <div class="cs_uni_logo_box">
+                                <img src="<?= htmlspecialchars($uni['logo']); ?>" alt="<?= htmlspecialchars($uni['alt']); ?>" loading="lazy">
+                            </div>
+                            <span class="cs_uni_badge_top">
+                                <i class="ri-shield-check-fill"></i> <?= htmlspecialchars($uni['badge']); ?>
+                            </span>
+                        </div>
+                        
+                        <h3 class="cs_uni_name"><?= htmlspecialchars($uni['name']); ?></h3>
+                        
+                        <div class="cs_uni_meta">
+                            <span class="cs_uni_meta_pill"><i class="ri-award-line"></i> <?= htmlspecialchars($uni['accreditation']); ?></span>
+                            <span class="cs_uni_meta_pill"><i class="ri-time-line"></i> <?= htmlspecialchars($uni['duration']); ?></span>
+                            <span class="cs_uni_meta_pill"><i class="ri-global-line"></i> Online Mode</span>
+                        </div>
+
+                        <div class="cs_uni_fee_row">
+                            <div class="cs_uni_fee_text">
+                                <small>Starting Fees</small>
+                                <strong><?= htmlspecialchars($uni['fee']); ?></strong>
+                            </div>
+                            <a href="#counselling" class="cs_uni_btn">
+                                <span>Enquire</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <!-- End Universities Section -->
+
+    <!-- Start Popular MBA Specialisations (Exact Reference Layout) -->
+    <section class="cs_spec_section" id="specialisations">
+        <div class="container">
+            <div data-aos="fade-up">
+                <span class="cs_mba_badge">
+                    <i class="ri-graduation-cap-line"></i> CHOOSE YOUR INTEREST
+                </span>
+                <h2 class="cs_mba_section_title">Popular MBA Specialisations</h2>
+            </div>
+
+            <div class="cs_spec_grid mt-4">
+                <!-- Card 1: Finance -->
+                <div class="cs_spec_card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="cs_spec_card_top">
+                        <div class="cs_spec_icon cs_spec_blue">
+                            <i class="ri-bar-chart-2-fill"></i>
+                        </div>
+                        <span class="cs_spec_arrow">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </div>
+                    <h3 class="cs_spec_title">Finance</h3>
+                    <p class="cs_spec_desc">Build expertise in financial management and analysis.</p>
+                </div>
+
+                <!-- Card 2: Marketing -->
+                <div class="cs_spec_card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cs_spec_card_top">
+                        <div class="cs_spec_icon cs_spec_orange">
+                            <i class="ri-megaphone-fill"></i>
+                        </div>
+                        <span class="cs_spec_arrow">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </div>
+                    <h3 class="cs_spec_title">Marketing</h3>
+                    <p class="cs_spec_desc">Learn modern marketing, branding and customer strategy.</p>
+                </div>
+
+                <!-- Card 3: Human Resources -->
+                <div class="cs_spec_card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cs_spec_card_top">
+                        <div class="cs_spec_icon cs_spec_purple">
+                            <i class="ri-group-fill"></i>
+                        </div>
+                        <span class="cs_spec_arrow">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </div>
+                    <h3 class="cs_spec_title">Human Resources</h3>
+                    <p class="cs_spec_desc">Develop skills in people and organisational management.</p>
+                </div>
+
+                <!-- Card 4: International Business -->
+                <div class="cs_spec_card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cs_spec_card_top">
+                        <div class="cs_spec_icon cs_spec_green">
+                            <i class="ri-global-line"></i>
+                        </div>
+                        <span class="cs_spec_arrow">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </div>
+                    <h3 class="cs_spec_title">International Business</h3>
+                    <p class="cs_spec_desc">Understand global markets and international operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Popular MBA Specialisations -->
+
+    <!-- Start Fees & Eligibility Cards (Exact Reference Layout) -->
+    <section class="cs_fees_eligibility_section" id="fees">
+        <div class="container">
+            <div class="cs_two_cards_grid">
+                <!-- Card 1: Fees -->
+                <div class="cs_highlight_card cs_card_fees" data-aos="fade-right">
+                    <div class="cs_highlight_icon_box">
+                        <i class="ri-wallet-3-line"></i>
+                    </div>
+                    <div class="cs_highlight_content">
+                        <span class="cs_highlight_badge">
+                            <i class="ri-coin-line"></i> COURSE FEES
+                        </span>
+                        <h3 class="cs_highlight_title">Understand Online MBA Fees</h3>
+                        <p class="cs_highlight_desc">
+                            Fees vary by university, specialisation and payment structure. Compare fees and find the best option for your budget.
+                        </p>
+                        <a href="#universities" class="cs_highlight_link">
+                            Compare University Fees <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Eligibility -->
+                <div class="cs_highlight_card cs_card_eligibility" id="eligibility" data-aos="fade-left">
+                    <div class="cs_highlight_icon_box">
+                        <i class="ri-file-user-line"></i>
+                    </div>
+                    <div class="cs_highlight_content">
+                        <span class="cs_highlight_badge">
+                            <i class="ri-graduation-cap-line"></i> ELIGIBILITY
+                        </span>
+                        <h3 class="cs_highlight_title">Who Can Apply?</h3>
+                        <p class="cs_highlight_desc">
+                            Graduates from a recognised university are eligible. Some universities may have additional criteria. Check the exact requirements before applying.
+                        </p>
+                        <a href="#counselling" class="cs_highlight_link">
+                            Check Eligibility <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Fees & Eligibility Cards -->
+
+    <!-- Start Admission Process ("How to Get Started?") (Exact Reference Layout) -->
+    <section class="cs_admission_process_section" id="admission-process">
+        <div class="container">
+            <div data-aos="fade-up">
+                <span class="cs_mba_badge">
+                    <i class="ri-graduation-cap-line"></i> ADMISSION PROCESS
+                </span>
+                <h2 class="cs_mba_section_title">How to Get Started?</h2>
+                <p class="cs_mba_section_subtitle">
+                    A simple process to help you move from exploration to admission with expert guidance.
+                </p>
+            </div>
+
+            <div class="cs_admission_steps_row mt-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- Step 01 -->
+                <div class="cs_admission_step_item">
+                    <div class="cs_admission_step_icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    <div class="cs_admission_step_content">
+                        <span class="cs_admission_step_num">01</span>
+                        <h4 class="cs_admission_step_title">Explore</h4>
+                        <p class="cs_admission_step_desc">Explore online MBA universities and courses.</p>
+                    </div>
+                </div>
+
+                <div class="cs_admission_step_arrow">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="cs_admission_step_item">
+                    <div class="cs_admission_step_icon">
+                        <i class="ri-scales-3-line"></i>
+                    </div>
+                    <div class="cs_admission_step_content">
+                        <span class="cs_admission_step_num">02</span>
+                        <h4 class="cs_admission_step_title">Compare</h4>
+                        <p class="cs_admission_step_desc">Compare fees, duration and specialisations.</p>
+                    </div>
+                </div>
+
+                <div class="cs_admission_step_arrow">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="cs_admission_step_item">
+                    <div class="cs_admission_step_icon">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+                    <div class="cs_admission_step_content">
+                        <span class="cs_admission_step_num">03</span>
+                        <h4 class="cs_admission_step_title">Get Guidance</h4>
+                        <p class="cs_admission_step_desc">Speak with a DuraSetu admission expert.</p>
+                    </div>
+                </div>
+
+                <div class="cs_admission_step_arrow">
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="cs_admission_step_item">
+                    <div class="cs_admission_step_icon">
+                        <i class="ri-checkbox-circle-line"></i>
+                    </div>
+                    <div class="cs_admission_step_content">
+                        <span class="cs_admission_step_num">04</span>
+                        <h4 class="cs_admission_step_title">Apply</h4>
+                        <p class="cs_admission_step_desc">Complete your application and start your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Admission Process -->
+
+    <!-- Start Syllabus Section -->
+    <section class="cs_section_padding" id="syllabus">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="cs_mba_badge">
+                    <i class="ri-book-open-line"></i> CURRICULUM &amp; MODULES
+                </span>
+                <h2 class="cs_mba_section_title">Online MBA Syllabus Overview</h2>
+                <p class="cs_mba_section_subtitle mx-auto">
+                    A comprehensive 4-semester curriculum balancing core business foundations with advanced specialisation subjects.
+                </p>
+            </div>
+
+            <div class="cs_syllabus_grid" data-aos="fade-up">
+                <!-- Semester 1 -->
+                <div class="cs_syllabus_card active">
+                    <div class="cs_syllabus_head">
+                        <h4>Semester 1: Management Foundations</h4>
+                        <span>5 Core Subjects</span>
+                    </div>
+                    <div class="cs_syllabus_body">
+                        <ul class="cs_syllabus_list">
+                            <li><i class="ri-checkbox-circle-fill"></i> Principles of Management &amp; Organisational Behaviour</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Managerial Economics</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Financial Accounting &amp; Reporting</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Marketing Management &amp; Consumer Insights</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Business Communication &amp; Soft Skills</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 2 -->
+                <div class="cs_syllabus_card active">
+                    <div class="cs_syllabus_head">
+                        <h4>Semester 2: Core Business Operations</h4>
+                        <span>5 Core Subjects</span>
+                    </div>
+                    <div class="cs_syllabus_body">
+                        <ul class="cs_syllabus_list">
+                            <li><i class="ri-checkbox-circle-fill"></i> Corporate Finance &amp; Valuation</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Human Resource Management</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Operations &amp; Supply Chain Management</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Business Analytics &amp; Quantitative Methods</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Legal Aspects of Business &amp; Ethics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 3 -->
+                <div class="cs_syllabus_card active">
+                    <div class="cs_syllabus_head">
+                        <h4>Semester 3: Specialisation Electives</h4>
+                        <span>Electives + Project</span>
+                    </div>
+                    <div class="cs_syllabus_body">
+                        <ul class="cs_syllabus_list">
+                            <li><i class="ri-checkbox-circle-fill"></i> Strategic Management</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Specialisation Elective I (Domain Specific)</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Specialisation Elective II (Domain Specific)</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Enterprise Resource Planning (ERP)</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Industry Internship / Capstone Project Prep</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Semester 4 -->
+                <div class="cs_syllabus_card active">
+                    <div class="cs_syllabus_head">
+                        <h4>Semester 4: Strategy &amp; Capstone Project</h4>
+                        <span>Advanced Electives + Dissertation</span>
+                    </div>
+                    <div class="cs_syllabus_body">
+                        <ul class="cs_syllabus_list">
+                            <li><i class="ri-checkbox-circle-fill"></i> International Business &amp; Global Trade</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Entrepreneurship, Innovation &amp; Startups</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Specialisation Elective III</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Business Leadership &amp; Change Management</li>
+                            <li><i class="ri-checkbox-circle-fill"></i> Final Master's Dissertation / Capstone Viva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Syllabus Section -->
+
+    <!-- Start Career Scope Section (Exact Reference Layout) -->
+    <section class="cs_career_scope_section" id="career">
+        <div class="container">
+            <div class="cs_career_grid_wrap">
+                <!-- Left text column -->
+                <div data-aos="fade-right">
+                    <span class="cs_mba_badge">
+                        <i class="ri-graduation-cap-line"></i> CAREER SCOPE
+                    </span>
+                    <h2 class="cs_mba_section_title">
+                        Career Opportunities After Online MBA
+                    </h2>
+                    <p class="cs_mba_section_subtitle">
+                        An Online MBA can open doors to a wide range of career opportunities across industries and business functions.
+                    </p>
+                    <a href="#counselling" class="cs_career_btn">
+                        <span>Explore Career Insights</span>
+                        <span class="cs_career_btn_circle">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Right pills grid (3x2 grid matching image) -->
+                <div class="cs_career_pills_grid" data-aos="fade-left">
+                    <!-- Pill 1 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_blue">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Business Management</span>
+                    </div>
+
+                    <!-- Pill 2 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_chart">
+                            <i class="ri-bar-chart-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Finance</span>
+                    </div>
+
+                    <!-- Pill 3 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_orange">
+                            <i class="ri-megaphone-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Marketing</span>
+                    </div>
+
+                    <!-- Pill 4 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_yellow">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Human Resources</span>
+                    </div>
+
+                    <!-- Pill 5 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_red">
+                            <i class="ri-settings-4-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Operations</span>
+                    </div>
+
+                    <!-- Pill 6 -->
+                    <div class="cs_career_pill">
+                        <div class="cs_career_pill_icon cs_cp_green">
+                            <i class="ri-lightbulb-line"></i>
+                        </div>
+                        <span class="cs_career_pill_text">Entrepreneurship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Career Scope Section -->
+
+    <!-- Start Frequently Asked Questions (Exact Reference Layout) -->
+    <section class="cs_mba_faq_section" id="faqs">
+        <div class="container">
+            <div class="cs_faq_head_row" data-aos="fade-up">
+                <div>
+                    <span class="cs_mba_badge">
+                        <i class="ri-questionnaire-line"></i> FAQ
+                    </span>
+                    <h2 class="cs_mba_section_title mb-2">Frequently Asked Questions</h2>
+                    <p class="cs_mba_section_subtitle mb-0">
+                        Find answers to common questions about Online MBA programs, eligibility, fees and admission.
+                    </p>
+                </div>
+                <div>
+                    <a href="#counselling" class="cs_faq_view_all">
+                        View All FAQs <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2x2 Accordion Grid -->
+            <div class="cs_faq_2col_grid mt-4" data-aos="fade-up">
+                <!-- Column 1 -->
+                <div>
+                    <!-- FAQ 1 -->
+                    <div class="cs_faq_accordion_item active">
+                        <div class="cs_faq_accordion_head">
+                            <h4 class="cs_faq_question">What is an Online MBA?</h4>
+                            <span class="cs_faq_toggle_icon"><i class="ri-add-line"></i></span>
+                        </div>
+                        <div class="cs_faq_accordion_body">
+                            An Online MBA is a master's level management degree delivered via interactive digital platforms with recorded lectures, live sessions, case studies, and virtual exams. When pursued from a UGC-DEB recognized university, it holds equal statutory value to an on-campus MBA.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="cs_faq_accordion_item">
+                        <div class="cs_faq_accordion_head">
+                            <h4 class="cs_faq_question">How long does an Online MBA take?</h4>
+                            <span class="cs_faq_toggle_icon"><i class="ri-add-line"></i></span>
+                        </div>
+                        <div class="cs_faq_accordion_body">
+                            The standard duration is 2 years divided into 4 semesters. Many universities also allow a flexible completion period of up to 4 years to accommodate busy work schedules.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <!-- FAQ 3 -->
+                    <div class="cs_faq_accordion_item">
+                        <div class="cs_faq_accordion_head">
+                            <h4 class="cs_faq_question">Can working professionals pursue an Online MBA?</h4>
+                            <span class="cs_faq_toggle_icon"><i class="ri-add-line"></i></span>
+                        </div>
+                        <div class="cs_faq_accordion_body">
+                            Yes, Online MBA programs are tailored specifically for working executives. They provide flexible weekend lectures, self-paced recorded sessions, and 24/7 access to digital LMS materials so you can balance study with work.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="cs_faq_accordion_item">
+                        <div class="cs_faq_accordion_head">
+                            <h4 class="cs_faq_question">How do I choose the right university?</h4>
+                            <span class="cs_faq_toggle_icon"><i class="ri-add-line"></i></span>
+                        </div>
+                        <div class="cs_faq_accordion_body">
+                            Evaluate universities based on their UGC-DEB entitlements, NAAC accreditation rating, curriculum modernness, faculty credentials, fee affordability, and placement support. DuraSetu helps you compare all these factors transparently.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Frequently Asked Questions -->
+
+    <!-- Start Need Help Choosing Banner (Exact Reference Layout) -->
+    <div class="container" id="counselling">
+        <div class="cs_need_help_banner" data-aos="fade-up">
+            <div class="cs_need_help_left">
+                <div class="cs_need_help_avatar">
+                    <i class="ri-customer-service-2-fill"></i>
+                </div>
+                <div>
+                    <h3 class="cs_need_help_title">Need Help Choosing the Right Online MBA?</h3>
+                    <p class="cs_need_help_subtitle">Get free and personalised guidance from our education counsellors.</p>
+                </div>
+            </div>
+            <div>
+                <a href="tel:+919876543210" class="cs_need_help_btn">
+                    <span>Talk to an Expert</span>
+                    <span class="cs_need_help_btn_circle">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Need Help Choosing Banner -->
 
 </main>
 
+<!-- In-page Navigation Tabs & Accordion Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Sticky Nav Smooth Scrolling with Header Offset
+    const navLinks = document.querySelectorAll(".cs_course_nav_tabs li a");
+    const navItems = document.querySelectorAll(".cs_course_nav_tabs li");
+    const sections = [];
 
+    navLinks.forEach(link => {
+        const targetId = link.getAttribute("href");
+        if (targetId && targetId.startsWith("#")) {
+            const section = document.querySelector(targetId);
+            if (section) {
+                sections.push({ id: targetId, el: section, link: link, item: link.parentElement });
+            }
+        }
+
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                const header = document.querySelector(".cs_site_header");
+                const stickyNav = document.getElementById("courseStickyNav");
+                const headerHeight = header ? header.offsetHeight : 0;
+                const navHeight = stickyNav ? stickyNav.offsetHeight : 50;
+                const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - (headerHeight + navHeight + 15);
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+
+                navItems.forEach(item => item.classList.remove("active"));
+                this.parentElement.classList.add("active");
+            }
+        });
+    });
+
+    // 2. ScrollSpy for Active Tab Highlighting
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".cs_site_header");
+        const stickyNav = document.getElementById("courseStickyNav");
+        const offset = (header ? header.offsetHeight : 0) + (stickyNav ? stickyNav.offsetHeight : 50) + 120;
+        const scrollPosition = window.pageYOffset + offset;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const sec = sections[i];
+            const top = sec.el.offsetTop;
+            const height = sec.el.offsetHeight;
+
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                navItems.forEach(item => item.classList.remove("active"));
+                sec.item.classList.add("active");
+
+                // Auto scroll tab container on mobile
+                const navTabsContainer = document.querySelector(".cs_course_nav_tabs");
+                if (navTabsContainer) {
+                    const activeTab = sec.item;
+                    const leftPos = activeTab.offsetLeft - (navTabsContainer.clientWidth / 2) + (activeTab.clientWidth / 2);
+                    navTabsContainer.scrollTo({ left: leftPos, behavior: "smooth" });
+                }
+                break;
+            }
+        }
+    });
+
+    // 3. FAQ Accordion Toggle Interaction
+    const faqHeads = document.querySelectorAll(".cs_faq_accordion_head");
+    faqHeads.forEach(head => {
+        head.addEventListener("click", function () {
+            const currentItem = this.parentElement;
+            const isActive = currentItem.classList.contains("active");
+
+            // Optional: close other items in the same column
+            const siblingItems = currentItem.parentElement.querySelectorAll(".cs_faq_accordion_item");
+            siblingItems.forEach(item => item.classList.remove("active"));
+
+            if (!isActive) {
+                currentItem.classList.add("active");
+            }
+        });
+    });
+
+    // 4. Syllabus Accordion Toggle
+    const syllabusHeads = document.querySelectorAll(".cs_syllabus_head");
+    syllabusHeads.forEach(head => {
+        head.addEventListener("click", function () {
+            this.parentElement.classList.toggle("active");
+        });
+    });
+});
+</script>
 
 <?php
 $content = ob_get_clean();

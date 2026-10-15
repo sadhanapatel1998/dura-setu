@@ -55,7 +55,7 @@
   /* --------------------------------------------
      Grays / Backgrounds
   -------------------------------------------- */
-  --gray-color: #FAFAF8;
+  --gray-color:   #fff6ec;;
   --gray2-color: #94A3B8;
   --gray3-color: #E8EEF8;
   --gray4-color: #FFF8EC;
@@ -8426,16 +8426,16 @@ input[type=number] {
 
 /* Link */
 .cs_feature_link {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 20px;
-    color: #f5a000;
-    /* font-family: "Manrope", sans-serif; */
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all .3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: #f5a000;
+  /* font-family: "Manrope", sans-serif; */
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .3s ease;
 }
 
 .cs_feature_link i {
@@ -23264,7 +23264,10 @@ button.cs_settings_2fa_option:hover {
   border-color: var(--primary-color);
   box-shadow: 0 2px 12px rgba(0, 38, 113, 0.08);
 }
-
+  .cs_universities_section .cs_uni_card {
+    background: #01204d;
+    padding: 0;
+  }
 /* ---- Responsive ---- */
 @media (max-width: 991px) {
   .cs_banner_slider_wrap .cs_arrows_style_1 {
@@ -23539,9 +23542,9 @@ button.cs_settings_2fa_option:hover {
 
 .cs_uni_logo_box {
   position: absolute;
-  bottom: 0px;
-  right: -1px;
-  width: 115px;
+    top: 0px;
+    right: -1px;
+    width: 135px;
   height: auto;
   background: #ffffff;
   border-radius: 5px;
@@ -24763,4 +24766,1087 @@ button.cs_settings_2fa_option:hover {
     min-width: 34px;
   }
 
+}
+
+
+/* ===================================================
+   Online MBA Page Styles
+====================================================== */
+
+/* Sticky Course Nav Tabs */
+.cs_course_sticky_nav {
+  position: sticky;
+  top: 80px;
+  z-index: 99;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.cs_course_nav_tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cs_course_nav_tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.cs_course_nav_tabs li a {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 50px;
+font-size: 16px;
+  font-weight: 600;
+  color: #4a5568;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cs_course_nav_tabs li a:hover {
+  color: #002671;
+  background: #f1f5f9;
+}
+
+.cs_course_nav_tabs li.active a {
+  color: #ffffff;
+  background: #002671;
+  box-shadow: 0 4px 12px rgba(0, 38, 113, 0.25);
+}
+
+/* Badge styling matching reference image */
+.cs_mba_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ff8a00;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.cs_mba_badge i {
+  font-size: 16px;
+}
+
+.cs_mba_section_title {
+  font-family: var(--heading-font), "BreveNews-SemiBold", serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #011835;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.cs_mba_section_subtitle {
+  color: #556987;
+    font-size: 16px;
+  line-height: 1.6;
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+/* Hero Section */
+.cs_mba_hero {
+  padding: 50px 0 60px;
+  background: #ffffff;
+}
+.cs_mba_hero .cs_secondary_btn{
+display: none;
+}
+.cs_mba_hero_media {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cs_mba_hero_img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 600 / 400;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(0, 38, 113, 0.12);
+  display: block;
+}
+
+.cs_mba_hero_pill {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs_mba_hero_pill.cs_top_pill {
+  top: 16px;
+  left: 16px;
+  color: #002671;
+}
+
+.cs_mba_hero_pill.cs_bottom_pill {
+  bottom: 16px;
+  right: 16px;
+  color: #ff8a00;
+}
+
+.cs_mba_metrics_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0 32px;
+}
+
+.cs_mba_metric_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.cs_mba_metric_icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 38, 113, 0.08);
+  color: #002671;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cs_mba_metric_info h4 {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 2px;
+  font-weight: 500;
+}
+
+.cs_mba_metric_info p {
+  font-size: 14.5px;
+  color: #0f172a;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Section: Specialisations (Exact reference layout) */
+.cs_spec_section {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.cs_spec_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.cs_spec_card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.cs_spec_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 38, 113, 0.09);
+  border-color: #cbd5e1;
+}
+
+.cs_spec_card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.cs_spec_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.cs_spec_icon.cs_spec_blue {
+  background: #e8f1fd;
+  color: #1e60d5;
+}
+
+.cs_spec_icon.cs_spec_orange {
+  background: #fff0e5;
+  color: #f97316;
+}
+
+.cs_spec_icon.cs_spec_purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.cs_spec_icon.cs_spec_green {
+  background: #e6f9ed;
+  color: #16a34a;
+}
+
+.cs_spec_arrow {
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.cs_spec_card:hover .cs_spec_arrow {
+  background: #002671;
+  color: #ffffff;
+  border-color: #002671;
+  transform: translateX(3px);
+}
+
+.cs_spec_title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.cs_spec_desc {
+    font-size: 16px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Section: Fees & Eligibility Cards (Exact reference layout) */
+.cs_fees_eligibility_section {
+  padding: 20px 0 60px;
+  background: #ffffff;
+}
+
+.cs_two_cards_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.cs_highlight_card {
+  border-radius: 20px;
+  padding: 34px 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs_highlight_card:hover {
+  transform: translateY(-3px);
+}
+
+.cs_highlight_card.cs_card_fees {
+  background: #fff9f0;
+  border: 1px solid #ffe7bc;
+  box-shadow: 0 4px 18px rgba(255, 138, 0, 0.05);
+}
+
+.cs_highlight_card.cs_card_eligibility {
+  background: #f0f6ff;
+  border: 1px solid #d2e4ff;
+  box-shadow: 0 4px 18px rgba(0, 68, 181, 0.05);
+}
+
+.cs_highlight_icon_box {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.cs_card_fees .cs_highlight_icon_box {
+  background: #ff9800;
+  box-shadow: 0 8px 18px rgba(255, 152, 0, 0.3);
+}
+
+.cs_card_eligibility .cs_highlight_icon_box {
+  background: #0052cc;
+  box-shadow: 0 8px 18px rgba(0, 82, 204, 0.3);
+}
+
+.cs_highlight_content {
+  flex: 1;
+}
+
+.cs_highlight_badge {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+.cs_card_fees .cs_highlight_badge {
+  color: #e67700;
+}
+
+.cs_card_eligibility .cs_highlight_badge {
+  color: #e67700;
+}
+
+.cs_highlight_title {
+  font-family: var(--heading-font), "BreveNews-SemiBold", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #011835;
+  margin-bottom: 10px;
+}
+
+.cs_highlight_desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #556987;
+  margin-bottom: 16px;
+}
+
+.cs_highlight_link {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0044b5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.cs_highlight_link:hover {
+  color: #ff8a00;
+  gap: 10px;
+}
+
+/* Section: Admission Process (Exact reference dark blue layout) */
+.cs_admission_process_section {
+  position: relative;
+  background: linear-gradient(135deg, #011835 0%, #032152 100%);
+  padding: 70px 0 75px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.cs_admission_process_section .cs_mba_section_title {
+  color: #ffffff;
+}
+
+.cs_admission_process_section .cs_mba_section_subtitle {
+  color: #cbd5e1;
+}
+
+.cs_admission_steps_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cs_admission_step_item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.cs_admission_step_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #002671;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cs_admission_step_content {
+  flex: 1;
+}
+
+.cs_admission_step_num {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff8a00;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.cs_admission_step_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cs_admission_step_desc {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #9cb3d3;
+    margin: 0;
+}
+
+.cs_admission_step_arrow {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* Section: Career Opportunities (Exact reference layout) */
+.cs_career_scope_section {
+    padding: 65px 0;
+    background: #eff7ff;
+}
+
+.cs_career_grid_wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 1.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.cs_career_btn {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background: #002671;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 38, 113, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cs_career_btn:hover {
+  background: #ff8a00;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 138, 0, 0.4);
+}
+
+.cs_career_btn_circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.cs_career_pills_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cs_career_pill {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.cs_career_pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 38, 113, 0.08);
+  border-color: #cbd5e1;
+}
+
+.cs_career_pill_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.cs_career_pill_icon.cs_cp_blue {
+  background: #e8f1fd;
+  color: #1e60d5;
+}
+
+.cs_career_pill_icon.cs_cp_chart {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.cs_career_pill_icon.cs_cp_orange {
+  background: #fff0e5;
+  color: #f97316;
+}
+
+.cs_career_pill_icon.cs_cp_yellow {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.cs_career_pill_icon.cs_cp_red {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.cs_career_pill_icon.cs_cp_green {
+  background: #e6f9ed;
+  color: #16a34a;
+}
+
+.cs_career_pill_text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Section: FAQ (Exact reference layout) */
+.cs_mba_faq_section {
+  padding: 65px 0 40px;
+  background: #ffffff;
+}
+
+.cs_faq_head_row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cs_faq_view_all {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0044b5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.cs_faq_view_all:hover {
+  color: #ff8a00;
+  gap: 10px;
+}
+
+.cs_faq_2col_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs_faq_accordion_item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.cs_faq_accordion_item.active {
+  border-color: #ff8a00;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.cs_faq_accordion_head {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cs_faq_question {
+    font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.cs_faq_toggle_icon {
+  font-size: 20px;
+  color: #0044b5;
+  transition: transform 0.25s ease;
+}
+
+.cs_faq_accordion_item.active .cs_faq_toggle_icon {
+  transform: rotate(45deg);
+  color: #ff8a00;
+}
+
+.cs_faq_accordion_body {
+  padding: 0 20px 18px;
+font-size: 16px; 
+ color: #64748b;
+  line-height: 1.6;
+  display: none;
+}
+
+.cs_faq_accordion_item.active .cs_faq_accordion_body {
+  display: block;
+}
+
+/* Section: Need Help Choosing Banner (Exact reference layout) */
+.cs_need_help_banner {
+  margin: 30px 0 70px;
+  background: linear-gradient(90deg, #fff7eb 0%, #fff2db 100%);
+  border: 1px solid #fed7aa;
+  border-radius: 22px;
+  padding: 24px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 6px 20px rgba(255, 138, 0, 0.06);
+}
+
+.cs_need_help_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cs_need_help_avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #ffeed3;
+  border: 2px solid #ffba66;
+  color: #002671;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.cs_need_help_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cs_need_help_subtitle {
+    font-size: 15px;
+  color: #556987;
+  margin: 0;
+}
+
+.cs_need_help_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ff8a00;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 10px 12px 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 138, 0, 0.35);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cs_need_help_btn:hover {
+  background: #ea580c;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 138, 0, 0.5);
+}
+
+.cs_need_help_btn_circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #ff8a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* University & Syllabus Sections */
+.cs_uni_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.cs_uni_card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.cs_uni_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 38, 113, 0.1);
+  border-color: #cbd5e1;
+}
+
+.cs_uni_card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  min-height: 52px;
+}
+
+.cs_uni_logo_box {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cs_uni_logo_box img {
+  max-height: 46px;
+  max-width: 145px;
+  object-fit: contain;
+  display: block;
+}
+
+.cs_uni_badge_top {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #eef4ff;
+  color: #002671;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 1px solid #d0e2ff;
+  white-space: nowrap;
+}
+
+.cs_uni_badge_top i {
+  color: #ff8a00;
+  font-size: 13px;
+}
+
+.cs_uni_name {
+  font-family: var(--heading-font), "BreveNews-SemiBold", serif;
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #011835;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.cs_uni_meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.cs_uni_meta_pill {
+  font-size: 13px;
+  background: #f8fafc;
+  color: #475569;
+  padding: 4px 11px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cs_uni_meta_pill i {
+  color: #002671;
+  font-size: 12px;
+}
+
+.cs_uni_fee_row {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cs_uni_fee_text small {
+  display: block;
+  font-size: 11.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.cs_uni_fee_text strong {
+  font-size: 16px;
+  color: #002671;
+  font-weight: 800;
+}
+
+.cs_uni_btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: #002671;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 38, 113, 0.2);
+}
+
+.cs_uni_btn:hover {
+  background: #ff8a00;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 138, 0, 0.35);
+}
+
+/* Syllabus Accordion */
+.cs_syllabus_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cs_syllabus_card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.cs_syllabus_card.active {
+  border-color: #002671;
+  box-shadow: 0 4px 18px rgba(0, 38, 113, 0.08);
+}
+
+.cs_syllabus_head {
+  padding: 18px 22px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cs_syllabus_head h4 {
+    font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.cs_syllabus_head span {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.cs_syllabus_body {
+  padding: 18px 22px;
+  display: none;
+}
+
+.cs_syllabus_card.active .cs_syllabus_body {
+  display: block;
+}
+
+.cs_syllabus_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cs_syllabus_list li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 16px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs_syllabus_list li:last-child {
+  border-bottom: none;
+}
+
+.cs_syllabus_list li i {
+  color: #ff8a00;
+  font-size: 16px;
+}
+
+/* Responsive Media Queries for Online MBA */
+@media (max-width: 1199px) {
+  .cs_spec_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs_career_grid_wrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cs_uni_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs_admission_steps_row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cs_admission_step_arrow {
+    display: none;
+  }
+
+  .cs_admission_step_item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_course_sticky_nav {
+    top: 68px;
+  }
+
+  .cs_two_cards_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_faq_2col_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_syllabus_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_career_pills_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs_need_help_banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .cs_need_help_btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_mba_section_title {
+    font-size: 26px;
+  }
+
+  .cs_spec_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_highlight_card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .cs_admission_step_item {
+    flex-basis: 100%;
+  }
+
+  .cs_career_pills_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_uni_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs_mba_metrics_grid {
+    grid-template-columns: 1fr;
+  }
 }

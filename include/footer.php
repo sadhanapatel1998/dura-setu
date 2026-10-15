@@ -70,13 +70,13 @@
           <h3 class="cs_footer_col_title">Explore</h3>
           <span class="cs_footer_title_line"></span>
           <ul class="cs_footer_nav_list">
-            <li><a href="courses.php"><i class="ri-arrow-right-s-line"></i><span>Top Universities</span></a></li>
-            <li><a href="courses/online-mba.php"><i class="ri-arrow-right-s-line"></i><span>Online MBA</span></a></li>
-            <li><a href="courses/online-mca.php"><i class="ri-arrow-right-s-line"></i><span>Online MCA</span></a></li>
-            <li><a href="courses/online-bba.php"><i class="ri-arrow-right-s-line"></i><span>Online BBA</span></a></li>
-            <li><a href="courses/online-bca.php"><i class="ri-arrow-right-s-line"></i><span>Online BCA</span></a></li>
-            <li><a href="courses/online-bcom.php"><i class="ri-arrow-right-s-line"></i><span>Online B.Com</span></a></li>
-            <li><a href="courses/online-mcom.php"><i class="ri-arrow-right-s-line"></i><span>Online M.Com</span></a></li>
+            <li><a href="universities.php"><i class="ri-arrow-right-s-line"></i><span>Top Universities</span></a></li>
+            <li><a href="online-mba.php"><i class="ri-arrow-right-s-line"></i><span>Online MBA</span></a></li>
+            <li><a href="online-mca.php"><i class="ri-arrow-right-s-line"></i><span>Online MCA</span></a></li>
+            <li><a href="online-bba.php"><i class="ri-arrow-right-s-line"></i><span>Online BBA</span></a></li>
+            <li><a href="online-bca.php"><i class="ri-arrow-right-s-line"></i><span>Online BCA</span></a></li>
+            <li><a href="online-bcom.php"><i class="ri-arrow-right-s-line"></i><span>Online B.Com</span></a></li>
+            <li><a href="online-mcom.php"><i class="ri-arrow-right-s-line"></i><span>Online M.Com</span></a></li>
           </ul>
         </div>
 

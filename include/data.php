@@ -57,7 +57,7 @@ $categories = [
         'image' => 'assets/img/category/mba.png',
         'fallback' => 'assets/img/category/cat-1.png',
         'color' => 'yellow',
-        'url' => 'courses/online-mba.php',
+        'url' => 'online-mba.php',
         'delay' => 0,
         'alt' => 'Online MBA'
     ],
@@ -69,7 +69,7 @@ $categories = [
         'image' => 'assets/img/category/mca.png',
         'fallback' => 'assets/img/category/cat-2.png',
         'color' => 'blue',
-        'url' => 'courses/online-mca.php',
+        'url' => 'online-mca.php',
         'delay' => 100,
         'alt' => 'Online MCA'
     ],
@@ -81,7 +81,7 @@ $categories = [
         'image' => 'assets/img/category/mcom.png',
         'fallback' => 'assets/img/category/cat-3.png',
         'color' => 'teal',
-        'url' => 'courses/online-mcom.php',
+        'url' => 'online-mcom.php',
         'delay' => 200,
         'alt' => 'Online M.Com'
     ],
@@ -93,7 +93,7 @@ $categories = [
         'image' => 'assets/img/category/bba.png',
         'fallback' => 'assets/img/category/cat-4.png',
         'color' => 'purple',
-        'url' => 'courses/online-bba.php',
+        'url' => 'online-bba.php',
         'delay' => 300,
         'alt' => 'Online BBA'
     ],
@@ -105,7 +105,7 @@ $categories = [
         'image' => 'assets/img/category/bca.png',
         'fallback' => 'assets/img/category/cat-5.png',
         'color' => 'skyblue',
-        'url' => 'courses/online-bca.php',
+        'url' => 'online-bca.php',
         'delay' => 0,
         'alt' => 'Online BCA'
     ],
@@ -117,7 +117,7 @@ $categories = [
         'image' => 'assets/img/category/bcom.png',
         'fallback' => 'assets/img/category/cat-6.png',
         'color' => 'pink',
-        'url' => 'courses/online-bcom.php',
+        'url' => 'online-bcom.php',
         'delay' => 100,
         'alt' => 'Online B.Com'
     ],
@@ -259,7 +259,7 @@ $popular_courses = [
         'icon' => 'ri-briefcase-4-line',
         'image' => 'assets/img/course/mba.jpg',
         'fallback_image' => 'assets/img/course-img-1.jpg',
-        'url' => 'courses/online-mba.php'
+        'url' => 'online-mba.php'
     ],
     [
         'title' => 'Online MCA',
@@ -270,7 +270,7 @@ $popular_courses = [
         'icon' => 'ri-code-s-slash-line',
         'image' => 'assets/img/course/mca.jpg',
         'fallback_image' => 'assets/img/course-img-2.jpg',
-        'url' => 'courses/online-mca.php'
+        'url' => 'online-mca.php'
     ],
     [
         'title' => 'Online M.Com',
@@ -281,7 +281,7 @@ $popular_courses = [
         'icon' => 'ri-line-chart-line',
         'image' => 'assets/img/course/mcom.jpg',
         'fallback_image' => 'assets/img/course-img-3.jpg',
-        'url' => 'courses/online-mcom.php'
+        'url' => 'online-mcom.php'
     ],
     [
         'title' => 'Online BBA',
@@ -292,7 +292,7 @@ $popular_courses = [
         'icon' => 'ri-building-4-line',
         'image' => 'assets/img/course/bba.jpg',
         'fallback_image' => 'assets/img/course-img-4.jpg',
-        'url' => 'courses/online-bba.php'
+        'url' => 'online-bba.php'
     ],
     [
         'title' => 'Online BCA',
@@ -303,7 +303,7 @@ $popular_courses = [
         'icon' => 'ri-terminal-box-line',
         'image' => 'assets/img/course/bca.jpg',
         'fallback_image' => 'assets/img/course-img-5.jpg',
-        'url' => 'courses/online-bca.php'
+        'url' => 'online-bca.php'
     ],
     [
         'title' => 'Online B.Com',
@@ -314,7 +314,7 @@ $popular_courses = [
         'icon' => 'ri-funds-line',
         'image' => 'assets/img/course/bcom.jpg',
         'fallback_image' => 'assets/img/course-img-6.jpg',
-        'url' => 'courses/online-bcom.php'
+        'url' => 'online-bcom.php'
     ]
 ];
 
