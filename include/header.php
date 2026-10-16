@@ -3,7 +3,7 @@ require_once __DIR__ . '/data-loader.php';
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 $allUnis = dura_get_all_universities();
-$universityPages = array_merge(['universities.php'], array_map(function($u) { return $u['slug']; }, $allUnis));
+$universityPages = array_merge(['universities.php', 'compare.php'], array_map(function($u) { return $u['slug']; }, $allUnis));
 
 $allCourses = dura_get_all_courses();
 $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) { return (!empty($c['url']) && $c['url'] !== '#') ? $c['url'] : null; }, $allCourses)));
