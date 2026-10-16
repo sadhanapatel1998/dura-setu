@@ -23269,6 +23269,17 @@ button.cs_settings_2fa_option:hover {
     padding: 0;
   }
 /* ---- Responsive ---- */
+@media (max-width: 1400px) {
+  .cs_universities_section {
+    margin: 0px 40px 0 !important;
+}
+}
+@media (max-width: 1300px) {
+  .cs_universities_section {
+    margin: 0px 60px 0 !important;
+}
+}
+
 @media (max-width: 991px) {
   .cs_banner_slider_wrap .cs_arrows_style_1 {
     display: none;

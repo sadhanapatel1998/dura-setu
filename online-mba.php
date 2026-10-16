@@ -2,8 +2,8 @@
 ob_start();
 include("include/data.php");
 
-// Dedicated, robust data set for top accredited MBA universities
-$mba_universities = [
+// Centralized data set for top accredited MBA universities
+$mba_universities = dura_get_course_universities_list('online-mba', [
     [
         'name' => 'Manipal University Jaipur Online',
         'logo' => 'assets/img/university/manipal-logo-jaipur.png',
@@ -12,7 +12,8 @@ $mba_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '2 Years',
         'fee' => '₹1,50,000 Total',
-        'emi' => '₹6,250/mo'
+        'emi' => '₹6,250/mo',
+        'url' => 'manipal-university-jaipur.php'
     ],
     [
         'name' => 'NMIMS Online University',
@@ -22,49 +23,11 @@ $mba_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '2 Years',
         'fee' => '₹1,68,000 Total',
-        'emi' => '₹7,000/mo'
-    ],
-    [
-        'name' => 'IGNOU Online University',
-        'logo' => 'assets/img/university/ignou-logo.png',
-        'alt' => 'IGNOU Online University',
-        'badge' => 'Central Govt',
-        'accreditation' => 'NAAC A++',
-        'duration' => '2 Years',
-        'fee' => '₹62,000 Total',
-        'emi' => '₹2,580/mo'
-    ],
-    [
-        'name' => 'Jain University Online',
-        'logo' => 'assets/img/university/jain-logo.png',
-        'alt' => 'Jain University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A++',
-        'duration' => '2 Years',
-        'fee' => '₹1,40,000 Total',
-        'emi' => '₹5,830/mo'
-    ],
-    [
-        'name' => 'Online Lovely Professional University',
-        'logo' => 'assets/img/university/lpu-logo.png',
-        'alt' => 'Online Lovely Professional University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NIRF Top 30',
-        'duration' => '2 Years',
-        'fee' => '₹1,32,000 Total',
-        'emi' => '₹5,500/mo'
-    ],
-    [
-        'name' => 'VIT Online University',
-        'logo' => 'assets/img/university/vit-logo.png',
-        'alt' => 'VIT Online University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A++',
-        'duration' => '2 Years',
-        'fee' => '₹1,55,000 Total',
-        'emi' => '₹6,450/mo'
+        'emi' => '₹7,000/mo',
+        'url' => 'nmims-online.php'
     ]
-];
+]);
+
 ?>
 
 <main>
@@ -214,7 +177,7 @@ $mba_universities = [
                             </span>
                         </div>
                         
-                        <h3 class="cs_uni_name"><?= htmlspecialchars($uni['name']); ?></h3>
+                        <h3 class="cs_uni_name"><a href="<?= htmlspecialchars($uni['url'] ?? 'universities.php'); ?>" style="color:inherit; text-decoration:none;"><?= htmlspecialchars($uni['name']); ?></a></h3>
                         
                         <div class="cs_uni_meta">
                             <span class="cs_uni_meta_pill"><i class="ri-award-line"></i> <?= htmlspecialchars($uni['accreditation']); ?></span>

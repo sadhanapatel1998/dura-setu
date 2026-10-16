@@ -1,7 +1,11 @@
 <?php
-// Centralized, robust data store for all university detail pages
+// Centralized data loader bridging JSON datasets with legacy array compatibility
+require_once __DIR__ . '/data-loader.php';
 
-$all_universities_data = [
+// If JSON loaded successfully, $all_universities_data is already populated.
+// If for any reason JSON loading yielded empty, fallback to legacy definition below:
+if (empty($all_universities_data)) {
+    $all_universities_data = [
     'manipal-jaipur' => [
         'slug' => 'manipal-university-jaipur.php',
         'name' => 'Manipal University Jaipur Online',
@@ -542,5 +546,6 @@ $all_universities_data = [
         ]
     ]
 ];
+}
 ?>
 

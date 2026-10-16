@@ -2,8 +2,8 @@
 ob_start();
 include("include/data.php");
 
-// Dedicated, robust data set for top accredited BCA universities
-$bca_universities = [
+// Centralized data set for top accredited BCA universities
+$bca_universities = dura_get_course_universities_list('online-bca', [
     [
         'name' => 'Manipal University Jaipur Online',
         'logo' => 'assets/img/university/manipal-logo-jaipur.png',
@@ -12,7 +12,8 @@ $bca_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '3 Years',
         'fee' => '₹1,26,000 Total',
-        'emi' => '₹3,500/mo'
+        'emi' => '₹3,500/mo',
+        'url' => 'manipal-university-jaipur.php'
     ],
     [
         'name' => 'Jain University Online',
@@ -22,49 +23,11 @@ $bca_universities = [
         'accreditation' => 'NAAC A++',
         'duration' => '3 Years',
         'fee' => '₹1,35,000 Total',
-        'emi' => '₹3,750/mo'
-    ],
-    [
-        'name' => 'Online Lovely Professional University',
-        'logo' => 'assets/img/university/lpu-logo.png',
-        'alt' => 'Online Lovely Professional University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NIRF Top 30',
-        'duration' => '3 Years',
-        'fee' => '₹1,15,000 Total',
-        'emi' => '₹3,200/mo'
-    ],
-    [
-        'name' => 'IGNOU Online University',
-        'logo' => 'assets/img/university/ignou-logo.png',
-        'alt' => 'IGNOU Online University',
-        'badge' => 'Central Govt',
-        'accreditation' => 'NAAC A++',
-        'duration' => '3 Years',
-        'fee' => '₹46,200 Total',
-        'emi' => '₹1,925/mo'
-    ],
-    [
-        'name' => 'VIT Online University',
-        'logo' => 'assets/img/university/vit-logo.png',
-        'alt' => 'VIT Online University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A++',
-        'duration' => '3 Years',
-        'fee' => '₹1,40,000 Total',
-        'emi' => '₹3,880/mo'
-    ],
-    [
-        'name' => 'Uttaranchal University Online',
-        'logo' => 'assets/img/university/uttaranchal-logo.png',
-        'alt' => 'Uttaranchal University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A+',
-        'duration' => '3 Years',
-        'fee' => '₹96,000 Total',
-        'emi' => '₹2,670/mo'
+        'emi' => '₹3,750/mo',
+        'url' => 'jain-university-online.php'
     ]
-];
+]);
+
 ?>
 
 <main>
@@ -212,7 +175,7 @@ $bca_universities = [
                             </span>
                         </div>
                         
-                        <h3 class="cs_uni_name"><?= htmlspecialchars($uni['name']); ?></h3>
+                        <h3 class="cs_uni_name"><a href="<?= htmlspecialchars($uni['url'] ?? 'universities.php'); ?>" style="color:inherit; text-decoration:none;"><?= htmlspecialchars($uni['name']); ?></a></h3>
                         
                         <div class="cs_uni_meta">
                             <span class="cs_uni_meta_pill"><i class="ri-award-line"></i> <?= htmlspecialchars($uni['accreditation']); ?></span>

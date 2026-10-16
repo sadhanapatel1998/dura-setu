@@ -228,22 +228,28 @@ if (!isset($univ) || empty($univ)) {
                 </div>
             </div>
 
-            <div class="cs_unid_course_grid">
-                <?php foreach ($univ['courses'] as $course): ?>
-                    <div class="cs_unid_course_card" data-aos="fade-up">
-                        <div class="cs_unid_course_icon <?= htmlspecialchars($course['theme']); ?>">
-                            <i class="<?= htmlspecialchars($course['icon']); ?>"></i>
+            <?php if (!empty($univ['courses'])): ?>
+                <div class="cs_unid_course_grid">
+                    <?php foreach ($univ['courses'] as $course): ?>
+                        <div class="cs_unid_course_card" data-aos="fade-up">
+                            <div class="cs_unid_course_icon <?= htmlspecialchars($course['theme']); ?>">
+                                <i class="<?= htmlspecialchars($course['icon']); ?>"></i>
+                            </div>
+                            <h3 class="cs_unid_course_name"><?= htmlspecialchars($course['name']); ?></h3>
+                            <span class="cs_unid_course_duration"><?= htmlspecialchars($course['duration']); ?></span>
+                            <div class="cs_unid_course_fee"><?= htmlspecialchars($course['fee']); ?></div>
+                            <a href="<?= htmlspecialchars($course['url']); ?>" class="cs_unid_course_btn">
+                                <span>View Course</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
                         </div>
-                        <h3 class="cs_unid_course_name"><?= htmlspecialchars($course['name']); ?></h3>
-                        <span class="cs_unid_course_duration"><?= htmlspecialchars($course['duration']); ?></span>
-                        <div class="cs_unid_course_fee"><?= htmlspecialchars($course['fee']); ?></div>
-                        <a href="<?= htmlspecialchars($course['url']); ?>" class="cs_unid_course_btn">
-                            <span>View Course</span>
-                            <i class="ri-arrow-right-line"></i>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?>
+                <div class="p-4 text-center bg-white rounded-3 border" data-aos="fade-up">
+                    <p class="text-muted mb-0">Course details for this university will be available soon. Please connect with our counsellors for the latest prospectus.</p>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
     <!-- End Section 2: Popular Online Courses -->
@@ -308,14 +314,20 @@ if (!isset($univ) || empty($univ)) {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($univ['fee_structure'] as $feeRow): ?>
+                            <?php if (!empty($univ['fee_structure'])): ?>
+                                <?php foreach ($univ['fee_structure'] as $feeRow): ?>
+                                    <tr>
+                                        <td><strong><?= htmlspecialchars($feeRow['program']); ?></strong></td>
+                                        <td><?= htmlspecialchars($feeRow['duration']); ?></td>
+                                        <td><strong><?= htmlspecialchars($feeRow['total']); ?></strong></td>
+                                        <td><?= htmlspecialchars($feeRow['emi']); ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
                                 <tr>
-                                    <td><strong><?= htmlspecialchars($feeRow['program']); ?></strong></td>
-                                    <td><?= htmlspecialchars($feeRow['duration']); ?></td>
-                                    <td><strong><?= htmlspecialchars($feeRow['total']); ?></strong></td>
-                                    <td><?= htmlspecialchars($feeRow['emi']); ?></td>
+                                    <td colspan="4" class="text-center text-muted py-4">Detailed fee schedule will be updated shortly. Please connect with our counselling team for the official fee breakdown.</td>
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>

@@ -1,27 +1,12 @@
 <?php
+require_once __DIR__ . '/data-loader.php';
 $currentPage = basename($_SERVER['PHP_SELF']);
 
-$universityPages = [
-    'manipal-university-jaipur.php',
-    'nmims-online.php',
-    'ignou-online.php',
-    'jain-university-online.php',
-    'lpu-online.php',
-    'vit-online.php',
-    'uttaranchal-university-online.php',
-    'sikkim-manipal-online.php',
-    'sharda-university-online.php'
-];
+$allUnis = dura_get_all_universities();
+$universityPages = array_merge(['universities.php'], array_map(function($u) { return $u['slug']; }, $allUnis));
 
-$coursePages = [
-    'courses.php',
-    'online-mba.php',
-    'online-mca.php',
-    'online-mcom.php',
-    'online-bba.php',
-    'online-bca.php',
-    'online-bcom.php'
-];
+$allCourses = dura_get_all_courses();
+$coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) { return (!empty($c['url']) && $c['url'] !== '#') ? $c['url'] : null; }, $allCourses)));
 ?>
 
 <!-- Start Header -->
@@ -71,63 +56,24 @@ $coursePages = [
                                 </li>
                                 <!-- Top Universities -->
                                 <li class="menu-item-has-children">
-                                    <a href="courses.php"
+                                    <a href="universities.php"
                                         class="<?= in_array($currentPage, $universityPages) ? 'active' : ''; ?>">
                                         Top Universities
                                     </a>
                                     <ul>
+                                        <?php 
+                                        $header_top_unis = array_slice($allUnis, 0, 9);
+                                        foreach ($header_top_unis as $u): ?>
+                                            <li>
+                                                <a href="<?= htmlspecialchars($u['slug']); ?>"
+                                                    class="<?= $currentPage == $u['slug'] ? 'active' : ''; ?>">
+                                                    <?= htmlspecialchars($u['name']); ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
                                         <li>
-                                            <a href="manipal-university-jaipur.php"
-                                                class="<?= $currentPage == 'manipal-university-jaipur.php' ? 'active' : ''; ?>">
-                                                Manipal University Jaipur Online
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="nmims-online.php"
-                                                class="<?= $currentPage == 'nmims-online.php' ? 'active' : ''; ?>">
-                                                NMIMS Online University
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="ignou-online.php"
-                                                class="<?= $currentPage == 'ignou-online.php' ? 'active' : ''; ?>">
-                                                IGNOU Online University
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="jain-university-online.php"
-                                                class="<?= $currentPage == 'jain-university-online.php' ? 'active' : ''; ?>">
-                                                Jain University Online
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="lpu-online.php"
-                                                class="<?= $currentPage == 'lpu-online.php' ? 'active' : ''; ?>">
-                                                Online Lovely Professional University
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="vit-online.php"
-                                                class="<?= $currentPage == 'vit-online.php' ? 'active' : ''; ?>">
-                                                VIT Online University
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="uttaranchal-university-online.php"
-                                                class="<?= $currentPage == 'uttaranchal-university-online.php' ? 'active' : ''; ?>">
-                                                Uttaranchal University Online
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="sikkim-manipal-online.php"
-                                                class="<?= $currentPage == 'sikkim-manipal-online.php' ? 'active' : ''; ?>">
-                                                Sikkim Manipal University Online
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="sharda-university-online.php"
-                                                class="<?= $currentPage == 'sharda-university-online.php' ? 'active' : ''; ?>">
-                                                Sharda University Online
+                                            <a href="universities.php" style="font-weight: 600; color: #f59e0b;">
+                                                View All Universities (<?= count($allUnis); ?>+) &rarr;
                                             </a>
                                         </li>
                                     </ul>
@@ -140,44 +86,24 @@ $coursePages = [
                                         Courses
                                     </a>
                                     <ul class="sub-menu">
+                                        <?php 
+                                        $header_courses = dura_get_popular_courses_list(6);
+                                        foreach ($header_courses as $c): ?>
+                                            <li>
+                                                <a href="<?= htmlspecialchars($c['url']); ?>"
+                                                    class="<?= $currentPage == $c['url'] ? 'active' : ''; ?>">
+                                                    <?= htmlspecialchars($c['title']); ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach; ?>
                                         <li>
-                                            <a href="online-mba.php"
-                                                class="<?= $currentPage == 'online-mba.php' ? 'active' : ''; ?>">
-                                                Online MBA
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="online-mca.php"
-                                                class="<?= $currentPage == 'online-mca.php' ? 'active' : ''; ?>">
-                                                Online MCA
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="online-mcom.php"
-                                                class="<?= $currentPage == 'online-mcom.php' ? 'active' : ''; ?>">
-                                                Online M.Com
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="online-bba.php"
-                                                class="<?= $currentPage == 'online-bba.php' ? 'active' : ''; ?>">
-                                                Online BBA
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="online-bca.php"
-                                                class="<?= $currentPage == 'online-bca.php' ? 'active' : ''; ?>">
-                                                Online BCA
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="online-bcom.php"
-                                                class="<?= $currentPage == 'online-bcom.php' ? 'active' : ''; ?>">
-                                                Online B.Com
+                                            <a href="courses.php" style="font-weight: 600; color: #f59e0b;">
+                                                View All Programs (<?= count($allCourses); ?>+) &rarr;
                                             </a>
                                         </li>
                                     </ul>
                                 </li>
+
 
                                 <!-- Scholarships -->
                                 <!--

@@ -2,8 +2,8 @@
 ob_start();
 include("include/data.php");
 
-// Dedicated, robust data set for top accredited B.Com universities
-$bcom_universities = [
+// Centralized data set for top accredited B.Com universities
+$bcom_universities = dura_get_course_universities_list('online-bcom', [
     [
         'name' => 'Manipal University Jaipur Online',
         'logo' => 'assets/img/university/manipal-logo-jaipur.png',
@@ -12,7 +12,8 @@ $bcom_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '3 Years',
         'fee' => '₹99,000 Total',
-        'emi' => '₹2,750/mo'
+        'emi' => '₹2,750/mo',
+        'url' => 'manipal-university-jaipur.php'
     ],
     [
         'name' => 'NMIMS Online University',
@@ -22,49 +23,11 @@ $bcom_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '3 Years',
         'fee' => '₹1,15,000 Total',
-        'emi' => '₹3,190/mo'
-    ],
-    [
-        'name' => 'Jain University Online',
-        'logo' => 'assets/img/university/jain-logo.png',
-        'alt' => 'Jain University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A++',
-        'duration' => '3 Years',
-        'fee' => '₹1,05,000 Total',
-        'emi' => '₹2,920/mo'
-    ],
-    [
-        'name' => 'IGNOU Online University',
-        'logo' => 'assets/img/university/ignou-logo.png',
-        'alt' => 'IGNOU Online University',
-        'badge' => 'Central Govt',
-        'accreditation' => 'NAAC A++',
-        'duration' => '3 Years',
-        'fee' => '₹16,500 Total',
-        'emi' => '₹690/mo'
-    ],
-    [
-        'name' => 'Online Lovely Professional University',
-        'logo' => 'assets/img/university/lpu-logo.png',
-        'alt' => 'Online Lovely Professional University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NIRF Top 30',
-        'duration' => '3 Years',
-        'fee' => '₹90,000 Total',
-        'emi' => '₹2,500/mo'
-    ],
-    [
-        'name' => 'Uttaranchal University Online',
-        'logo' => 'assets/img/university/uttaranchal-logo.png',
-        'alt' => 'Uttaranchal University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A+',
-        'duration' => '3 Years',
-        'fee' => '₹75,000 Total',
-        'emi' => '₹2,080/mo'
+        'emi' => '₹3,190/mo',
+        'url' => 'nmims-online.php'
     ]
-];
+]);
+
 ?>
 
 <main>
@@ -212,7 +175,7 @@ $bcom_universities = [
                             </span>
                         </div>
                         
-                        <h3 class="cs_uni_name"><?= htmlspecialchars($uni['name']); ?></h3>
+                        <h3 class="cs_uni_name"><a href="<?= htmlspecialchars($uni['url'] ?? 'universities.php'); ?>" style="color:inherit; text-decoration:none;"><?= htmlspecialchars($uni['name']); ?></a></h3>
                         
                         <div class="cs_uni_meta">
                             <span class="cs_uni_meta_pill"><i class="ri-award-line"></i> <?= htmlspecialchars($uni['accreditation']); ?></span>

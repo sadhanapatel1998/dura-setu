@@ -2,8 +2,8 @@
 ob_start();
 include("include/data.php");
 
-// Dedicated, robust data set for top accredited BBA universities
-$bba_universities = [
+// Centralized data set for top accredited BBA universities
+$bba_universities = dura_get_course_universities_list('online-bba', [
     [
         'name' => 'Manipal University Jaipur Online',
         'logo' => 'assets/img/university/manipal-logo-jaipur.png',
@@ -12,7 +12,8 @@ $bba_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '3 Years',
         'fee' => '₹1,26,000 Total',
-        'emi' => '₹3,500/mo'
+        'emi' => '₹3,500/mo',
+        'url' => 'manipal-university-jaipur.php'
     ],
     [
         'name' => 'NMIMS Online University',
@@ -22,49 +23,11 @@ $bba_universities = [
         'accreditation' => 'NAAC A+',
         'duration' => '3 Years',
         'fee' => '₹1,44,000 Total',
-        'emi' => '₹4,000/mo'
-    ],
-    [
-        'name' => 'Jain University Online',
-        'logo' => 'assets/img/university/jain-logo.png',
-        'alt' => 'Jain University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A++',
-        'duration' => '3 Years',
-        'fee' => '₹1,35,000 Total',
-        'emi' => '₹3,750/mo'
-    ],
-    [
-        'name' => 'Online Lovely Professional University',
-        'logo' => 'assets/img/university/lpu-logo.png',
-        'alt' => 'Online Lovely Professional University',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NIRF Top 30',
-        'duration' => '3 Years',
-        'fee' => '₹1,15,000 Total',
-        'emi' => '₹3,200/mo'
-    ],
-    [
-        'name' => 'Uttaranchal University Online',
-        'logo' => 'assets/img/university/uttaranchal-logo.png',
-        'alt' => 'Uttaranchal University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A+',
-        'duration' => '3 Years',
-        'fee' => '₹96,000 Total',
-        'emi' => '₹2,670/mo'
-    ],
-    [
-        'name' => 'Sikkim Manipal University Online',
-        'logo' => 'assets/img/university/sikkim-manipal-logo.png',
-        'alt' => 'Sikkim Manipal University Online',
-        'badge' => 'UGC-DEB',
-        'accreditation' => 'NAAC A+',
-        'duration' => '3 Years',
-        'fee' => '₹1,10,000 Total',
-        'emi' => '₹3,050/mo'
+        'emi' => '₹4,000/mo',
+        'url' => 'nmims-online.php'
     ]
-];
+]);
+
 ?>
 
 <main>
@@ -212,7 +175,7 @@ $bba_universities = [
                             </span>
                         </div>
                         
-                        <h3 class="cs_uni_name"><?= htmlspecialchars($uni['name']); ?></h3>
+                        <h3 class="cs_uni_name"><a href="<?= htmlspecialchars($uni['url'] ?? 'universities.php'); ?>" style="color:inherit; text-decoration:none;"><?= htmlspecialchars($uni['name']); ?></a></h3>
                         
                         <div class="cs_uni_meta">
                             <span class="cs_uni_meta_pill"><i class="ri-award-line"></i> <?= htmlspecialchars($uni['accreditation']); ?></span>

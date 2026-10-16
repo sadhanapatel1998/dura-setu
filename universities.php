@@ -32,9 +32,43 @@ include("include/university-data.php");
                 </p>
             </div>
 
-            <div class="row g-4">
-                <?php foreach ($all_universities_data as $key => $uni): ?>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="row align-items-center mb-4" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <!-- Filter Pills -->
+                    <div class="d-flex flex-wrap gap-2" id="uniFilterTabs">
+                        <button type="button" class="cs_cat_badge_pill active text-dark border-0" data-filter="all" style="cursor:pointer; background:#e0e7ff; color:#1e3a8a !important; font-weight:600; padding:8px 18px; border-radius:50px;">
+                            All Universities (<?= count($all_universities_data); ?>)
+                        </button>
+                        <button type="button" class="cs_cat_badge_pill border-0" data-filter="a++" style="cursor:pointer; background:#f1f5f9; color:#475569; font-weight:600; padding:8px 18px; border-radius:50px;">
+                            NAAC A++
+                        </button>
+                        <button type="button" class="cs_cat_badge_pill border-0" data-filter="a+" style="cursor:pointer; background:#f1f5f9; color:#475569; font-weight:600; padding:8px 18px; border-radius:50px;">
+                            NAAC A+
+                        </button>
+                        <button type="button" class="cs_cat_badge_pill border-0" data-filter="private" style="cursor:pointer; background:#f1f5f9; color:#475569; font-weight:600; padding:8px 18px; border-radius:50px;">
+                            Private
+                        </button>
+                        <button type="button" class="cs_cat_badge_pill border-0" data-filter="deemed" style="cursor:pointer; background:#f1f5f9; color:#475569; font-weight:600; padding:8px 18px; border-radius:50px;">
+                            Deemed
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3 mt-lg-0">
+                    <!-- Search Input -->
+                    <div class="position-relative">
+                        <input type="text" id="uniSearchInput" class="form-control" placeholder="Search university by name..." style="border-radius:50px; padding:10px 42px 10px 18px; border:1px solid #cbd5e1; font-size:14px; box-shadow:none;">
+                        <i class="ri-search-line position-absolute" style="right:16px; top:50%; transform:translateY(-50%); color:#94a3b8; font-size:18px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="uniGrid">
+                <?php foreach ($all_universities_data as $key => $uni): 
+                    $naacGrade = strtolower($uni['comparison_data']['naac_grade'] ?? ($uni['overview']['accreditation'] ?? ''));
+                    $uniType = strtolower($uni['overview']['type'] ?? '');
+                    $keywords = strtolower(($uni['name'] ?? '') . ' ' . ($uni['short_name'] ?? '') . ' ' . ($uni['overview']['type'] ?? '') . ' ' . ($uni['overview']['accreditation'] ?? ''));
+                ?>
+                    <div class="col-lg-4 col-md-6 uni-card-col" data-naac="<?= htmlspecialchars($naacGrade); ?>" data-type="<?= htmlspecialchars($uniType); ?>" data-keywords="<?= htmlspecialchars($keywords); ?>" data-aos="fade-up">
                         <div class="cs_uni_card h-100 d-flex flex-column" style="background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:22px; box-shadow:0 6px 18px rgba(0,0,0,0.04);">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <div style="height:48px; display:flex; align-items:center;">
@@ -76,8 +110,84 @@ include("include/university-data.php");
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <!-- Empty Search Fallback -->
+            <div id="noUnisFound" class="text-center py-5 d-none">
+                <i class="ri-search-eye-line" style="font-size:48px; color:#cbd5e1;"></i>
+                <h4 class="mt-3 mb-1" style="color:#0f172a; font-weight:600;">No matching universities found</h4>
+                <p class="text-muted">Try clearing your search keyword or switching filters.</p>
+            </div>
         </div>
     </section>
+
+    <!-- JavaScript Filter System for Universities -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('#uniFilterTabs button');
+        const searchInput = document.getElementById('uniSearchInput');
+        const cards = document.querySelectorAll('.uni-card-col');
+        const noResults = document.getElementById('noUnisFound');
+
+        let currentFilter = 'all';
+
+        function applyFilter() {
+            const query = (searchInput.value || '').trim().toLowerCase();
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const naac = card.getAttribute('data-naac') || '';
+                const type = card.getAttribute('data-type') || '';
+                const keywords = card.getAttribute('data-keywords') || '';
+
+                let matchesFilter = false;
+                if (currentFilter === 'all') {
+                    matchesFilter = true;
+                } else if (currentFilter === 'a++') {
+                    matchesFilter = naac.includes('a++');
+                } else if (currentFilter === 'a+') {
+                    matchesFilter = naac.includes('a+') && !naac.includes('a++');
+                } else if (currentFilter === 'private') {
+                    matchesFilter = type.includes('private');
+                } else if (currentFilter === 'deemed') {
+                    matchesFilter = type.includes('deemed');
+                }
+
+                const matchesSearch = (!query || keywords.includes(query));
+
+                if (matchesFilter && matchesSearch) {
+                    card.classList.remove('d-none');
+                    visibleCount++;
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('d-none');
+            } else {
+                noResults.classList.add('d-none');
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                tabs.forEach(t => {
+                    t.style.background = '#f1f5f9';
+                    t.style.color = '#475569';
+                    t.classList.remove('active');
+                });
+                this.style.background = '#e0e7ff';
+                this.style.color = '#1e3a8a';
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter');
+                applyFilter();
+            });
+        });
+
+        searchInput.addEventListener('input', applyFilter);
+    });
+    </script>
+
 
     <!-- Start Need Help Banner -->
     <div class="container mb-5 pb-5">
