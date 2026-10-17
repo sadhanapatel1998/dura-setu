@@ -288,7 +288,7 @@ $mcom_universities = dura_get_course_universities_list('online-mcom', [
                         <p class="cs_highlight_desc">
                             Total program fees range from ₹18,600 to ₹1,20,000 depending on the institution. Easy semester installments and zero-interest EMI schemes are available starting at ₹775/month.
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -307,7 +307,7 @@ $mcom_universities = dura_get_course_universities_list('online-mcom', [
                         <p class="cs_highlight_desc">
                             Graduates with a B.Com, BBA, B.Com (Hons), or equivalent bachelor's degree in commerce and finance with at least 50% aggregate marks from a recognized university.
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

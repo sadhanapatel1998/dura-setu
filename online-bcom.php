@@ -288,7 +288,7 @@ $bcom_universities = dura_get_course_universities_list('online-bcom', [
                         <p class="cs_highlight_desc">
                             Total program fees range from ₹16,500 to ₹1,15,000 across India's top universities. Enjoy manageable semester-wise payments and no-cost EMI plans starting from just ₹690/month.
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -307,7 +307,7 @@ $bcom_universities = dura_get_course_universities_list('online-bcom', [
                         <p class="cs_highlight_desc">
                             Candidates who have cleared 10+2 (Higher Secondary) in Commerce, Science, or Arts with at least 45-50% aggregate marks from any recognized state or central board.
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

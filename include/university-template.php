@@ -6,15 +6,18 @@ if (!isset($univ) || empty($univ)) {
 
 <main>
     <!-- Start Page Header / Breadcrumb -->
-    <div class="cs_unid_breadcrumb_bar">
+    <section class="cs_page_header cs_bg_filed" data-src="assets/img/breadcrumb-bg.jpg">
         <div class="container">
-            <ul class="cs_breadcrumb cs_mp_0 cs_fs_14">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="universities.php">Universities</a></li>
-                <li><?= htmlspecialchars($univ['name']); ?></li>
-            </ul>
+            <div class="cs_page_header_text" data-aos="fade-up">
+                <h1 class="cs_page_header_title cs_fs_48 cs_bold"><?= htmlspecialchars($univ['name']); ?></h1>
+                <ul class="cs_breadcrumb cs_mp_0 cs_fs_16">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="universities.php">Universities</a></li>
+                    <li><?= htmlspecialchars($univ['name']); ?></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- End Page Header -->
 
     <!-- Start University Hero & Overview Section -->
@@ -44,11 +47,11 @@ if (!isset($univ) || empty($univ)) {
 
                             <!-- CTA Buttons -->
                             <div class="cs_unid_hero_btns">
-                                <a href="#counselling" class="cs_unid_btn_primary">
-                                    <span>Get Free Counselling</span>
+                                <a href="universities.php" class="cs_unid_btn_primary">
+                                    <span>Campare Universities</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
-                                <a href="#admission" class="cs_unid_btn_secondary">
+                                <a href="contact.php" class="cs_unid_btn_secondary">
                                     <span>Apply Now</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
@@ -351,8 +354,8 @@ if (!isset($univ) || empty($univ)) {
                                 <span>Get detailed fee structure from our counsellors.</span>
                             </li>
                         </ul>
-                        <a href="#counselling" class="cs_unid_btn_primary w-100 justify-content-center">
-                            <span>Get Fee Details</span>
+                        <a href="universities.php" class="cs_unid_btn_primary w-100 justify-content-center">
+                            <span>Campare Universities</span>
                             <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

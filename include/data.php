@@ -86,7 +86,7 @@ $categories = [
         'image' => 'assets/img/category/degree.png',
         'fallback' => 'assets/img/category/cat-7.png',
         'color' => 'orange',
-        'url' => 'courses/online-degrees.php',
+        'url' => 'universities.php',
         'delay' => 200,
         'alt' => 'Online Degrees'
     ],
@@ -160,7 +160,7 @@ $blogs = [
         'category' => 'Career Guide',
         'image' => 'assets/img/blog/online-mba-guide.jpg',
         'description' => 'Explore important factors like university, fees, specializations, flexibility, and career opportunities before choosing an MBA.',
-        'url' => 'blog-details.php?slug=online-mba-guide'
+        'url' => 'blogs.php'
     ],
 
     [
@@ -168,7 +168,7 @@ $blogs = [
         'category' => 'Course Guide',
         'image' => 'assets/img/blog/online-mca-guide.jpg',
         'description' => 'Understand eligibility, course structure, learning options, and career opportunities after completing an online MCA.',
-        'url' => 'blog-details.php?slug=online-mca-guide'
+        'url' => 'blogs.php'
     ],
 
     [
@@ -176,7 +176,7 @@ $blogs = [
         'category' => 'University Guide',
         'image' => 'assets/img/blog/online-degree-guide.jpg',
         'description' => 'Compare flexibility, learning experience, career planning, and other important factors before selecting your degree.',
-        'url' => 'blog-details.php?slug=online-degree-vs-regular-degree'
+        'url' => 'blogs.php'
     ],
 
     // [

@@ -2,7 +2,6 @@
 ob_start();
 include("include/data.php");
 ?>
-
 <main>
     <!-- Start Hero Section -->
     <div class="cs_banner_slider_wrap slider-section">
@@ -12,17 +11,20 @@ include("include/data.php");
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="#">
-                        <img src="assets/img/hero/banner-1.jpg" alt="Banner 1">
+                        <img src="assets/img/hero/ds-banner-one.jpg" alt="Banner 1" class="desktop-banner">
+                        <img src="assets/img/hero/m-banner-one.jpg" alt="Banner 1" class="mobile-banner">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="#">
-                        <img src="assets/img/hero/banner-2.jpg" alt="Banner 2">
+                        <img src="assets/img/hero/ds-banner-three.jpg" alt="Banner 3" class="desktop-banner">
+                        <img src="assets/img/hero/m-banner-three.jpg" alt="Banner 3" class="mobile-banner">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="#">
-                        <img src="assets/img/hero/banner-3.jpg" alt="Banner 3">
+                        <img src="assets/img/hero/ds-banner-two.jpg" alt="Banner 2" class="desktop-banner">
+                        <img src="assets/img/hero/m-banner-two.jpg" alt="Banner 2" class="mobile-banner">
                     </a>
                 </div>
             </div>
@@ -44,7 +46,7 @@ include("include/data.php");
     </div>
     <!-- End Hero Section -->
 
-    <!-- Start Universities Section -->
+    <!-- Start Universities Logo Section -->
     <section class="cs_partners_section durasetu_universities_section" data-aos="fade-up">
         <div class="container">
             <div class="cs_partners_wrap">
@@ -70,7 +72,7 @@ include("include/data.php");
             </div>
         </div>
     </section>
-    <!-- End Universities Section -->
+    <!-- End Universities Logo Section -->
 
     <!-- Start Categories Section -->
     <section class="cs_categories_section cs_section_padding">
@@ -161,7 +163,7 @@ include("include/data.php");
                         </div>
                     </div> -->
                     <a href="universities.php" class="cs_primary_btn cs_login_btn">
-                        <span class="cs_login_text">View All Universities</span>
+                        <span class="cs_login_text">All Universities</span>
                         <span class="cs_user_icon"><i class="ri-arrow-right-line"></i></span>
                     </a>
                 </div>
@@ -179,11 +181,11 @@ include("include/data.php");
                 </button>
 
                 <div class="cs_slider cs_slider_3 swiper" data-slides-per-view="responsive" data-xxlg-slides="4"
-                    data-xlg-slides="4" data-lg-slides="3" data-md-slides="2" data-sm-slides="1" data-xsm-slides="1"
-                    data-gap="20" data-speed="600" data-loop="1" data-autoplay="1" data-pagination-type="bullets">
+                    data-xlg-slides="3" data-lg-slides="3" data-md-slides="2" data-sm-slides="1" data-xsm-slides="1"
+                    data-gap="20" data-speed="600" data-loop="1" data-autoplay="0" data-pagination-type="bullets">
                     <div class="swiper-wrapper">
                         <?php if (!empty($universities)): ?>
-                            <?php foreach ($universities as $uni): ?>
+                            <?php foreach (array_slice($universities, 0, 8) as $uni): ?>
                                 <div class="swiper-slide">
                                     <div class="cs_uni_card">
                                         <!-- Campus Image with Logo overlay -->
@@ -362,8 +364,8 @@ include("include/data.php");
                             </div>
                         </div>
                         <div class="cs_promo_btn_box">
-                            <a href="courses.php" class="cs_primary_btn cs_login_btn">
-                                <span class="cs_login_text">Explore Online Degrees</span>
+                            <a href="universities.php" class="cs_primary_btn cs_login_btn">
+                                <span class="cs_login_text">Compare Universities</span>
                                 <span class="cs_user_icon"><i class="ri-arrow-right-line"></i></span>
                             </a>
                         </div>
@@ -515,7 +517,7 @@ include("include/data.php");
                 data-src="assets/img/vector-bg-2.svg">
                 <div class="cs_section_heading_style_2 cs_type_1 mb-4" data-aos="fade-up">
                     <div>
-                        <span class="cs_section_label cs_fs_14 cs_primary_color mb-2 px-2">
+                        <span class="cs_section_label cs_fs_14 cs_primary_color mb-2 px-3">
                             <span>Testimonials</span>
                         </span>
                         <h2 class="cs_fs_42 cs_semibold cs_white_color mb-0">What Students Say About DuraSetu</h2>

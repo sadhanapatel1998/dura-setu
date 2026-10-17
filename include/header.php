@@ -55,55 +55,20 @@ $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) 
                                     </a>
                                 </li>
                                 <!-- Top Universities -->
-                                <li class="menu-item-has-children">
+                                <li>
                                     <a href="universities.php"
                                         class="<?= in_array($currentPage, $universityPages) ? 'active' : ''; ?>">
                                         Top Universities
                                     </a>
-                                    <ul>
-                                        <?php 
-                                        $header_top_unis = array_slice($allUnis, 0, 9);
-                                        foreach ($header_top_unis as $u): ?>
-                                            <li>
-                                                <a href="<?= htmlspecialchars($u['slug']); ?>"
-                                                    class="<?= $currentPage == $u['slug'] ? 'active' : ''; ?>">
-                                                    <?= htmlspecialchars($u['name']); ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                        <li>
-                                            <a href="universities.php" style="font-weight: 600; color: #f59e0b;">
-                                                View All Universities (<?= count($allUnis); ?>+) &rarr;
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
 
                                 <!-- Courses -->
-                                <li class="menu-item-has-children">
+                                <li>
                                     <a href="courses.php"
                                         class="<?= in_array($currentPage, $coursePages) ? 'active' : ''; ?>">
                                         Courses
                                     </a>
-                                    <ul class="sub-menu">
-                                        <?php 
-                                        $header_courses = dura_get_popular_courses_list(6);
-                                        foreach ($header_courses as $c): ?>
-                                            <li>
-                                                <a href="<?= htmlspecialchars($c['url']); ?>"
-                                                    class="<?= $currentPage == $c['url'] ? 'active' : ''; ?>">
-                                                    <?= htmlspecialchars($c['title']); ?>
-                                                </a>
-                                            </li>
-                                        <?php endforeach; ?>
-                                        <li>
-                                            <a href="courses.php" style="font-weight: 600; color: #f59e0b;">
-                                                View All Programs (<?= count($allCourses); ?>+) &rarr;
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
-
 
                                 <!-- Scholarships -->
                                 <!--

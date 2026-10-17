@@ -116,12 +116,33 @@
     box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
 }
 
+
+
+
+.cs_uni_card .cs_unid_btn_primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+        border: 1px solid #ff7900;
+    background: #ff7900;
+    color: #ffffff;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 121, 0, 0.25);
+}
+
+
+
 /* Compare Button inside Card */
 .cs_compare_btn {
     border: 1px solid #cbd5e1;
     background: #f8fafc;
     color: #334155;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     padding: 9px 13px;
     border-radius: 8px;
@@ -132,7 +153,9 @@
     white-space: nowrap;
     transition: all 0.2s ease;
 }
-
+.cs_compare_btn i{
+margin-right: 5px;
+}
 .cs_compare_btn:hover {
     background: #e2e8f0;
     color: #0f172a;
@@ -756,7 +779,7 @@ const DuraCompare = (function () {
             if (selectedIds.has(id)) {
                 card.classList.add('cs_is_selected');
                 btn.classList.add('cs_btn_selected');
-                btn.innerHTML = `<i class="ri-checkbox-circle-fill"></i> <span class="cs_compare_btn_text">Added to Compare</span>`;
+                btn.innerHTML = `<i class="ri-checkbox-circle-fill"></i> <span class="cs_compare_btn_text">Added</span>`;
 
                 if (!ribbon) {
                     ribbon = document.createElement('span');

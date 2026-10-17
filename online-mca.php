@@ -288,7 +288,7 @@ $mca_universities = dura_get_course_universities_list('online-mca', [
                         <p class="cs_highlight_desc">
                             Program fees range from ₹68,000 to ₹1,65,000 across top institutions. Benefit from interest-free monthly EMI plans starting at ₹4,999/month.
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -307,7 +307,7 @@ $mca_universities = dura_get_course_universities_list('online-mca', [
                         <p class="cs_highlight_desc">
                             Graduates with BCA, B.Sc (IT/CS), or any bachelor's degree with Mathematics at 10+2 or graduation level (min 50% marks). Bridge courses available for non-CS students.
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

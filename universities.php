@@ -423,10 +423,10 @@ $course_groups = [
 }
 
 .cs_filter_group_title {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #64748b;
+      color: #ff8313;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -435,12 +435,11 @@ $course_groups = [
 
 .cs_filter_group_title i {
     font-size: 13px;
-    color: #3b82f6;
+    color: #f98d01;
 }
-
 .cs_group_items_count {
     font-size: 10.5px;
-    color: #94a3b8;
+    color: #003987;
     font-weight: 600;
 }
 
@@ -633,7 +632,7 @@ $course_groups = [
 }
 
 .cs_chips_label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #64748b;
     display: inline-flex;
@@ -647,7 +646,7 @@ $course_groups = [
     gap: 6px;
     background: #eff6ff;
     color: #1e40af;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 50px;
@@ -672,7 +671,7 @@ $course_groups = [
     background: transparent;
     border: none;
     color: #ef4444;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     padding: 4px 8px;
     cursor: pointer;
@@ -767,7 +766,7 @@ $course_groups = [
 .cs_badge_pill_accent {
     background: #eff6ff;
     color: #2563eb;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     padding: 3px 9px;
     border-radius: 4px;
@@ -777,10 +776,10 @@ $course_groups = [
 }
 
 .cs_badge_pill_neutral {
-    background: #f8fafc;
-    color: #475569;
-    font-size: 11.5px;
-    font-weight: 600;
+    background: #ddf7e8;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 500;
     padding: 3px 9px;
     border-radius: 4px;
     display: inline-flex;

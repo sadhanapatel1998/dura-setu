@@ -288,7 +288,7 @@ $bba_universities = dura_get_course_universities_list('online-bba', [
                         <p class="cs_highlight_desc">
                             Total course fees range from ₹96,000 to ₹1,44,000. Take advantage of flexible semester installment plans and zero-interest EMI options starting from ₹2,670/month.
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -307,7 +307,7 @@ $bba_universities = dura_get_course_universities_list('online-bba', [
                         <p class="cs_highlight_desc">
                             Candidates who have successfully completed 10+2 (Higher Secondary) in any stream (Commerce, Science, or Arts) with a minimum of 45-50% marks from a recognized state or central board.
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

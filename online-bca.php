@@ -288,7 +288,7 @@ $bca_universities = dura_get_course_universities_list('online-bca', [
                         <p class="cs_highlight_desc">
                             Total program fees range from ₹46,200 to ₹1,40,000. Benefit from flexible per-semester installments and 0% interest EMI options starting at just ₹1,925/month.
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -307,7 +307,7 @@ $bca_universities = dura_get_course_universities_list('online-bca', [
                         <p class="cs_highlight_desc">
                             Candidates who have cleared 10+2 (Higher Secondary) with a minimum of 45-50% marks from any recognized board. Open to students from Science, Commerce, and Arts streams.
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>

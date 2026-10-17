@@ -55,7 +55,8 @@
   /* --------------------------------------------
      Grays / Backgrounds
   -------------------------------------------- */
-  --gray-color:   #fff6ec;;
+  --gray-color: #fff6ec;
+  ;
   --gray2-color: #94A3B8;
   --gray3-color: #E8EEF8;
   --gray4-color: #FFF8EC;
@@ -711,12 +712,12 @@ label {
 }
 
 .cs_section_padding {
-  padding: 64px 0;
+  padding: 52px 0;
 }
 
 @media (max-width: 991px) {
   .cs_section_padding {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 }
 
@@ -9737,7 +9738,7 @@ input[type=number] {
   background-image: linear-gradient(180deg, var(--primary-color) 0%, color-mix(in srgb, var(--accent-color) 90%, transparent) 50%);
   position: relative;
   overflow: hidden;
-  padding: 88px 112px 0 88px;
+  padding: 55px 112px 0 55px;
 }
 
 .cs_testimonial_panel .cs_section_heading_style_2 .cs_section_label {
@@ -23264,20 +23265,24 @@ button.cs_settings_2fa_option:hover {
   border-color: var(--primary-color);
   box-shadow: 0 2px 12px rgba(0, 38, 113, 0.08);
 }
-  .cs_universities_section .cs_uni_card {
-    background: #01204d;
-    padding: 0;
-  }
+
+.cs_universities_section .cs_uni_card {
+  background: #01204d;
+  padding: 0;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1400px) {
   .cs_universities_section {
     margin: 0px 40px 0 !important;
+
+  }
 }
-}
+
 @media (max-width: 1300px) {
   .cs_universities_section {
     margin: 0px 60px 0 !important;
-}
+  }
 }
 
 @media (max-width: 991px) {
@@ -23334,10 +23339,10 @@ button.cs_settings_2fa_option:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 80px 0 90px;
+  padding: 50px 0 50px;
   overflow: hidden;
   margin: 0px 80px 0;
-  border-radius: 40px;
+  border-radius: 25px;
 }
 
 .cs_universities_bg_overlay {
@@ -23553,12 +23558,12 @@ button.cs_settings_2fa_option:hover {
 
 .cs_uni_logo_box {
   position: absolute;
-    top: 0px;
-    right: -1px;
-    width: 135px;
+  top: 209px;
+  right: 15px;
+  width: 115px;
   height: auto;
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 4px 6px;
   display: flex;
   align-items: center;
@@ -23585,6 +23590,7 @@ button.cs_settings_2fa_option:hover {
 
 
 .cs_uni_card_title {
+  margin-top: 25px;
   font-size: 22px;
   font-weight: 700;
   line-height: 1.35;
@@ -23608,7 +23614,7 @@ button.cs_settings_2fa_option:hover {
 
 .cs_uni_card_accred {
   font-size: 14px;
-  color: #8da4c4;
+  color: #ffffffd6;
   margin-bottom: 14px;
   white-space: nowrap;
   overflow: hidden;
@@ -23656,6 +23662,12 @@ button.cs_settings_2fa_option:hover {
 .cs_tags_purple .cs_uni_tag {
   background: #4a215c;
   color: #ffd6f5;
+}
+
+/* Orange theme */
+.cs_tags_orange .cs_uni_tag {
+  background: #1cc7d3;
+  color: #fff3e0;
 }
 
 /* Card View Programs Button */
@@ -24800,7 +24812,6 @@ button.cs_settings_2fa_option:hover {
   align-items: center;
   gap: 8px;
   list-style: none;
-  padding: 10px 0;
   margin: 0;
   overflow-x: auto;
   white-space: nowrap;
@@ -24813,26 +24824,47 @@ button.cs_settings_2fa_option:hover {
 }
 
 .cs_course_nav_tabs li a {
-  display: inline-block;
-  padding: 9px 18px;
-  border-radius: 50px;
-font-size: 16px;
+  display: block;
+  padding: 17px 22px 12px;
+  font-size: 15.5px;
   font-weight: 600;
-  color: #4a5568;
+  color: #556987;
   text-decoration: none;
+  border-bottom: 3px solid transparent;
   transition: all 0.25s ease;
 }
 
 .cs_course_nav_tabs li a:hover {
-  color: #002671;
-  background: #f1f5f9;
+  color: #ff7900;
 }
 
 .cs_course_nav_tabs li.active a {
-  color: #ffffff;
-  background: #002671;
-  box-shadow: 0 4px 12px rgba(0, 38, 113, 0.25);
+  color: #ff7900;
+  border-bottom-color: #ff7900;
+  background: rgba(255, 121, 0, 0.04);
 }
+
+
+/* .cs_unid_nav_list li a {
+  display: block;
+  padding: 17px 22px 12px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #556987;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.cs_unid_nav_list li a:hover {
+  color: #ff7900;
+}
+
+.cs_unid_nav_list li.active a {
+  color: #ff7900;
+  border-bottom-color: #ff7900;
+  background: rgba(255, 121, 0, 0.04);
+} */
 
 /* Badge styling matching reference image */
 .cs_mba_badge {
@@ -24862,7 +24894,7 @@ font-size: 16px;
 
 .cs_mba_section_subtitle {
   color: #556987;
-    font-size: 16px;
+  font-size: 16px;
   line-height: 1.6;
   max-width: 640px;
   margin-bottom: 32px;
@@ -24870,12 +24902,14 @@ font-size: 16px;
 
 /* Hero Section */
 .cs_mba_hero {
-  padding: 50px 0 60px;
+  padding: 55px 0 55px;
   background: #ffffff;
 }
-.cs_mba_hero .cs_secondary_btn{
-display: none;
+
+.cs_mba_hero .cs_secondary_btn {
+  display: none;
 }
+
 .cs_mba_hero_media {
   position: relative;
   width: 100%;
@@ -25001,13 +25035,13 @@ display: none;
 }
 
 .cs_spec_icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
 
 .cs_spec_icon.cs_spec_blue {
@@ -25059,7 +25093,7 @@ display: none;
 }
 
 .cs_spec_desc {
-    font-size: 16px;
+  font-size: 16px;
   color: #64748b;
   line-height: 1.5;
   margin: 0;
@@ -25243,10 +25277,10 @@ display: none;
 }
 
 .cs_admission_step_desc {
-    font-size: 15px;
-    line-height: 1.5;
-    color: #9cb3d3;
-    margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #9cb3d3;
+  margin: 0;
 }
 
 .cs_admission_step_arrow {
@@ -25257,8 +25291,8 @@ display: none;
 
 /* Section: Career Opportunities (Exact reference layout) */
 .cs_career_scope_section {
-    padding: 65px 0;
-    background: #eff7ff;
+  padding: 65px 0;
+  background: #eff7ff;
 }
 
 .cs_career_grid_wrap {
@@ -25326,14 +25360,14 @@ display: none;
 }
 
 .cs_career_pill_icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-shrink: 0;
 }
 
 .cs_career_pill_icon.cs_cp_blue {
@@ -25433,7 +25467,7 @@ display: none;
 }
 
 .cs_faq_question {
-    font-size: 18px;
+  font-size: 18px;
   font-weight: 700;
   color: #0f172a;
   margin: 0;
@@ -25452,8 +25486,8 @@ display: none;
 
 .cs_faq_accordion_body {
   padding: 0 20px 18px;
-font-size: 16px; 
- color: #64748b;
+  font-size: 16px;
+  color: #64748b;
   line-height: 1.6;
   display: none;
 }
@@ -25504,7 +25538,7 @@ font-size: 16px;
 }
 
 .cs_need_help_subtitle {
-    font-size: 15px;
+  font-size: 15px;
   color: #556987;
   margin: 0;
 }
@@ -25555,7 +25589,7 @@ font-size: 16px;
 
 .cs_uni_card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #0248a6;
   border-radius: 18px;
   padding: 22px 24px;
   display: flex;
@@ -25723,7 +25757,7 @@ font-size: 16px;
 }
 
 .cs_syllabus_head h4 {
-    font-size: 20px;
+  font-size: 20px;
   font-weight: 700;
   color: #0f172a;
   margin: 0;
@@ -25943,9 +25977,20 @@ font-size: 16px;
   color: #1e293b;
 }
 
-.cs_unid_trust_pill.ugc i { color: #16a34a; font-size: 15px; }
-.cs_unid_trust_pill.naac i { color: #ea580c; font-size: 15px; }
-.cs_unid_trust_pill.group i { color: #2563eb; font-size: 15px; }
+.cs_unid_trust_pill.ugc i {
+  color: #16a34a;
+  font-size: 15px;
+}
+
+.cs_unid_trust_pill.naac i {
+  color: #ea580c;
+  font-size: 15px;
+}
+
+.cs_unid_trust_pill.group i {
+  color: #2563eb;
+  font-size: 15px;
+}
 
 .cs_unid_hero_btns {
   display: flex;
@@ -26269,7 +26314,7 @@ font-size: 16px;
 
 .cs_unid_nav_list li a {
   display: block;
-  padding: 17px 22px;
+  padding: 17px 22px 12px;
   font-size: 15.5px;
   font-weight: 600;
   color: #556987;
@@ -26292,7 +26337,7 @@ font-size: 16px;
    Detail Page Common Section Styling
 ============================================================== */
 .cs_unid_section {
-  padding: 65px 0;
+  padding: 55px 0;
   background: #ffffff;
 }
 
@@ -26388,7 +26433,7 @@ font-size: 16px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 8px 0;
+  padding: 2px 0;
   font-size: 15px;
   color: #1e293b;
   line-height: 1.55;
@@ -26778,6 +26823,7 @@ font-size: 16px;
 }
 
 .cs_unid_dual_media {
+  display: none;
   margin-top: 22px;
   border-radius: 10px;
   overflow: hidden;
@@ -27111,4 +27157,55 @@ font-size: 16px;
   .cs_unid_dual_card {
     padding: 22px 18px;
   }
+}
+
+/* Default: Desktop */
+.desktop-banner {
+  display: block;
+  width: 100%;
+}
+
+.mobile-banner {
+  display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .desktop-banner {
+    display: none !important;
+  }
+
+  .mobile-banner {
+    display: block !important;
+    width: 100%;
+  }
+}
+
+
+.cs_scrollup_btn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f58320;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.cs_scrollup_btn:hover {
+  background: #d96f0b;
+  transform: translateY(-3px);
+}
+
+.cs_scrollup_btn i {
+  font-size: 20px;
 }

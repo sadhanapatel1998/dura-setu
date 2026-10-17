@@ -254,7 +254,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                         <p class="cs_highlight_desc">
                             <?= htmlspecialchars($course['fee_desc'] ?? 'Fees vary by university, specialisation and payment structure. Compare fees and find the best option for your budget.'); ?>
                         </p>
-                        <a href="#universities" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Compare University Fees <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
@@ -273,7 +273,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                         <p class="cs_highlight_desc">
                             <?= htmlspecialchars($course['eligibility_desc'] ?? 'Graduates from a recognised university are eligible. Check the exact requirements before applying.'); ?>
                         </p>
-                        <a href="#counselling" class="cs_highlight_link">
+                        <a href="universities.php" class="cs_highlight_link">
                             Check Eligibility <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
