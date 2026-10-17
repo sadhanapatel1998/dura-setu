@@ -167,6 +167,97 @@ $seoData = [
         "robots" => "index, follow"
     ],
 
+    "online-bsc.php" => [
+        "title" => "Online B.Sc | Universities, Fees, Eligibility & Syllabus | DuraSetu",
+        "description" => "Explore Online B.Sc degree programs, top UGC-DEB entitled universities, curriculum, eligibility, fees, and career scope with DuraSetu.",
+        "keywords" => "online BSc, online B.Sc degree, online bachelor of science, online BSc fees, online science degree",
+        "robots" => "index, follow"
+    ],
+
+    "online-bajmc.php" => [
+        "title" => "Online BAJMC | Journalism & Mass Communication | DuraSetu",
+        "description" => "Compare Online BAJMC programs, top accredited universities, fees, digital media curriculum, eligibility, and admission process with DuraSetu.",
+        "keywords" => "online BAJMC, online journalism degree, mass communication online, BAJMC fees, media studies degree",
+        "robots" => "index, follow"
+    ],
+
+    "bca-mca.php" => [
+        "title" => "Integrated BCA+MCA Degree | Universities & Fees | DuraSetu",
+        "description" => "Explore 5-year integrated BCA+MCA programs, dual degree curriculum, top universities, fees, and career pathways with DuraSetu.",
+        "keywords" => "integrated BCA MCA, BCA MCA integrated course, dual degree computer applications, BCA MCA fees",
+        "robots" => "index, follow"
+    ],
+
+    "bba-mba.php" => [
+        "title" => "Integrated BBA+MBA Degree | Universities, Fees & Eligibility | DuraSetu",
+        "description" => "Explore 5-year integrated BBA+MBA management programs, curriculum, top universities, fees, and executive career opportunities with DuraSetu.",
+        "keywords" => "integrated BBA MBA, BBA MBA 5 year course, dual management degree, BBA MBA fees",
+        "robots" => "index, follow"
+    ],
+
+    "bcom-mba.php" => [
+        "title" => "Integrated B.Com+MBA Degree | Universities & Admission | DuraSetu",
+        "description" => "Discover 5-year integrated B.Com+MBA programs, corporate finance curriculum, top universities, fees, and career insights with DuraSetu.",
+        "keywords" => "integrated BCom MBA, BCom MBA integrated course, commerce and MBA dual degree, BCom MBA fees",
+        "robots" => "index, follow"
+    ],
+
+    "global-mba.php" => [
+        "title" => "Global MBA Online | Top International Programs & Fees | DuraSetu",
+        "description" => "Explore Global MBA online programs with international curriculum, global market strategies, accredited universities, and career growth.",
+        "keywords" => "global MBA online, international online MBA, global business administration, global MBA fees",
+        "robots" => "index, follow"
+    ],
+
+    "one-year-mba.php" => [
+        "title" => "1-Year MBA Online | Fast-Track Executive Master | DuraSetu",
+        "description" => "Accelerate your leadership career with 1-Year Online MBA programs. Compare top universities, fast-track curriculum, eligibility, and fees.",
+        "keywords" => "1 year MBA online, one year MBA, fast track MBA, executive 1 year MBA India, 1 year MBA fees",
+        "robots" => "index, follow"
+    ],
+
+    "executive-mba.php" => [
+        "title" => "Executive MBA Online | For Working Professionals | DuraSetu",
+        "description" => "Advance into senior leadership with Executive MBA online programs. Compare accredited universities, flexible weekend classes, fees, and eligibility.",
+        "keywords" => "executive MBA online, EMBA online India, executive master of business administration, EMBA fees",
+        "robots" => "index, follow"
+    ],
+
+    "global-mca.php" => [
+        "title" => "Global MCA Online | Advanced Cloud & AI Engineering | DuraSetu",
+        "description" => "Explore Global MCA online degrees with advanced enterprise computing, AI architecture, top universities, fees, and career opportunities.",
+        "keywords" => "global MCA online, international MCA, global computer applications, advanced MCA degree",
+        "robots" => "index, follow"
+    ],
+
+    "online-majmc.php" => [
+        "title" => "Online MAJMC | Master of Arts in Journalism & Mass Comm | DuraSetu",
+        "description" => "Explore Online MAJMC master programs, digital media strategies, PR, broadcast journalism, top universities, fees, and admission with DuraSetu.",
+        "keywords" => "online MAJMC, masters in journalism online, mass communication master degree, MAJMC fees",
+        "robots" => "index, follow"
+    ],
+
+    "online-msc-mathematics.php" => [
+        "title" => "Online M.Sc. Mathematics | Pure & Applied Curriculum | DuraSetu",
+        "description" => "Explore Online M.Sc. Mathematics programs, computational mathematics, statistics, top accredited universities, fees, and career scope.",
+        "keywords" => "online MSc mathematics, online masters in maths, MSc mathematics fees, online math degree",
+        "robots" => "index, follow"
+    ],
+
+    "online-msc-ms.php" => [
+        "title" => "Online M.Sc. / MS Degree Programs | Science & Tech | DuraSetu",
+        "description" => "Explore specialized Online M.Sc. and MS programs in Data Science, AI, and Applied Sciences. Compare university fees, eligibility, and curriculum.",
+        "keywords" => "online MSc degree, online MS programs, master of science online, online MSc data science, MSc fees",
+        "robots" => "index, follow"
+    ],
+
+    "online-ma.php" => [
+        "title" => "Online MA Programs | English, Economics, Psychology | DuraSetu",
+        "description" => "Explore Online MA degree programs in English, Economics, Psychology, History, and Public Administration. Compare top universities and fees.",
+        "keywords" => "online MA degree, online master of arts, online MA english, online MA economics, online MA fees",
+        "robots" => "index, follow"
+    ],
+
 
     /* =========================
        BLOG

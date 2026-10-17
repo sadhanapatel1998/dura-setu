@@ -6,18 +6,15 @@ if (!isset($univ) || empty($univ)) {
 
 <main>
     <!-- Start Page Header / Breadcrumb -->
-    <section class="cs_page_header cs_bg_filed" data-src="assets/img/breadcrumb-bg.jpg">
+    <div class="cs_unid_breadcrumb_bar">
         <div class="container">
-            <div class="cs_page_header_text" data-aos="fade-up">
-                <h1 class="cs_page_header_title cs_fs_48 cs_bold"><?= htmlspecialchars($univ['name']); ?></h1>
-                <ul class="cs_breadcrumb cs_mp_0 cs_fs_16">
-                    <li><a href="index.php">Home</a></li>
-                    <!-- <li><a href="universities.php">Universities</a></li> -->
-                    <li><?= htmlspecialchars($univ['short_name']); ?></li>
-                </ul>
-            </div>
+            <ul class="cs_breadcrumb cs_mp_0 cs_fs_14">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="universities.php">Universities</a></li>
+                <li><?= htmlspecialchars($univ['name']); ?></li>
+            </ul>
         </div>
-    </section>
+    </div>
     <!-- End Page Header -->
 
     <!-- Start University Hero & Overview Section -->
@@ -47,14 +44,14 @@ if (!isset($univ) || empty($univ)) {
 
                             <!-- CTA Buttons -->
                             <div class="cs_unid_hero_btns">
-                                <a href="contact.php" class="cs_unid_btn_primary">
+                                <a href="#counselling" class="cs_unid_btn_primary">
+                                    <span>Get Free Counselling</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                                <a href="#admission" class="cs_unid_btn_secondary">
                                     <span>Apply Now</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
-                                <!-- <a href="#admission" class="cs_unid_btn_secondary">
-                                    <span>Apply Now</span>
-                                    <i class="ri-arrow-right-line"></i>
-                                </a> -->
                             </div>
                         </div>
 
@@ -172,16 +169,13 @@ if (!isset($univ) || empty($univ)) {
     <!-- Section 1: About the University (#overview) -->
     <section class="cs_unid_section" id="overview">
         <div class="container">
-            <div data-aos="fade-up">
-                <span class="cs_unid_badge">
-                    <i class="ri-graduation-cap-line"></i> ABOUT THE UNIVERSITY
-                </span>
-                <h2 class="cs_unid_sec_title">About <?= htmlspecialchars($univ['name']); ?></h2>
-            </div>
-
-            <div class="cs_unid_about_grid mt-4">
+            <div class="cs_unid_about_grid">
                 <!-- Left Story -->
                 <div class="cs_unid_about_text" data-aos="fade-right">
+                    <span class="cs_unid_badge">
+                        <i class="ri-graduation-cap-line"></i> ABOUT THE UNIVERSITY
+                    </span>
+                    <h2 class="cs_unid_sec_title">About <?= htmlspecialchars($univ['name']); ?></h2>
                     <p><?= htmlspecialchars($univ['about_p1']); ?></p>
                     <p><?= htmlspecialchars($univ['about_p2']); ?></p>
                     <p>Learners gain 24/7 access to comprehensive LMS courseware, interactive virtual labs, live academic webinars, and continuous faculty mentorship. Programs are structured specifically to empower working executives and career changers to attain accredited degrees without halting their current profession.</p>

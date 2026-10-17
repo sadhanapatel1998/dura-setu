@@ -683,6 +683,17 @@ $course_groups = [
 }
 
 /* University Cards Styling in Grid */
+.uni-card-col {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.uni-card-col:not(.d-none) {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
 .cs_uni_card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -910,6 +921,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (matchesCourse && matchesSearch) {
                 card.classList.remove('d-none');
+                card.classList.add('aos-animate');
+                card.style.opacity = '1';
+                card.style.transform = 'none';
+                card.style.visibility = 'visible';
                 visibleCount++;
             } else {
                 card.classList.add('d-none');
@@ -935,6 +950,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         } else {
             noResults.classList.add('d-none');
+        }
+
+        // Refresh AOS animations
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
         }
 
         // Update Active Chips UI

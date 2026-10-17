@@ -15,14 +15,24 @@
     "url": "online-bba.php",
     "popular": true,
     "offering_universities": [
-      "manipal-jaipur",
-      "nmims-online",
-      "jain-university-online",
+      "alliance-university-online",
+      "amity-university-online",
+      "dy-patil-university-online",
       "lpu-online",
-      "vit-online",
-      "uttaranchal-university-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
       "sikkim-manipal-online",
-      "sharda-university-online"
+      "vgu-online",
+      "sharda-university-online",
+      "shoolini-university-online",
+      "vit-online",
+      "gla-university-online",
+      "uttaranchal-university-online",
+      "parul-university-online",
+      "nmims-online",
+      "galgotias-university-online",
+      "mangalayatan-university-online",
+      "jain-university-online"
     ]
   },
   {
@@ -41,14 +51,23 @@
     "url": "online-bca.php",
     "popular": true,
     "offering_universities": [
-      "manipal-jaipur",
-      "ignou-online",
-      "jain-university-online",
+      "amity-university-online",
       "lpu-online",
-      "vit-online",
-      "uttaranchal-university-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
       "sikkim-manipal-online",
-      "sharda-university-online"
+      "vgu-online",
+      "amrita-university-online",
+      "sharda-university-online",
+      "shoolini-university-online",
+      "vit-online",
+      "gla-university-online",
+      "uttaranchal-university-online",
+      "parul-university-online",
+      "galgotias-university-online",
+      "mangalayatan-university-online",
+      "ignou-online",
+      "jain-university-online"
     ]
   },
   {
@@ -67,7 +86,20 @@
     "url": "online-bcom.php",
     "popular": true,
     "offering_universities": [
+      "amity-university-online",
+      "lpu-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
+      "sikkim-manipal-online",
+      "vgu-online",
+      "amrita-university-online",
+      "sharda-university-online",
+      "shoolini-university-online",
+      "gla-university-online",
+      "parul-university-online",
       "nmims-online",
+      "galgotias-university-online",
+      "mangalayatan-university-online",
       "ignou-online"
     ]
   },
@@ -84,7 +116,7 @@
     "icon": "ri-microscope-line",
     "image": "assets/img/course/bca.jpg",
     "fallback_image": "assets/img/course-img-1.jpg",
-    "url": "#",
+    "url": "online-bsc.php",
     "popular": false,
     "offering_universities": []
   },
@@ -101,9 +133,12 @@
     "icon": "ri-broadcast-line",
     "image": "assets/img/course/bba.jpg",
     "fallback_image": "assets/img/course-img-2.jpg",
-    "url": "#",
+    "url": "online-bajmc.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "amity-university-online",
+      "chandigarh-university-online"
+    ]
   },
   {
     "id": "bca-mca-integrated",
@@ -118,7 +153,7 @@
     "icon": "ri-computer-line",
     "image": "assets/img/course/mca.jpg",
     "fallback_image": "assets/img/course-img-3.jpg",
-    "url": "#",
+    "url": "bca-mca.php",
     "popular": false,
     "offering_universities": []
   },
@@ -135,7 +170,7 @@
     "icon": "ri-briefcase-line",
     "image": "assets/img/course/mba.jpg",
     "fallback_image": "assets/img/course-img-4.jpg",
-    "url": "#",
+    "url": "bba-mba.php",
     "popular": false,
     "offering_universities": []
   },
@@ -152,7 +187,7 @@
     "icon": "ri-bank-card-line",
     "image": "assets/img/course/mcom.jpg",
     "fallback_image": "assets/img/course-img-5.jpg",
-    "url": "#",
+    "url": "bcom-mba.php",
     "popular": false,
     "offering_universities": []
   },
@@ -172,15 +207,27 @@
     "url": "online-mba.php",
     "popular": true,
     "offering_universities": [
-      "manipal-jaipur",
-      "nmims-online",
-      "ignou-online",
-      "jain-university-online",
+      "alliance-university-online",
+      "amity-university-online",
+      "dy-patil-university-online",
       "lpu-online",
-      "vit-online",
-      "uttaranchal-university-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
       "sikkim-manipal-online",
-      "sharda-university-online"
+      "vgu-online",
+      "amrita-university-online",
+      "sharda-university-online",
+      "shoolini-university-online",
+      "vit-online",
+      "gla-university-online",
+      "uttaranchal-university-online",
+      "parul-university-online",
+      "manipal-mahe-online",
+      "nmims-online",
+      "galgotias-university-online",
+      "mangalayatan-university-online",
+      "ignou-online",
+      "jain-university-online"
     ]
   },
   {
@@ -196,7 +243,7 @@
     "icon": "ri-global-line",
     "image": "assets/img/course/mba.jpg",
     "fallback_image": "assets/img/course-img-1.jpg",
-    "url": "#",
+    "url": "global-mba.php",
     "popular": false,
     "offering_universities": []
   },
@@ -213,7 +260,7 @@
     "icon": "ri-time-line",
     "image": "assets/img/course/mba.jpg",
     "fallback_image": "assets/img/course-img-2.jpg",
-    "url": "#",
+    "url": "one-year-mba.php",
     "popular": false,
     "offering_universities": []
   },
@@ -230,9 +277,11 @@
     "icon": "ri-user-star-line",
     "image": "assets/img/course/mba.jpg",
     "fallback_image": "assets/img/course-img-3.jpg",
-    "url": "#",
+    "url": "executive-mba.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "nmims-online"
+    ]
   },
   {
     "id": "online-mca",
@@ -250,15 +299,25 @@
     "url": "online-mca.php",
     "popular": true,
     "offering_universities": [
-      "manipal-jaipur",
-      "nmims-online",
-      "ignou-online",
-      "jain-university-online",
+      "amity-university-online",
       "lpu-online",
-      "vit-online",
-      "uttaranchal-university-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
       "sikkim-manipal-online",
-      "sharda-university-online"
+      "vgu-online",
+      "amrita-university-online",
+      "sharda-university-online",
+      "shoolini-university-online",
+      "vit-online",
+      "gla-university-online",
+      "uttaranchal-university-online",
+      "parul-university-online",
+      "manipal-mahe-online",
+      "nmims-online",
+      "galgotias-university-online",
+      "mangalayatan-university-online",
+      "ignou-online",
+      "jain-university-online"
     ]
   },
   {
@@ -274,7 +333,7 @@
     "icon": "ri-cloud-line",
     "image": "assets/img/course/mca.jpg",
     "fallback_image": "assets/img/course-img-2.jpg",
-    "url": "#",
+    "url": "global-mca.php",
     "popular": false,
     "offering_universities": []
   },
@@ -291,9 +350,12 @@
     "icon": "ri-newspaper-line",
     "image": "assets/img/course/bba.jpg",
     "fallback_image": "assets/img/course-img-4.jpg",
-    "url": "#",
+    "url": "online-majmc.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "amity-university-online",
+      "chandigarh-university-online"
+    ]
   },
   {
     "id": "online-msc-mathematics",
@@ -308,9 +370,13 @@
     "icon": "ri-calculator-line",
     "image": "assets/img/course/bca.jpg",
     "fallback_image": "assets/img/course-img-5.jpg",
-    "url": "#",
+    "url": "online-msc-mathematics.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "lpu-online",
+      "chandigarh-university-online",
+      "mangalayatan-university-online"
+    ]
   },
   {
     "id": "online-msc-ms-other",
@@ -325,9 +391,11 @@
     "icon": "ri-cpu-line",
     "image": "assets/img/course/mca.jpg",
     "fallback_image": "assets/img/course-img-6.jpg",
-    "url": "#",
+    "url": "online-msc-ms.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "manipal-mahe-online"
+    ]
   },
   {
     "id": "online-ma-other",
@@ -342,9 +410,14 @@
     "icon": "ri-book-open-line",
     "image": "assets/img/course/mcom.jpg",
     "fallback_image": "assets/img/course-img-3.jpg",
-    "url": "#",
+    "url": "online-ma.php",
     "popular": false,
-    "offering_universities": []
+    "offering_universities": [
+      "lpu-online",
+      "uttaranchal-university-online",
+      "parul-university-online",
+      "mangalayatan-university-online"
+    ]
   },
   {
     "id": "online-mcom",
@@ -361,7 +434,15 @@
     "fallback_image": "assets/img/course-img-3.jpg",
     "url": "online-mcom.php",
     "popular": true,
-    "offering_universities": []
+    "offering_universities": [
+      "amity-university-online",
+      "lpu-online",
+      "manipal-jaipur",
+      "chandigarh-university-online",
+      "sikkim-manipal-online",
+      "amrita-university-online",
+      "parul-university-online",
+      "mangalayatan-university-online"
+    ]
   }
 ]
-
