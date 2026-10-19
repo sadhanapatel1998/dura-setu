@@ -105,7 +105,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                     </div>
 
                     <div class="d-flex flex-wrap gap-3 align-items-center">
-                        <a href="#counselling" class="cs_primary_btn">
+                        <a href="tel:919315913702" class="cs_primary_btn">
                             <span>Talk to an Expert</span>
                             <i class="ri-arrow-right-line"></i>
                         </a>
@@ -173,7 +173,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                                     <small>Starting Fees</small>
                                     <strong><?= htmlspecialchars($uni['fee'] ?? 'Fees On Request'); ?></strong>
                                 </div>
-                                <a href="#counselling" class="cs_uni_btn">
+                                <a href="contact.php" class="cs_uni_btn">
                                     <span>Enquire</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
@@ -188,7 +188,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                     <p class="text-muted mx-auto" style="max-width: 600px; font-size: 15px; line-height: 1.6;">
                         Partner universities offering this program will be updated shortly as newly entitled institutions open their admission cycle. Connect with our academic counselling team for the latest syllabus, partner updates, and early admission support.
                     </p>
-                    <a href="#counselling" class="cs_primary_btn mt-3">
+                    <a href="contact.php" class="cs_primary_btn mt-3">
                         <span>Get Admission Guidance</span>
                         <i class="ri-arrow-right-line"></i>
                     </a>
@@ -516,7 +516,7 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                 </div>
             </div>
             <div>
-                <a href="tel:+919876543210" class="cs_need_help_btn">
+                <a href="tel:+919315913702" class="cs_need_help_btn">
                     <span>Talk to an Expert</span>
                     <span class="cs_need_help_btn_circle">
                         <i class="ri-arrow-right-s-line"></i>

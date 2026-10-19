@@ -110,7 +110,7 @@ $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) 
                                 <i class="ri-arrow-right-line"></i>
                             </span>
                         </a>
-                        <a href="#"
+                        <a href="tel:9315913702"
                             class="cs_header_icon_btn cs_cart_btn"
                             aria-label="Contact">
 

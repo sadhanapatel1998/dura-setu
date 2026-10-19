@@ -6,18 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
     <title><?= htmlspecialchars($pageMeta['title']) ?></title>
-
     <meta name="description"
         content="<?= htmlspecialchars($pageMeta['description']) ?>">
-
     <meta name="keywords"
         content="<?= htmlspecialchars($pageMeta['keywords']) ?>">
-
     <meta name="robots"
         content="<?= htmlspecialchars($pageMeta['robots']) ?>">
-
     <?php if (!empty($pageMeta['canonical'])): ?>
         <link rel="canonical"
             href="<?= htmlspecialchars($pageMeta['canonical']) ?>">
@@ -70,9 +65,39 @@
     <script defer src="assets/js/lightgallery.min.js"></script>
     <script defer src="assets/js/aos.min.js"></script>
     <script defer src="assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Replace with your WhatsApp number
+            // India: 91 + 10 digit number
+            const whatsappNumber = "919315913702";
+
+            const firstName = document.getElementById("fname").value;
+            const lastName = document.getElementById("lname").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            const whatsappMessage = `
+            Hello DuraSetu,
+            
+            *New Website Enquiry*
+            
+            Name: ${firstName} ${lastName}
+            Email: ${email}
+            Subject: ${subject}
+            
+            Message:
+            ${message}
+            `.trim();
+
+            const whatsappURL =
+                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
 </body>
-
-
-<!-- Mirrored from lerntix-html.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Oct 2026 06:07:59 GMT -->
-
 </html>

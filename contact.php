@@ -28,15 +28,15 @@ include("include/data.php");
                         <div class="cs_contact_info_item">
                             <h2 class="cs_fs_20 cs_semibold">Office Address</h2>
                             <p class="cs_fs_14 mb-0">
-                                DuraSetu Education Services<br>
-                                New Delhi, India
+                                Sector 16, Noida – 201301<br>
+                                Uttar Pradesh, India
                             </p>
                         </div>
 
                         <div class="cs_contact_info_item">
                             <h2 class="cs_fs_20 cs_semibold">Call Us</h2>
                             <p class="cs_fs_14 mb-0">
-                                <a href="tel:+919876543210">+91 98765 43210</a><br>
+                                <a href="tel:+919315913702">+91 93159 13702</a><br>
                                 Mon-Sat, 9:00 AM - 7:00 PM
                             </p>
                         </div>
@@ -44,12 +44,12 @@ include("include/data.php");
                         <div class="cs_contact_info_item">
                             <h2 class="cs_fs_20 cs_semibold">Email</h2>
                             <div class="cs_fs_14">
-                                <a href="mailto:info@durasetu.com">info@durasetu.com</a>
+                                <a href="mailto:arpansangam01@gmail.com">arpansangam01@gmail.com</a>
                                 <div>We'll respond within 24 hours</div>
                             </div>
                         </div>
 
-                        <div class="cs_contact_info_item">
+                        <!-- <div class="cs_contact_info_item">
                             <h2 class="cs_fs_20 cs_semibold">Connect With Us</h2>
                             <div class="cs_contact_social">
                                 <a href="#" aria-label="Facebook">
@@ -65,7 +65,7 @@ include("include/data.php");
                                     <i class="ri-instagram-line"></i>
                                 </a>
                             </div>
-                        </div>
+                        </div> -->
 
                     </aside>
                 </div>
@@ -74,8 +74,7 @@ include("include/data.php");
                         <h2 class="cs_fs_32 cs_semibold cs_contact_form_title mb-4">
                             Get in Touch With DuraSetu
                         </h2>
-
-                        <form class="cs_contact_form" action="#" method="post">
+                        <form class="cs_contact_form" id="whatsappForm">
 
                             <div class="cs_form_input">
                                 <label class="cs_form_label" for="fname">First Name</label>
@@ -130,8 +129,8 @@ include("include/data.php");
 
                             <div class="cs_form_input">
                                 <button type="submit" class="cs_primary_btn">
-                                    <span>Send Message</span>
-                                    <span><i class="ri-arrow-right-s-line"></i></span>
+                                    <span>Send on WhatsApp</span>
+                                    <span><i class="ri-whatsapp-line"></i></span>
                                 </button>
                             </div>
 

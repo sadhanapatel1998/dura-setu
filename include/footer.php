@@ -37,7 +37,7 @@
                 <i class="ri-phone-fill"></i>
               </div>
               <div class="cs_footer_contact_info">
-                <a href="tel:+919876543210" class="cs_footer_contact_val">+91 98765 43210</a>
+                <a href="tel:+919315913702" class="cs_footer_contact_val">+91 93159 13702</a>
                 <span class="cs_footer_contact_sub">Mon - Sat, 9:00 AM - 6:00 PM</span>
               </div>
             </div>
@@ -47,7 +47,7 @@
                 <i class="ri-mail-fill"></i>
               </div>
               <div class="cs_footer_contact_info">
-                <a href="mailto:info@durasetu.com" class="cs_footer_contact_val">info@durasetu.com</a>
+                <a href="mailto:arpansangam01@gmail.com" class="cs_footer_contact_val">arpansangam01@gmail.com</a>
                 <span class="cs_footer_contact_sub">We reply within 24 hours</span>
               </div>
             </div>
@@ -166,7 +166,7 @@
               </li>
             </ul>
 
-            <a href="contact.php" class="cs_counsel_btn">
+            <a href="tel:919315913702" class="cs_counsel_btn">
               <span class="cs_counsel_btn_text">Talk to an Expert</span>
               <span class="cs_counsel_btn_arrow"><i class="ri-arrow-right-s-line"></i></span>
             </a>

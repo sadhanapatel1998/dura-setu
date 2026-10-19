@@ -123,7 +123,7 @@ $mba_universities = dura_get_course_universities_list('online-mba', [
                     </div>
 
                     <div class="d-flex flex-wrap gap-3 align-items-center">
-                        <a href="#counselling" class="cs_primary_btn">
+                        <a href="tel:919315913702" class="cs_primary_btn">
                             <span>Talk to an Expert</span>
                             <i class="ri-arrow-right-line"></i>
                         </a>
@@ -650,7 +650,7 @@ $mba_universities = dura_get_course_universities_list('online-mba', [
                 </div>
             </div>
             <div>
-                <a href="tel:+919876543210" class="cs_need_help_btn">
+                <a href="tel:+919315913702" class="cs_need_help_btn">
                     <span>Talk to an Expert</span>
                     <span class="cs_need_help_btn_circle">
                         <i class="ri-arrow-right-s-line"></i>

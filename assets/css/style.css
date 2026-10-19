@@ -1801,7 +1801,7 @@ label {
   font-size: 14.5px;
   font-weight: 700;
   padding: 7px 8px 7px 20px;
-  border-radius: 50px;
+  border-radius: 9px;
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(255, 138, 0, 0.4);
   transition: all 0.3s ease;
@@ -25552,7 +25552,7 @@ button.cs_settings_2fa_option:hover {
   font-size: 14.5px;
   font-weight: 700;
   padding: 10px 12px 10px 22px;
-  border-radius: 50px;
+  border-radius: 9px;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(255, 138, 0, 0.35);
   transition: all 0.3s ease;

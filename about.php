@@ -226,7 +226,7 @@ include("include/data.php");
                                     Not sure which university or course is right for you? Our experts can help you
                                     compare your options and make a confident decision.
                                 </p>
-                                <a href="contact.php" class="cs_help_expert_btn">
+                                <a href="tel:9315913702" class="cs_help_expert_btn">
                                     <i class="ri-user-line"></i>
                                     <span>Talk to an Expert</span>
                                     <i class="ri-arrow-right-line"></i>

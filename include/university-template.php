@@ -129,11 +129,11 @@ if (!isset($univ) || empty($univ)) {
                         </ul>
 
                         <div class="cs_unid_sidebar_actions">
-                            <a href="#counselling" class="cs_unid_sidebar_btn_primary">
+                            <a href="tel:+919315913702" class="cs_unid_sidebar_btn_primary">
                                 <span>Talk to an Expert</span>
                                 <i class="ri-arrow-right-line"></i>
                             </a>
-                            <a href="tel:+919876543210" class="cs_unid_sidebar_btn_secondary">
+                            <a href="tel:+919315913702" class="cs_unid_sidebar_btn_secondary">
                                 <i class="ri-phone-line"></i>
                                 <span>Get Free Counselling</span>
                             </a>
@@ -608,7 +608,7 @@ if (!isset($univ) || empty($univ)) {
                 </div>
             </div>
             <div>
-                <a href="tel:+919876543210" class="cs_unid_btn_primary">
+                <a href="tel:+919315913702" class="cs_unid_btn_primary">
                     <span>Talk to an Expert</span>
                     <i class="ri-arrow-right-line"></i>
                 </a>
