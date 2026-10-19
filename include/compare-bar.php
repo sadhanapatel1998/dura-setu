@@ -208,7 +208,7 @@ margin-right: 5px;
 .cs_compare_bar_info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
     min-width: 175px;
 }
 
@@ -219,15 +219,15 @@ margin-right: 5px;
 }
 
 .cs_compare_icon_wrap {
-    width: 32px;
-    height: 32px;
+    width: 45px;
+    height: 45px;
     border-radius: 8px;
     background: #eff6ff;
     color: #2563eb;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .cs_compare_title_text {
@@ -236,14 +236,14 @@ margin-right: 5px;
 }
 
 .cs_compare_heading {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #0f172a;
     line-height: 1.2;
 }
 
 .cs_compare_count_pill {
-    font-size: 11.5px;
+    font-size: 12.5px;
     font-weight: 600;
     color: #2563eb;
 }
@@ -254,7 +254,7 @@ margin-right: 5px;
     gap: 5px;
     background: #f1f5f9;
     color: #0f172a;
-    font-size: 11.5px;
+    font-size: 13.5px;
     font-weight: 600;
     padding: 2px 8px;
     border-radius: 4px;
@@ -267,7 +267,7 @@ margin-right: 5px;
 
 .cs_compare_course_chip i {
     color: #2563eb;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .cs_chip_remove {
@@ -337,7 +337,7 @@ margin-right: 5px;
 }
 
 .cs_slot_logo {
-    width: 32px;
+    width: 50px;
     height: 32px;
     object-fit: contain;
     background: #ffffff;
@@ -348,7 +348,7 @@ margin-right: 5px;
 }
 
 .cs_slot_title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #0f172a;
     line-height: 1.2;
@@ -393,7 +393,7 @@ margin-right: 5px;
 .cs_compare_clear_link {
     background: transparent;
     border: none;
-    color: #64748b;
+    color: #dc3545;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -414,7 +414,7 @@ margin-right: 5px;
     background: #2563eb;
     color: #ffffff !important;
     padding: 10px 22px;
-    border-radius: 50px;
+    border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -506,7 +506,7 @@ margin-right: 5px;
         padding: 4px 6px;
     }
     .cs_slot_logo {
-        width: 26px;
+        width: 40px;
         height: 26px;
     }
     .cs_slot_title {

@@ -1,0 +1,51 @@
+[
+    {
+        "file": "contact.php",
+        "line": 11,
+        "match": "Conact",
+        "suggested": "contact",
+        "context": "<h1 class=\"cs_page_header_title cs_fs_64\">Conact Us</h1>"
+    },
+    {
+        "file": "contact.php",
+        "line": 14,
+        "match": "Conact",
+        "suggested": "contact",
+        "context": "<li>Conact Us</li>"
+    },
+    {
+        "file": "index.php",
+        "line": 795,
+        "match": "Worldwid",
+        "suggested": "worldwide",
+        "context": "Trusted by Learners <span class=\"cs_funfact_highlight\">Worldwid</span>"
+    },
+    {
+        "file": "online-mba.php",
+        "line": 310,
+        "match": "recognised",
+        "suggested": "recognized",
+        "context": "Graduates from a recognised university are eligible. Some universities may have additional criteria. Check the exact requirements before applying."
+    },
+    {
+        "file": "course-template.php",
+        "line": 274,
+        "match": "recognised",
+        "suggested": "recognized",
+        "context": "<?= htmlspecialchars($course['eligibility_desc'] ?? 'Graduates from a recognised university are eligible. Check the exact requirements before applying.'); ?>"
+    },
+    {
+        "file": "university-template.php",
+        "line": 261,
+        "match": "Recognised",
+        "suggested": "recognized",
+        "context": "<h2 class=\"cs_unid_sec_title\">Recognised, Trusted and Reputed</h2>"
+    },
+    {
+        "file": "university-template.php",
+        "line": 262,
+        "match": "recognised",
+        "suggested": "recognized",
+        "context": "<p class=\"cs_unid_sec_subtitle\">Degrees from <?= htmlspecialchars($univ['name']); ?> are recognised and valued by employers across industries.</p>"
+    }
+]

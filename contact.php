@@ -8,10 +8,10 @@ include("include/data.php");
     <section class="cs_page_header cs_bg_filed" data-src="assets/img/breadcrumb-bg.jpg">
         <div class="container">
             <div class="cs_page_header_text">
-                <h1 class="cs_page_header_title cs_fs_64">Conact Us</h1>
+                <h1 class="cs_page_header_title cs_fs_64">Contact Us</h1>
                 <ul class="cs_breadcrumb cs_mp_0 cs_fs_16">
                     <li><a href="index.php">Home</a></li>
-                    <li>Conact Us</li>
+                    <li>Contact Us</li>
                 </ul>
             </div>
         </div>

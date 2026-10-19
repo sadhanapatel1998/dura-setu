@@ -997,11 +997,93 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         updateSidebarVisuals();
         applyFilters();
+        if (window.innerWidth < 992) {
+            closeMobileFilter();
+        }
     }
+
+    // Mobile Filter Collapse Handlers (< 992px)
+    const mobileFilterToggleBtn = document.querySelector('.cs_mobile_filter_toggle_btn');
+    const uniFilterCollapse = document.getElementById('uniFilterSidebarCollapse');
+
+    function openMobileFilter() {
+        if (!uniFilterCollapse || window.innerWidth >= 992) return;
+        uniFilterCollapse.classList.add('show');
+        if (window.jQuery) {
+            window.jQuery(uniFilterCollapse).stop(true, true).slideDown(250);
+        } else {
+            uniFilterCollapse.style.display = 'block';
+        }
+        if (mobileFilterToggleBtn) {
+            mobileFilterToggleBtn.setAttribute('aria-expanded', 'true');
+            mobileFilterToggleBtn.classList.remove('collapsed');
+        }
+    }
+
+    function closeMobileFilter() {
+        if (!uniFilterCollapse || window.innerWidth >= 992) return;
+        if (window.jQuery && window.jQuery(uniFilterCollapse).is(':visible')) {
+            window.jQuery(uniFilterCollapse).stop(true, true).slideUp(200, function () {
+                uniFilterCollapse.classList.remove('show');
+                uniFilterCollapse.style.display = 'none';
+            });
+        } else {
+            uniFilterCollapse.classList.remove('show');
+            uniFilterCollapse.style.display = 'none';
+        }
+        if (mobileFilterToggleBtn) {
+            mobileFilterToggleBtn.setAttribute('aria-expanded', 'false');
+            mobileFilterToggleBtn.classList.add('collapsed');
+        }
+    }
+
+    function toggleMobileFilter() {
+        if (!uniFilterCollapse || window.innerWidth >= 992) return;
+        const isVisible = uniFilterCollapse.classList.contains('show') || 
+                          (uniFilterCollapse.style.display === 'block') ||
+                          (window.jQuery && window.jQuery(uniFilterCollapse).is(':visible'));
+        if (isVisible) {
+            closeMobileFilter();
+        } else {
+            openMobileFilter();
+        }
+    }
+
+    // Mobile Filter Toggle Button Listener
+    if (mobileFilterToggleBtn) {
+        mobileFilterToggleBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleMobileFilter();
+        });
+    }
+
+    // Close mobile filter when clicking outside on mobile
+    document.addEventListener('click', function (e) {
+        if (window.innerWidth >= 992) return;
+        if (!uniFilterCollapse || !uniFilterCollapse.classList.contains('show')) return;
+        if (uniFilterCollapse.contains(e.target) || (mobileFilterToggleBtn && mobileFilterToggleBtn.contains(e.target))) {
+            return;
+        }
+        closeMobileFilter();
+    });
+
+    // Window Resize Guard: Reset inline styles when switching between mobile and desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 992 && uniFilterCollapse) {
+            uniFilterCollapse.style.removeProperty('display');
+            uniFilterCollapse.classList.remove('show');
+            if (mobileFilterToggleBtn) {
+                mobileFilterToggleBtn.setAttribute('aria-expanded', 'false');
+                mobileFilterToggleBtn.classList.remove('collapsed');
+            }
+        }
+    });
 
     // Sidebar Course Item Click Listeners
     courseLabels.forEach(lbl => {
         lbl.addEventListener('click', function (e) {
+            if (e.target.tagName && e.target.tagName.toLowerCase() === 'input') return;
+
             const targetCourse = (this.getAttribute('data-course') || '').toLowerCase();
             const targetTitle = this.getAttribute('data-title') || '';
 
@@ -1020,6 +1102,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             updateSidebarVisuals();
             applyFilters();
+
+            // Mobile view handling: close filter collapse & scroll to results
+            if (window.innerWidth < 992) {
+                closeMobileFilter();
+                const targetScroll = document.querySelector('.cs_right_top_bar') || document.getElementById('uniGrid');
+                if (targetScroll) {
+                    targetScroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         });
     });
 
@@ -1047,6 +1138,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             updateSidebarVisuals();
             applyFilters();
+            if (window.innerWidth < 992) {
+                closeMobileFilter();
+            }
         });
     }
 

@@ -2,12 +2,12 @@
 ob_start();
 include("include/data.php");
 ?>
+
 <main>
     <!-- Start Hero Section -->
     <div class="cs_banner_slider_wrap slider-section">
         <div class="cs_banner_slider swiper" data-slides-per-view="1" data-gap="0" data-autoplay="5000" data-loop="1"
             data-speed="800" data-pagination="1">
-
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="contact.php">
@@ -28,7 +28,6 @@ include("include/data.php");
                     </a>
                 </div>
             </div>
-
             <!-- Arrows -->
             <div class="cs_arrows_style_1">
                 <button type="button" class="cs_slider_arrow slider-prev" aria-label="Previous banner">
@@ -38,7 +37,6 @@ include("include/data.php");
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </div>
-
             <!-- Dots -->
             <div class="swiper-pagination"></div>
 
@@ -794,7 +792,7 @@ include("include/data.php");
                 </div>
 
                 <h2 class="cs_funfact_title">
-                    Trusted by Learners <span class="cs_funfact_highlight">Worldwid</span>
+                    Trusted by Learners <span class="cs_funfact_highlight">Worldwide</span>
                 </h2>
 
                 <p class="cs_funfact_desc mb-0">
@@ -911,7 +909,7 @@ include("include/data.php");
                         and tips to make smarter decisions about your online education.</p>
                 </div>
                 <div class="cs_pop_heading_btn">
-                    <a href="courses.php" class="cs_primary_btn cs_radius_50">
+                    <a href="blogs.php" class="cs_primary_btn cs_radius_50">
                         <span>View All Blogs</span>
                         <span><i class="ri-arrow-right-line"></i></span>
                     </a>

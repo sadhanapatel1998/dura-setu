@@ -48,7 +48,7 @@ if (!isset($univ) || empty($univ)) {
                             <!-- CTA Buttons -->
                             <div class="cs_unid_hero_btns">
                                 <a href="universities.php" class="cs_unid_btn_primary">
-                                    <span>Campare Universities</span>
+                                    <span>Compare Universities</span>
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
                                 <a href="contact.php" class="cs_unid_btn_secondary">
@@ -355,7 +355,7 @@ if (!isset($univ) || empty($univ)) {
                             </li>
                         </ul>
                         <a href="universities.php" class="cs_unid_btn_primary w-100 justify-content-center">
-                            <span>Campare Universities</span>
+                            <span>Compare Universities</span>
                             <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
