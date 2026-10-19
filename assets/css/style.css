@@ -199,25 +199,40 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+html,
+body {
   color: var(--secondary-color);
   font-family: var(--secondary-font);
   font-size: 16px;
   line-height: 1.625em;
   font-weight: 400;
-  overflow-x: clip;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
   background-color: var(--web-wash);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-body::-webkit-scrollbar,
 html::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 h1,

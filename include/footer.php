@@ -5,17 +5,17 @@
 
         <!-- Column 1: Brand & Contact -->
         <div class="cs_footer_col cs_footer_col_brand">
-          <!-- <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
-            <img src="assets/img/logo/logo.png" alt="Dura Setu">
-          </a> -->
           <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
+            <img src="assets/img/logo/logo.png" alt="Dura Setu">
+          </a>
+          <!-- <a class="cs_footer_brand_logo" href="index.php" aria-label="DuraSetu Home">
             <div class="cs_footer_logo_main">
-              <!-- <svg class="cs_footer_logo_cap" width="38" height="30" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="cs_footer_logo_cap" width="38" height="30" viewBox="0 0 48 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 3L3 14.5L24 26L45 14.5L24 3Z" fill="#FF8A00" stroke="#FF8A00" stroke-width="1.5" stroke-linejoin="round"/>
                 <path d="M10 19V28.5C10 28.5 15.5 34 24 34C32.5 34 38 28.5 38 28.5V19" stroke="#FF8A00" stroke-width="3" stroke-linecap="round"/>
                 <path d="M41 17V29" stroke="#FF8A00" stroke-width="2.5" stroke-linecap="round"/>
                 <circle cx="41" cy="30.5" r="2" fill="#FF8A00"/>
-              </svg> -->
+              </svg>
               <span class="cs_footer_brand_name text">
                 <span class="cs_dura">Dura</span><span class="cs_setu">Setu</span><sup class="cs_tm"></sup>
               </span>
@@ -25,7 +25,7 @@
               <span class="cs_tagline_txt">LEARNING &nbsp;|&nbsp; BEYOND &nbsp;|&nbsp; DISTANCE</span>
               <span class="cs_tagline_bar"></span>
             </div>
-          </a>
+          </a> -->
 
           <p class="cs_footer_brand_desc">
             Your bridge to the right online university, course and career path.
