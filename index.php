@@ -10,19 +10,19 @@ include("include/data.php");
 
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a href="contact.php">
                         <img src="assets/img/hero/ds-banner-one.jpg" alt="Banner 1" class="desktop-banner">
                         <img src="assets/img/hero/m-banner-one.jpg" alt="Banner 1" class="mobile-banner">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a href="contact.php">
                         <img src="assets/img/hero/ds-banner-three.jpg" alt="Banner 3" class="desktop-banner">
                         <img src="assets/img/hero/m-banner-three.jpg" alt="Banner 3" class="mobile-banner">
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a href="contact.php">
                         <img src="assets/img/hero/ds-banner-two.jpg" alt="Banner 2" class="desktop-banner">
                         <img src="assets/img/hero/m-banner-two.jpg" alt="Banner 2" class="mobile-banner">
                     </a>
