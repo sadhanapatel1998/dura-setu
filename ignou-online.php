@@ -1,9 +1,4 @@
 <?php
-ob_start();
-include("include/data.php");
-include("include/university-data.php");
-
-$univ = $all_universities_data['ignou-online'];
-include("include/university-template.php");
+header("Location: universities.php", true, 301);
+exit();
 ?>
-

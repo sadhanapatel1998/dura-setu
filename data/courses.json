@@ -32,7 +32,17 @@
             "nmims-online",
             "galgotias-university-online",
             "mangalayatan-university-online",
-            "jain-university-online"
+            "jain-university-online",
+            "christ-university-online",
+            "dayananda-sagar-university-online",
+            "dr-dy-patil-vidyapeeth-pune-online",
+            "symbiosis-international-online",
+            "bharati-vidyapeeth-online",
+            "chitkara-university-online",
+            "bennett-university-online",
+            "noida-international-university-online",
+            "upes-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -66,8 +76,17 @@
             "parul-university-online",
             "galgotias-university-online",
             "mangalayatan-university-online",
-            "ignou-online",
-            "jain-university-online"
+            "jain-university-online",
+            "christ-university-online",
+            "dayananda-sagar-university-online",
+            "dr-dy-patil-vidyapeeth-pune-online",
+            "symbiosis-international-online",
+            "bharati-vidyapeeth-online",
+            "chitkara-university-online",
+            "bennett-university-online",
+            "noida-international-university-online",
+            "upes-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -100,7 +119,12 @@
             "nmims-online",
             "galgotias-university-online",
             "mangalayatan-university-online",
-            "ignou-online"
+            "christ-university-online",
+            "dayananda-sagar-university-online",
+            "bharati-vidyapeeth-online",
+            "chitkara-university-online",
+            "noida-international-university-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -137,7 +161,9 @@
         "popular": false,
         "offering_universities": [
             "amity-university-online",
-            "chandigarh-university-online"
+            "chandigarh-university-online",
+            "noida-international-university-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -226,8 +252,17 @@
             "nmims-online",
             "galgotias-university-online",
             "mangalayatan-university-online",
-            "ignou-online",
-            "jain-university-online"
+            "jain-university-online",
+            "christ-university-online",
+            "dayananda-sagar-university-online",
+            "dr-dy-patil-vidyapeeth-pune-online",
+            "symbiosis-international-online",
+            "bharati-vidyapeeth-online",
+            "chitkara-university-online",
+            "bennett-university-online",
+            "noida-international-university-online",
+            "upes-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -316,8 +351,16 @@
             "nmims-online",
             "galgotias-university-online",
             "mangalayatan-university-online",
-            "ignou-online",
-            "jain-university-online"
+            "jain-university-online",
+            "christ-university-online",
+            "dayananda-sagar-university-online",
+            "symbiosis-international-online",
+            "bharati-vidyapeeth-online",
+            "chitkara-university-online",
+            "bennett-university-online",
+            "noida-international-university-online",
+            "upes-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -354,7 +397,9 @@
         "popular": false,
         "offering_universities": [
             "amity-university-online",
-            "chandigarh-university-online"
+            "chandigarh-university-online",
+            "noida-international-university-online",
+            "amity-university-jaipur-online"
         ]
     },
     {
@@ -416,7 +461,8 @@
             "lpu-online",
             "uttaranchal-university-online",
             "parul-university-online",
-            "mangalayatan-university-online"
+            "mangalayatan-university-online",
+            "christ-university-online"
         ]
     },
     {
@@ -442,7 +488,9 @@
             "sikkim-manipal-online",
             "amrita-university-online",
             "parul-university-online",
-            "mangalayatan-university-online"
+            "mangalayatan-university-online",
+            "bharati-vidyapeeth-online",
+            "amity-university-jaipur-online"
         ]
     }
 ]

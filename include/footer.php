@@ -100,9 +100,9 @@
             </li>
 
             <li>
-              <a href="ignou-online.php">
+              <a href="symbiosis-international-online.php">
                 <i class="ri-arrow-right-s-line"></i>
-                <span>IGNOU Online University</span>
+                <span>Symbiosis International Online</span>
               </a>
             </li>
 

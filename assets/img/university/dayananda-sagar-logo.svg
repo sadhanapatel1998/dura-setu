@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
+  <rect width="220" height="60" fill="transparent"/>
+  <!-- Emblem -->
+  <g transform="translate(10, 6)">
+    <circle cx="24" cy="24" r="22" fill="#003366" stroke="#E67E22" stroke-width="2"/>
+    <path d="M24 10 L34 20 L24 30 L14 20 Z" fill="#E67E22"/>
+    <circle cx="24" cy="24" r="4" fill="#FFFFFF"/>
+    <path d="M16 34 Q24 28 32 34" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Text -->
+  <text x="64" y="22" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="14" font-weight="800" fill="#003366" letter-spacing="0.5">DAYANANDA SAGAR</text>
+  <text x="64" y="37" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="800" fill="#E67E22" letter-spacing="1">UNIVERSITY</text>
+  <text x="64" y="49" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#64748B" letter-spacing="0.5">BENGALURU · KARNATAKA</text>
+</svg>

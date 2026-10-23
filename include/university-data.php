@@ -126,7 +126,7 @@ if (empty($all_universities_data)) {
             ]
         ],
 
-        'ignou-online' => [
+        'ignou-online-disabled' => [
             'slug' => 'ignou-online.php',
             'name' => 'IGNOU Online University',
             'short_name' => 'IGNOU Online',

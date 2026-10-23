@@ -60,10 +60,73 @@ $seoData = [
     ],
 
 
-    "ignou-online.php" => [
-        "title" => "IGNOU Online University | Courses, Fees & Admission | DuraSetu",
-        "description" => "Explore IGNOU online programs, courses, fees, eligibility, admission process and online education options with DuraSetu.",
-        "keywords" => "IGNOU Online, IGNOU university, IGNOU online courses, IGNOU admission, online degree IGNOU",
+    "christ-university-online.php" => [
+        "title" => "CHRIST (Deemed to be University) Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore CHRIST (Deemed to be University) Online degree programs, fees, eligibility, admission process, and career opportunities with DuraSetu.",
+        "keywords" => "Christ University Online, Christ deemed university, online MBA Christ, online BCA Christ, Christ admission",
+        "robots" => "index, follow"
+    ],
+
+    "dayananda-sagar-university-online.php" => [
+        "title" => "Dayananda Sagar University Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Dayananda Sagar University Online programs, fees, eligibility, admission process, and career opportunities with DuraSetu.",
+        "keywords" => "Dayananda Sagar University Online, DSU Online, online MBA DSU, online BCA DSU, DSU admission",
+        "robots" => "index, follow"
+    ],
+
+    "dr-dy-patil-vidyapeeth-pune-online.php" => [
+        "title" => "Dr. D.Y. Patil Vidyapeeth (Pune) Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Dr. D.Y. Patil Vidyapeeth Pune Online programs, NAAC A++ accreditation, fees, eligibility, and admission process with DuraSetu.",
+        "keywords" => "DY Patil Pune Online, DPU Pune Online, online MBA DY Patil Pune, DPU online admission",
+        "robots" => "index, follow"
+    ],
+
+    "symbiosis-international-online.php" => [
+        "title" => "Symbiosis International Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Symbiosis International (Deemed University) Online programs, SSODL fees, eligibility, and career opportunities with DuraSetu.",
+        "keywords" => "Symbiosis Online, Symbiosis International Online, SSODL Pune, online MBA Symbiosis, Symbiosis admission",
+        "robots" => "index, follow"
+    ],
+
+    "bharati-vidyapeeth-online.php" => [
+        "title" => "Bharati Vidyapeeth Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Bharati Vidyapeeth (Deemed to be University) Online degree programs, fees, eligibility, and admission guidance with DuraSetu.",
+        "keywords" => "Bharati Vidyapeeth Online, BVDU Online, online MBA Bharati Vidyapeeth, online MCA BVDU, Bharati Vidyapeeth admission",
+        "robots" => "index, follow"
+    ],
+
+    "chitkara-university-online.php" => [
+        "title" => "Chitkara University Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Chitkara University Online degree courses, NAAC A+ accreditation, fees, eligibility, and placement support with DuraSetu.",
+        "keywords" => "Chitkara University Online, Chitkara Online, online MBA Chitkara, online BCA Chitkara, Chitkara admission",
+        "robots" => "index, follow"
+    ],
+
+    "bennett-university-online.php" => [
+        "title" => "Bennett University Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Bennett University Online degree programs, The Times Group legacy, fees, eligibility, and admission guidance with DuraSetu.",
+        "keywords" => "Bennett University Online, Bennett Online, online MBA Bennett, Times Group university, Bennett admission",
+        "robots" => "index, follow"
+    ],
+
+    "noida-international-university-online.php" => [
+        "title" => "Noida International University Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Noida International University (NIU) Online courses, NAAC A+ accreditation, fees, eligibility, and admissions with DuraSetu.",
+        "keywords" => "Noida International University Online, NIU Online, online MBA NIU, NIU admission, online degree NIU",
+        "robots" => "index, follow"
+    ],
+
+    "upes-online.php" => [
+        "title" => "UPES Online University | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore University of Petroleum and Energy Studies (UPES) Online programs, fees, eligibility, specialisations, and admission process with DuraSetu.",
+        "keywords" => "UPES Online, UPES Dehradun online, online MBA UPES, UPES online courses, UPES admission",
+        "robots" => "index, follow"
+    ],
+
+    "amity-university-jaipur-online.php" => [
+        "title" => "Amity University Jaipur Online | Courses, Fees & Admission | DuraSetu",
+        "description" => "Explore Amity University Jaipur Online degree programs, fees, eligibility, approvals, and admission guidance with DuraSetu.",
+        "keywords" => "Amity University Jaipur Online, Amity Jaipur Online, online MBA Amity Jaipur, Amity Rajasthan online",
         "robots" => "index, follow"
     ],
 

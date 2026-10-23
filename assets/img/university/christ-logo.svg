@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" width="220" height="60">
+  <rect width="220" height="60" fill="transparent"/>
+  <!-- Crest Icon -->
+  <g transform="translate(10, 6)">
+    <path d="M24 2 L42 10 L42 28 C42 38 34 45 24 48 C14 45 6 38 6 28 L6 10 Z" fill="#0A2540" stroke="#C5A059" stroke-width="2"/>
+    <path d="M24 10 L30 18 L24 26 L18 18 Z" fill="#C5A059"/>
+    <path d="M24 26 L24 40 M16 33 L32 33" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Text -->
+  <text x="64" y="24" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="19" font-weight="800" fill="#0A2540" letter-spacing="1">CHRIST</text>
+  <text x="64" y="38" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="8.5" font-weight="700" fill="#C5A059" letter-spacing="0.5">(DEEMED TO BE UNIVERSITY)</text>
+  <text x="64" y="49" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-size="7.5" font-weight="600" fill="#64748B" letter-spacing="0.5">BENGALURU · PUNE · DELHI</text>
+</svg>
