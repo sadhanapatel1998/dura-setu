@@ -64,7 +64,7 @@
     <script defer src="assets/js/odometer.min.js"></script>
     <script defer src="assets/js/lightgallery.min.js"></script>
     <script defer src="assets/js/aos.min.js"></script>
-    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/assets/js/main.js') ? filemtime(__DIR__ . '/assets/js/main.js') : '1.0'; ?>"></script>
 
     <script>
         document.getElementById("whatsappForm").addEventListener("submit", function(e) {

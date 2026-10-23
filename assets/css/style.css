@@ -207,8 +207,7 @@ body {
   line-height: 1.625em;
   font-weight: 400;
 
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: clip;
 
   background-color: var(--web-wash);
 
@@ -216,6 +215,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
+}
+
+@supports not (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 html::-webkit-scrollbar {
@@ -23525,6 +23531,10 @@ button.cs_settings_2fa_option:hover {
   transform: translateY(-50%) scale(1.08);
 }
 
+.cs_uni_slider_nav i {
+  pointer-events: none;
+}
+
 .cs_uni_prev {
   left: -8px;
 }
@@ -24813,13 +24823,18 @@ button.cs_settings_2fa_option:hover {
 
 /* Sticky Course Nav Tabs */
 .cs_course_sticky_nav {
+  position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  z-index: 99;
+  z-index: 990;
   background: #ffffff;
   border-bottom: 1px solid #e2e8f0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
+  transition: top 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cs_course_sticky_nav.cs_is_stuck {
+  box-shadow: 0 4px 18px rgba(11, 30, 56, 0.1);
 }
 
 .cs_course_nav_tabs {
@@ -25848,7 +25863,8 @@ button.cs_settings_2fa_option:hover {
 
 @media (max-width: 991px) {
   .cs_course_sticky_nav {
-    top: 68px;
+    top: 70px;
+    z-index: 990;
   }
 
   .cs_two_cards_grid {
@@ -26295,14 +26311,19 @@ button.cs_settings_2fa_option:hover {
    Sticky Horizontal Navigation Bar (#unidStickyNav)
 ============================================================== */
 .cs_unid_sticky_nav {
+  position: -webkit-sticky;
   position: sticky;
-  top: 75px;
-  z-index: 99;
+  top: 80px;
+  z-index: 990;
   background: #ffffff;
   border-top: 1px solid #edf2f7;
   border-bottom: 2px solid #e2e8f0;
   box-shadow: 0 4px 14px rgba(11, 30, 56, 0.06);
-  transition: all 0.3s ease;
+  transition: top 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cs_unid_sticky_nav.cs_is_stuck {
+  box-shadow: 0 4px 18px rgba(11, 30, 56, 0.1);
 }
 
 .cs_unid_nav_list {
@@ -27049,7 +27070,8 @@ button.cs_settings_2fa_option:hover {
 
 @media (max-width: 991px) {
   .cs_unid_sticky_nav {
-    top: 68px;
+    top: 70px;
+    z-index: 990;
   }
 
   .cs_unid_hero_top_row {

@@ -167,7 +167,7 @@ include("include/data.php");
             </div>
 
             <!-- Slider Container -->
-            <div class="cs_uni_slider_wrapper position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="cs_uni_slider_wrapper slider-section position-relative" data-aos="fade-up" data-aos-delay="100">
                 <!-- Navigation Prev -->
                 <button type="button" class="cs_uni_slider_nav cs_uni_prev slider-prev" aria-label="Previous slide">
                     <i class="ri-arrow-left-s-line"></i>

@@ -80,8 +80,8 @@ $course_groups = [
             </div>
 
             <!-- Mobile Filter Toggle Button (< 992px) -->
-            <div class="d-lg-none mb-3" data-aos="fade-up">
-                <button type="button" class="btn w-100 d-flex align-items-center justify-content-between cs_mobile_filter_toggle_btn" data-bs-toggle="collapse" data-bs-target="#uniFilterSidebarCollapse" aria-expanded="false" aria-controls="uniFilterSidebarCollapse">
+            <div class="d-lg-none cs_mobile_filter_toggle_wrap" data-aos="fade-up">
+                <button type="button" class="btn w-100 d-flex align-items-center justify-content-between cs_mobile_filter_toggle_btn" id="csMobileFilterToggleBtn" aria-expanded="false" aria-controls="uniFilterSidebarCollapse">
                     <span class="d-flex align-items-center gap-2">
                         <i class="ri-equalizer-line"></i>
                         <span class="cs_bold">Filter Courses</span>
@@ -90,12 +90,15 @@ $course_groups = [
                 </button>
             </div>
 
+            <!-- Backdrop Overlay for Mobile Left Sidebar Drawer -->
+            <div class="cs_filter_sidebar_backdrop d-lg-none" id="csFilterSidebarBackdrop"></div>
+
             <!-- Two-Column Layout: Left Sticky Sidebar + Right University Grid -->
             <div class="row g-4">
 
                 <!-- LEFT SIDE: Sticky Filter Sidebar (col-lg-4 col-xl-3) -->
-                <div class="col-lg-4 col-xl-3">
-                    <div class="collapse d-lg-block" id="uniFilterSidebarCollapse">
+                <div class="col-lg-4 col-xl-3 cs_filter_sidebar_col">
+                    <div class="cs_filter_sidebar_wrapper" id="uniFilterSidebarCollapse">
                         <aside class="cs_filter_sidebar_card">
                             
                             <!-- Sidebar Header -->
@@ -104,9 +107,14 @@ $course_groups = [
                                     <i class="ri-filter-3-line cs_filter_header_icon"></i>
                                     <h3 class="cs_filter_header_title mb-0">Course Filters</h3>
                                 </div>
-                                <button type="button" id="csResetFilterSidebarBtn" class="cs_filter_reset_link" title="Reset all course filters">
-                                    <i class="ri-refresh-line"></i> Reset
-                                </button>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button type="button" id="csResetFilterSidebarBtn" class="cs_filter_reset_link" title="Reset all course filters">
+                                        <i class="ri-refresh-line"></i> Reset
+                                    </button>
+                                    <button type="button" class="cs_mobile_filter_close_btn d-lg-none" id="csMobileFilterCloseBtn" aria-label="Close filters">
+                                        <i class="ri-close-line"></i>
+                                    </button>
+                                </div>
                             </div>
 
                             <!-- "All Programs" Quick Option -->
@@ -147,6 +155,14 @@ $course_groups = [
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
+                            </div>
+
+                            <!-- Mobile Drawer Apply Footer (< 992px) -->
+                            <div class="cs_mobile_filter_footer d-lg-none">
+                                <button type="button" class="cs_mobile_filter_apply_btn" id="csMobileFilterApplyBtn">
+                                    <span>Show Universities</span>
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
                             </div>
 
                         </aside>
@@ -337,12 +353,29 @@ $course_groups = [
 }
 
 @media (min-width: 992px) {
+    .cs_filter_sidebar_col {
+        position: relative;
+        align-self: stretch;
+    }
+    .cs_filter_sidebar_wrapper {
+        height: 100% !important;
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        visibility: visible !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background: transparent !important;
+    }
     .cs_filter_sidebar_card {
+        position: -webkit-sticky;
         position: sticky;
-        top: 90px;
-        max-height: calc(100vh - 110px);
+        top: 95px;
+        max-height: calc(100vh - 115px);
         display: flex;
         flex-direction: column;
+        z-index: 20;
     }
 }
 
@@ -521,7 +554,17 @@ $course_groups = [
     color: #ffffff;
 }
 
-/* Mobile Filter Button */
+/* Mobile Filter Button & Sticky Wrapper (< 992px) */
+.cs_mobile_filter_toggle_wrap {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+    z-index: 80;
+    background: #f8fafc;
+    padding: 6px 0;
+    margin-bottom: 14px;
+}
+
 .cs_mobile_filter_toggle_btn {
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
@@ -546,6 +589,121 @@ $course_groups = [
     color: #2563eb;
     padding: 3px 10px;
     border-radius: 50px;
+}
+
+/* Mobile Filter Drawer to Left Side (< 992px) */
+@media (max-width: 991px) {
+    .cs_filter_sidebar_wrapper {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 320px !important;
+        max-width: 86vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background: #ffffff !important;
+        z-index: 1050 !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: 6px 0 25px rgba(0, 0, 0, 0.18) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        visibility: hidden !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .cs_filter_sidebar_wrapper.cs_drawer_open {
+        transform: translateX(0) !important;
+        visibility: visible !important;
+    }
+
+    .cs_filter_sidebar_card {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+    }
+
+    .cs_filter_scroll_area {
+        flex: 1 1 auto !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-bottom: 24px !important;
+    }
+
+    /* Mobile Backdrop Overlay */
+    .cs_filter_sidebar_backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 30, 56, 0.5);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        z-index: 1045;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .cs_filter_sidebar_backdrop.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Mobile Close Button */
+    .cs_mobile_filter_close_btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #f1f5f9;
+        border: none;
+        color: #0b1e38;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .cs_mobile_filter_close_btn:hover {
+        background: #fee2e2;
+        color: #ef4444;
+    }
+
+    /* Mobile Drawer Apply Footer */
+    .cs_mobile_filter_footer {
+        padding: 12px 16px;
+        background: #ffffff;
+        border-top: 1px solid #e2e8f0;
+        box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .cs_mobile_filter_apply_btn {
+        width: 100%;
+        background: #002671;
+        color: #ffffff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 14.5px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: background 0.2s ease;
+    }
+
+    .cs_mobile_filter_apply_btn:hover {
+        background: #ff7900;
+        color: #ffffff;
+    }
 }
 
 /* Right Top Bar & Search Box */
@@ -1002,54 +1160,46 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Mobile Filter Collapse Handlers (< 992px)
+    // Mobile Filter Drawer to Left Side Handlers (< 992px)
     const mobileFilterToggleBtn = document.querySelector('.cs_mobile_filter_toggle_btn');
     const uniFilterCollapse = document.getElementById('uniFilterSidebarCollapse');
+    const mobileFilterBackdrop = document.getElementById('csFilterSidebarBackdrop');
+    const mobileFilterCloseBtn = document.getElementById('csMobileFilterCloseBtn');
+    const mobileFilterApplyBtn = document.getElementById('csMobileFilterApplyBtn');
 
     function openMobileFilter() {
         if (!uniFilterCollapse || window.innerWidth >= 992) return;
-        uniFilterCollapse.classList.add('show');
-        if (window.jQuery) {
-            window.jQuery(uniFilterCollapse).stop(true, true).slideDown(250);
-        } else {
-            uniFilterCollapse.style.display = 'block';
+        uniFilterCollapse.classList.add('cs_drawer_open');
+        if (mobileFilterBackdrop) {
+            mobileFilterBackdrop.classList.add('active');
         }
+        document.body.style.overflow = 'hidden';
         if (mobileFilterToggleBtn) {
             mobileFilterToggleBtn.setAttribute('aria-expanded', 'true');
-            mobileFilterToggleBtn.classList.remove('collapsed');
         }
     }
 
     function closeMobileFilter() {
-        if (!uniFilterCollapse || window.innerWidth >= 992) return;
-        if (window.jQuery && window.jQuery(uniFilterCollapse).is(':visible')) {
-            window.jQuery(uniFilterCollapse).stop(true, true).slideUp(200, function () {
-                uniFilterCollapse.classList.remove('show');
-                uniFilterCollapse.style.display = 'none';
-            });
-        } else {
-            uniFilterCollapse.classList.remove('show');
-            uniFilterCollapse.style.display = 'none';
+        if (!uniFilterCollapse) return;
+        uniFilterCollapse.classList.remove('cs_drawer_open');
+        if (mobileFilterBackdrop) {
+            mobileFilterBackdrop.classList.remove('active');
         }
+        document.body.style.removeProperty('overflow');
         if (mobileFilterToggleBtn) {
             mobileFilterToggleBtn.setAttribute('aria-expanded', 'false');
-            mobileFilterToggleBtn.classList.add('collapsed');
         }
     }
 
     function toggleMobileFilter() {
         if (!uniFilterCollapse || window.innerWidth >= 992) return;
-        const isVisible = uniFilterCollapse.classList.contains('show') || 
-                          (uniFilterCollapse.style.display === 'block') ||
-                          (window.jQuery && window.jQuery(uniFilterCollapse).is(':visible'));
-        if (isVisible) {
+        if (uniFilterCollapse.classList.contains('cs_drawer_open')) {
             closeMobileFilter();
         } else {
             openMobileFilter();
         }
     }
 
-    // Mobile Filter Toggle Button Listener
     if (mobileFilterToggleBtn) {
         mobileFilterToggleBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -1057,25 +1207,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Close mobile filter when clicking outside on mobile
-    document.addEventListener('click', function (e) {
-        if (window.innerWidth >= 992) return;
-        if (!uniFilterCollapse || !uniFilterCollapse.classList.contains('show')) return;
-        if (uniFilterCollapse.contains(e.target) || (mobileFilterToggleBtn && mobileFilterToggleBtn.contains(e.target))) {
-            return;
-        }
-        closeMobileFilter();
-    });
+    if (mobileFilterCloseBtn) {
+        mobileFilterCloseBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeMobileFilter();
+        });
+    }
 
-    // Window Resize Guard: Reset inline styles when switching between mobile and desktop
-    window.addEventListener('resize', function () {
-        if (window.innerWidth >= 992 && uniFilterCollapse) {
-            uniFilterCollapse.style.removeProperty('display');
-            uniFilterCollapse.classList.remove('show');
-            if (mobileFilterToggleBtn) {
-                mobileFilterToggleBtn.setAttribute('aria-expanded', 'false');
-                mobileFilterToggleBtn.classList.remove('collapsed');
+    if (mobileFilterBackdrop) {
+        mobileFilterBackdrop.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeMobileFilter();
+        });
+    }
+
+    if (mobileFilterApplyBtn) {
+        mobileFilterApplyBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeMobileFilter();
+            const targetScroll = document.querySelector('.cs_right_top_bar') || document.getElementById('uniGrid');
+            if (targetScroll) {
+                targetScroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+        });
+    }
+
+    // Window Resize Guard: Reset styles when resizing to desktop
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 992) {
+            closeMobileFilter();
         }
     });
 

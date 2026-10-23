@@ -63,6 +63,7 @@
   $(function () {
     mainNav();
     stickyHeader();
+    subnavSticky();
     dynamicBackground();
     swiperInit();
     languageSwitch();
@@ -112,8 +113,9 @@
   /*=============================================================
    Run on window Scroll
   ===============================================================*/
-  $(window).on("scroll", function () {
+  $(window).on("scroll resize", function () {
     stickyHeader();
+    subnavSticky();
     showScrollUp();
   });
 
@@ -168,6 +170,29 @@
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
   }
+  /*===========================================================
+    Subnav Sticky Controller
+  ===============================================================*/
+  function subnavSticky() {
+    var $stickyNavs = $(".cs_unid_sticky_nav, .cs_course_sticky_nav");
+    if (!$stickyNavs.length) return;
+
+    var $header = $(".cs_site_header");
+    var headerH = $header.length ? $header.outerHeight() : (window.innerWidth <= 991 ? 70 : 80);
+
+    $stickyNavs.each(function () {
+      var $nav = $(this);
+      $nav.css("top", headerH + "px");
+
+      var rect = this.getBoundingClientRect();
+      if (rect.top <= headerH + 2) {
+        $nav.addClass("cs_is_stuck");
+      } else {
+        $nav.removeClass("cs_is_stuck");
+      }
+    });
+  }
+
   /*===========================================================
     03. Dynamic Background
   =============================================================*/
@@ -364,10 +389,10 @@
       var $nextBtn = $swiperEl.find(".slider-next");
 
       if (!$prevBtn.length) {
-        $prevBtn = $swiperEl.closest(".slider-section").find(".slider-prev");
+        $prevBtn = $swiperEl.siblings(".slider-prev").length ? $swiperEl.siblings(".slider-prev") : $swiperEl.closest(".slider-section, .cs_uni_slider_wrapper").find(".slider-prev");
       }
       if (!$nextBtn.length) {
-        $nextBtn = $swiperEl.closest(".slider-section").find(".slider-next");
+        $nextBtn = $swiperEl.siblings(".slider-next").length ? $swiperEl.siblings(".slider-next") : $swiperEl.closest(".slider-section, .cs_uni_slider_wrapper").find(".slider-next");
       }
 
       // ===== PAGINATION =====
