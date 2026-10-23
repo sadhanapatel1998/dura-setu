@@ -38,19 +38,19 @@
                 <div class="cs_compare_slot" id="csCompareSlot0" data-slot="0">
                     <div class="cs_slot_placeholder">
                         <i class="ri-add-line"></i>
-                        <span>Add University</span>
+                        <span>Add</span>
                     </div>
                 </div>
                 <div class="cs_compare_slot" id="csCompareSlot1" data-slot="1">
                     <div class="cs_slot_placeholder">
                         <i class="ri-add-line"></i>
-                        <span>Add University</span>
+                        <span>Add</span>
                     </div>
                 </div>
                 <div class="cs_compare_slot" id="csCompareSlot2" data-slot="2">
                     <div class="cs_slot_placeholder">
                         <i class="ri-add-line"></i>
-                        <span>Add University</span>
+                        <span>Add</span>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@ margin-right: 5px;
     background: #ffffff;
     border-top: 1px solid #e2e8f0;
     box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.12);
-    z-index: 1040;
+    z-index: 99999 !important;
     transform: translateY(110%);
     opacity: 0;
     visibility: hidden;
@@ -195,6 +195,16 @@ margin-right: 5px;
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+}
+
+/* Offset scrollup button when compare bar is visible so it stays neatly above */
+.cs_scrollup_btn.cs_compare_offset {
+    bottom: 110px !important;
+}
+@media (max-width: 767.98px) {
+    .cs_scrollup_btn.cs_compare_offset {
+        bottom: 190px !important;
+    }
 }
 
 .cs_compare_bar_inner {
@@ -501,38 +511,225 @@ margin-right: 5px;
         max-width: 100%;
     }
     .cs_compare_slot {
-        height: 46px;
+        height: 48px;
         min-width: 80px;
-        padding: 4px 6px;
+        padding: 4px 8px;
     }
     .cs_slot_logo {
-        width: 40px;
-        height: 26px;
+        width: 44px;
+        height: 28px;
     }
     .cs_slot_title {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767.98px) {
     .cs_sticky_compare_bar {
-        padding: 8px 0 12px;
+        border-top-left-radius: 20px !important;
+        border-top-right-radius: 20px !important;
+        padding: 14px 14px 16px 14px !important;
+        box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.16) !important;
+    }
+    .cs_compare_bar_inner {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        grid-template-areas:
+            "info clear"
+            "action action"
+            "slots slots" !important;
+        gap: 10px 8px !important;
+        align-items: center !important;
     }
     .cs_compare_bar_info {
-        min-width: auto;
+        grid-area: info !important;
+        min-width: 0 !important;
+        gap: 4px !important;
+    }
+    .cs_compare_bar_title_row {
+        gap: 8px !important;
+    }
+    .cs_compare_icon_wrap {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 20px !important;
+        border-radius: 9px !important;
+        background: #eff6ff !important;
+        color: #2563eb !important;
+        flex-shrink: 0 !important;
     }
     .cs_compare_heading {
-        font-size: 13px;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        color: #0b1e38 !important;
+        line-height: 1.25 !important;
     }
+    .cs_compare_count_pill {
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        color: #2563eb !important;
+    }
+    .cs_compare_course_chip {
+        font-size: 11px !important;
+        padding: 2px 7px !important;
+        max-width: 160px !important;
+    }
+
+    /* Actions wrapper on mobile participates via display: contents */
+    .cs_compare_bar_actions {
+        display: contents !important;
+    }
+    .cs_compare_clear_link {
+        grid-area: clear !important;
+        justify-self: end !important;
+        font-size: 13.5px !important;
+        font-weight: 600 !important;
+        color: #ef4444 !important;
+        text-decoration: underline !important;
+        padding: 4px 0 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
+        background: transparent !important;
+        border: none !important;
+    }
+    .cs_compare_clear_link:hover {
+        color: #dc2626 !important;
+    }
+
+    /* Row 2: Full-Width Compare Now Button */
     .cs_compare_now_btn {
-        padding: 8px 16px;
-        font-size: 13px;
+        grid-area: action !important;
+        width: 100% !important;
+        height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+        background: #1d68f2 !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 14px rgba(29, 104, 242, 0.28) !important;
+        text-align: center !important;
     }
-    .cs_slot_placeholder span {
-        display: none;
+    .cs_compare_now_btn.disabled {
+        background: #cbd5e1 !important;
+        color: #64748b !important;
+        box-shadow: none !important;
+    }
+
+    /* Row 3: 3 Comparison Cards */
+    .cs_compare_slots_container {
+        grid-area: slots !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        margin: 0 !important;
+    }
+    .cs_compare_slot {
+        height: 48px !important;
+        min-width: 0 !important;
+        padding: 4px 8px !important;
+        position: relative !important;
+        border-radius: 8px !important;
+        background: #f8fbff !important;
+        border: 1.5px dashed #93c5fd !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
+    }
+    .cs_compare_slot.filled {
+        background: #ffffff !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+    .cs_slot_content {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+    }
+    .cs_slot_logo {
+        height: 22px !important;
+        max-width: 30px !important;
+        width: auto !important;
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+        display: block !important;
+    }
+    .cs_slot_title {
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #0b1e38 !important;
+        line-height: 1.15 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        flex-grow: 1 !important;
+        max-width: calc(100% - 34px) !important;
+        text-align: left !important;
+        padding: 0 !important;
+    }
+    .cs_slot_title_desktop {
+        display: none !important;
+    }
+    .cs_slot_title_mobile {
+        display: block !important;
+    }
+    .cs_slot_remove {
+        position: absolute !important;
+        top: -6px !important;
+        right: -6px !important;
+        width: 18px !important;
+        height: 18px !important;
+        background: #ffffff !important;
+        border: 1.5px solid #ef4444 !important;
+        color: #ef4444 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12) !important;
+        z-index: 10 !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+    }
+    .cs_slot_placeholder {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: transparent !important;
+        border: none !important;
+        color: #2563eb !important;
     }
     .cs_slot_placeholder i {
-        font-size: 18px;
+        font-size: 18px !important;
+        line-height: 1 !important;
+        color: #2563eb !important;
+        font-weight: 700 !important;
+    }
+    .cs_slot_placeholder span {
+        display: inline-block !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: #2563eb !important;
     }
 }
 </style>
@@ -606,6 +803,15 @@ const DuraCompare = (function () {
         if (toast) toast.classList.remove('show');
     }
 
+    function getUniversityCourses(uniId) {
+        const col = document.querySelector(`.uni-card-col[data-id="${uniId}"]`);
+        if (col) {
+            const raw = col.getAttribute('data-courses') || '';
+            return raw.split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+        }
+        return null;
+    }
+
     function toggleUni(uniData) {
         const unis = getStoredUnis();
         const existingIdx = unis.findIndex(u => u.id === uniData.id);
@@ -623,11 +829,27 @@ const DuraCompare = (function () {
                 return null; // reached limit
             }
 
+            // Ensure comparison is only between universities offering the same selected course
+            const currentCourse = getStoredCourse();
+            let uniCourses = uniData.courses;
+            if (!uniCourses || !Array.isArray(uniCourses) || uniCourses.length === 0) {
+                uniCourses = getUniversityCourses(uniData.id);
+            }
+
+            if (currentCourse && currentCourse.id && uniCourses && uniCourses.length > 0) {
+                const cId = currentCourse.id.toLowerCase();
+                if (!uniCourses.map(c => c.toLowerCase()).includes(cId)) {
+                    showToast(`${uniData.short_name || uniData.name} does not offer ${currentCourse.title || currentCourse.id}.`);
+                    return null;
+                }
+            }
+
             unis.push({
                 id: uniData.id,
                 name: uniData.name,
                 short_name: uniData.short_name || uniData.name,
-                logo: uniData.logo
+                logo: uniData.logo,
+                courses: uniCourses || []
             });
             saveStoredUnis(unis);
             renderUI();
@@ -651,7 +873,29 @@ const DuraCompare = (function () {
         if (!courseId) {
             saveStoredCourse(null);
         } else {
-            saveStoredCourse({ id: courseId, title: courseName || courseId });
+            const cId = courseId.toLowerCase();
+            saveStoredCourse({ id: cId, title: courseName || courseId });
+
+            // Enforce that all selected universities offer this course
+            let unis = getStoredUnis();
+            if (unis.length > 0) {
+                const validUnis = unis.filter(u => {
+                    let uCourses = u.courses;
+                    if (!uCourses || !Array.isArray(uCourses) || uCourses.length === 0) {
+                        uCourses = getUniversityCourses(u.id);
+                    }
+                    if (uCourses && uCourses.length > 0) {
+                        return uCourses.map(c => c.toLowerCase()).includes(cId);
+                    }
+                    return true;
+                });
+
+                if (validUnis.length < unis.length) {
+                    saveStoredUnis(validUnis);
+                    const removed = unis.length - validUnis.length;
+                    showToast(`${removed} university(s) not offering ${courseName || courseId} removed from comparison.`);
+                }
+            }
         }
         renderUI();
     }
@@ -668,6 +912,42 @@ const DuraCompare = (function () {
         renderUI();
     }
 
+    function getBrandName(u) {
+        if (!u) return '';
+        const n = (u.short_name || u.name || '').trim();
+        if (/manipal.*jaipur/i.test(n) || (/manipal/i.test(n) && !/sikkim/i.test(n))) return 'Manipal';
+        if (/sikkim.*manipal|smu/i.test(n)) return 'SMU';
+        if (/jain/i.test(n)) return 'Jain';
+        if (/amity.*jaipur/i.test(n)) return 'Amity Jaipur';
+        if (/amity/i.test(n)) return 'Amity';
+        if (/lpu|lovely/i.test(n)) return 'LPU';
+        if (/nmims/i.test(n)) return 'NMIMS';
+        if (/symbiosis/i.test(n)) return 'Symbiosis';
+        if (/d\.?y\.?\s*patil/i.test(n)) return 'DY Patil';
+        if (/chandigarh/i.test(n)) return 'Chandigarh';
+        if (/chitkara/i.test(n)) return 'Chitkara';
+        if (/bennett/i.test(n)) return 'Bennett';
+        if (/upes/i.test(n)) return 'UPES';
+        if (/christ/i.test(n)) return 'Christ';
+        if (/dayanand/i.test(n)) return 'Dayananda';
+        if (/bharati/i.test(n)) return 'Bharati';
+        if (/noida|niu/i.test(n)) return 'NIU';
+        if (/galgotias/i.test(n)) return 'Galgotias';
+        if (/sharda/i.test(n)) return 'Sharda';
+        if (/shoolini/i.test(n)) return 'Shoolini';
+        if (/uttaranchal/i.test(n)) return 'Uttaranchal';
+        if (/mangalayatan/i.test(n)) return 'Mangalayatan';
+        if (/g\.?l\.?a/i.test(n)) return 'GLA';
+        if (/vgu|vivekananda/i.test(n)) return 'VGU';
+        if (/amrita/i.test(n)) return 'Amrita';
+        if (/vit|vellore/i.test(n)) return 'VIT';
+        if (/alliance/i.test(n)) return 'Alliance';
+        if (/parul/i.test(n)) return 'Parul';
+
+        const cleaned = n.replace(/\s*(University|Online|\(Deemed.*?\)|Deemed|-.*$|COL|CCE).*$/i, '').trim();
+        return cleaned || n.split(' ')[0] || n;
+    }
+
     function renderUI() {
         const unis = getStoredUnis();
         const course = getStoredCourse();
@@ -677,14 +957,17 @@ const DuraCompare = (function () {
         const bar = document.getElementById('csStickyCompareBar');
         const countPill = document.getElementById('csCompareCountPill');
         const compareBtn = document.getElementById('csCompareNowBtn');
+        const scrollUpBtn = document.querySelector('.cs_scrollup_btn');
 
         if (bar) {
             if (count > 0) {
                 bar.classList.add('cs_bar_visible');
-                document.body.style.paddingBottom = '85px';
+                document.body.style.paddingBottom = (window.innerWidth < 768 ? '180px' : '90px');
+                if (scrollUpBtn) scrollUpBtn.classList.add('cs_compare_offset');
             } else {
                 bar.classList.remove('cs_bar_visible');
                 document.body.style.paddingBottom = '0px';
+                if (scrollUpBtn) scrollUpBtn.classList.remove('cs_compare_offset');
             }
         }
 
@@ -711,12 +994,14 @@ const DuraCompare = (function () {
 
             const u = unis[i];
             if (u) {
+                const brand = getBrandName(u);
                 slotEl.className = 'cs_compare_slot filled';
                 slotEl.innerHTML = `
                     <div class="cs_slot_content">
                         <img src="${escapeHtml(u.logo)}" alt="${escapeHtml(u.name)}" class="cs_slot_logo" onerror="this.src='assets/img/icons/graduation-cap.svg'">
-                        <span class="cs_slot_title" title="${escapeHtml(u.name)}">${escapeHtml(u.short_name || u.name)}</span>
-                        <button type="button" class="cs_slot_remove" onclick="DuraCompare.removeUni('${escapeHtml(u.id)}')" aria-label="Remove ${escapeHtml(u.name)}">
+                        <span class="cs_slot_title cs_slot_title_desktop" title="${escapeHtml(u.name)}">${escapeHtml(u.short_name || u.name)}</span>
+                        <span class="cs_slot_title cs_slot_title_mobile" title="${escapeHtml(u.name)}">${escapeHtml(brand)}</span>
+                        <button type="button" class="cs_slot_remove" onclick="DuraCompare.removeUni('${escapeHtml(u.id)}')" aria-label="Remove ${escapeHtml(u.name)}" title="Remove">
                             <i class="ri-close-line"></i>
                         </button>
                     </div>
@@ -726,7 +1011,7 @@ const DuraCompare = (function () {
                 slotEl.innerHTML = `
                     <div class="cs_slot_placeholder">
                         <i class="ri-add-line"></i>
-                        <span>Add University</span>
+                        <span>Add</span>
                     </div>
                 `;
             }

@@ -12,6 +12,44 @@ if (!defined('DURA_DATA_LOADED')) {
     // Global in-memory cache
     $GLOBALS['dura_universities_cache'] = null;
     $GLOBALS['dura_courses_cache'] = null;
+    $GLOBALS['dura_comparison_cache'] = null;
+
+    /**
+     * Load all comparison data from JSON
+     * @return array
+     */
+    function dura_get_all_comparison_data(): array {
+        if ($GLOBALS['dura_comparison_cache'] !== null) {
+            return $GLOBALS['dura_comparison_cache'];
+        }
+
+        $jsonFile = __DIR__ . '/../data/comparison.json';
+        if (file_exists($jsonFile)) {
+            $raw = file_get_contents($jsonFile);
+            $data = json_decode($raw, true);
+            if (is_array($data)) {
+                $GLOBALS['dura_comparison_cache'] = $data;
+                return $data;
+            }
+        }
+
+        $GLOBALS['dura_comparison_cache'] = [];
+        return [];
+    }
+
+    /**
+     * Get comparison data for a specific university
+     * @param string $id
+     * @return array|null
+     */
+    function dura_get_comparison_data(string $id): ?array {
+        $allComp = dura_get_all_comparison_data();
+        if (isset($allComp[$id])) {
+            return $allComp[$id];
+        }
+        $uni = dura_get_university($id);
+        return $uni['comparison_data'] ?? null;
+    }
 
     /**
      * Load all universities data from JSON
@@ -27,6 +65,16 @@ if (!defined('DURA_DATA_LOADED')) {
             $raw = file_get_contents($jsonFile);
             $data = json_decode($raw, true);
             if (is_array($data)) {
+                // Seamlessly merge extended comparison data from comparison.json
+                $compAll = dura_get_all_comparison_data();
+                if (!empty($compAll)) {
+                    foreach ($data as $uId => &$uVal) {
+                        if (isset($compAll[$uId])) {
+                            $uVal['comparison_data'] = array_merge($uVal['comparison_data'] ?? [], $compAll[$uId]);
+                        }
+                    }
+                    unset($uVal);
+                }
                 $GLOBALS['dura_universities_cache'] = $data;
                 return $data;
             }
@@ -141,32 +189,56 @@ if (!defined('DURA_DATA_LOADED')) {
 
     /**
      * Comparison Engine Helper
-     * Compares 2 to 4 universities across key academic, accreditation and cost parameters
+     * Compares universities across all academic, accreditation, placement, and cost parameters
+     * based on client benchmark comparison data.
      * @param array $university_ids
      * @return array
      */
     function dura_compare_universities(array $university_ids): array {
         $compared = [];
+        $compAll = dura_get_all_comparison_data();
         foreach ($university_ids as $id) {
             $uni = dura_get_university($id);
             if ($uni) {
-                $comp = $uni['comparison_data'] ?? [];
+                $comp = $compAll[$id] ?? ($uni['comparison_data'] ?? []);
                 $compared[$id] = [
                     'id' => $uni['id'],
                     'name' => $uni['name'],
-                    'short_name' => $uni['short_name'],
+                    'short_name' => $uni['short_name'] ?? $uni['name'],
+                    'slug' => $uni['slug'] ?? 'universities.php',
                     'logo' => $uni['logo'],
+                    'campus_img' => $uni['campus_img'] ?? '',
+                    'hero_desc' => $uni['hero_desc'] ?? '',
                     'type' => $uni['overview']['type'] ?? 'Not Available',
                     'recognition' => $uni['overview']['recognition'] ?? 'UGC-DEB',
                     'accreditation' => $uni['overview']['accreditation'] ?? 'Not Available',
+                    'semester_fee' => $comp['semester_fee'] ?? 'Not Available',
+                    'total_two_year_fee' => $comp['total_two_year_fee'] ?? ($comp['avg_fee_range'] ?? 'Not Available'),
+                    'approvals' => $comp['approvals'] ?? ($uni['overview']['recognition'] ?? 'Not Available'),
+                    'credit_points' => $comp['credit_points'] ?? 'Not Available',
+                    'eligibility' => $comp['eligibility'] ?? 'Not Available',
+                    'top_recruiters' => $comp['top_recruiters'] ?? 'Not Available',
+                    'duration' => $comp['duration'] ?? '2 Years',
+                    'education_mode' => $comp['education_mode'] ?? ($uni['overview']['mode'] ?? 'Online'),
+                    'elearning_facility' => $comp['elearning_facility'] ?? 'Yes',
+                    'alumni_status' => $comp['alumni_status'] ?? 'Not Available',
+                    'online_classes' => $comp['online_classes'] ?? 'Yes',
+                    'placement_assistance' => $comp['placement_assistance'] ?? 'Yes',
+                    'industry_ready_curriculum' => $comp['industry_ready_curriculum'] ?? 'Yes',
+                    'satisfied_students' => $comp['satisfied_students'] ?? 'Not Available',
+                    'pros' => $comp['pros'] ?? 'Not Available',
                     'naac_grade' => $comp['naac_grade'] ?? ($uni['overview']['accreditation'] ?? 'Not Available'),
+                    'naac_score' => $comp['naac_score'] ?? 'Not Available',
+                    'nirf_ranking' => $comp['nirf_ranking'] ?? ($uni['rank'] ?? 'Not Available'),
+                    'wes_approval' => $comp['wes_approval'] ?? 'Not Available',
+                    'established_year' => $comp['established_year'] ?? ($uni['since'] ?? 'Not Available'),
+                    'emi_available' => $comp['emi_available'] ?? 'Not Available',
+                    'students_visited' => $comp['students_visited'] ?? 'Not Available',
                     'ugc_entitled' => $comp['ugc_entitled'] ?? 'Yes',
                     'avg_fee_range' => $comp['avg_fee_range'] ?? 'Not Available',
-                    'emi_available' => $comp['emi_available'] ?? 'Not Available',
-                    'placement_assistance' => $comp['placement_assistance'] ?? 'Not Available',
                     'exam_mode' => $comp['exam_mode'] ?? 'Not Available',
                     'learning_mode' => $comp['learning_mode'] ?? 'Not Available',
-                    'established_year' => $comp['established_year'] ?? ($uni['since'] ?? 'Not Available'),
+                    'course_details' => $uni['course_details'] ?? [],
                     'offered_courses' => $uni['offered_courses'] ?? []
                 ];
             }

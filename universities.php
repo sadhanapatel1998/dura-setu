@@ -1165,11 +1165,16 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!btn) return;
 
             e.preventDefault();
+            const cardCol = btn.closest('.uni-card-col');
+            const coursesAttr = cardCol ? cardCol.getAttribute('data-courses') || '' : '';
+            const cardCourses = coursesAttr.split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+
             const uniData = {
                 id: btn.getAttribute('data-id'),
                 name: btn.getAttribute('data-name'),
                 short_name: btn.getAttribute('data-short'),
-                logo: btn.getAttribute('data-logo')
+                logo: btn.getAttribute('data-logo'),
+                courses: cardCourses
             };
 
             if (typeof DuraCompare !== 'undefined') {
