@@ -2081,9 +2081,10 @@ label {
 }
 
 .swiper-pagination.cs_style_1 .swiper-pagination-bullet {
+  margin: 0 !important;
   width: 8px;
   height: 8px;
-  margin: 0 !important;
+
   opacity: 1;
   border-radius: 4px;
   background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
@@ -23088,6 +23089,7 @@ button.cs_settings_2fa_option:hover {
 .cs_banner_slider .swiper-slide {
   width: 100%;
   height: auto !important;
+  min-height: 0 !important;
   display: block;
   margin-top: 90px;
   padding: 0;
@@ -23105,6 +23107,7 @@ button.cs_settings_2fa_option:hover {
   width: 100%;
   height: auto !important;
   min-height: 0 !important;
+
   max-height: none !important;
   object-fit: contain !important;
   object-position: center center;
@@ -23744,7 +23747,7 @@ button.cs_settings_2fa_option:hover {
   height: 10px;
   background: #2a4365;
   opacity: 0.6;
-  margin: 0 !important;
+
   border-radius: 50%;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -24080,7 +24083,7 @@ button.cs_settings_2fa_option:hover {
   height: 10px;
   background: #022567;
   opacity: 0.35;
-  margin: 0 !important;
+
   border-radius: 50%;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -27243,6 +27246,283 @@ button.cs_settings_2fa_option:hover {
   transform: translateY(-3px);
 }
 
+.cs_scrollup_btn i {
+  font-size: 20px;
+}
+
+/* ==============================================================
+   DuraSetu Premium Top Header Bar
+============================================================== */
+.cs_top_header {
+  background: #021a3e;
+  background: linear-gradient(90deg, #021533 0%, #03214d 50%, #021533 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-family: var(--primary-font, "Source Sans Pro", sans-serif);
+  font-size: 13px;
+  position: relative;
+  z-index: 1001;
+  transition: height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Top bar non-sticky rule */
+.cs_site_header.cs_sticky_active .cs_top_header {
+  display: none !important;
+}
+/* cleanup-start
+.cs_site_header.cs_sticky_active .cs_top_header {
+
+
+
+
+
+
+
+
+
+
+  display: none !important;
+}
+
+.cs_site_header.cs_sticky_active .cs_top_header {
+  display: none !important;
+}
+
+
+
+
+
+}
+}
+
+cleanup-end */
+
+.cs_top_header_in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  gap: 16px;
+}
+
+/* Left: Graduation Cap & Rotating Messages */
+.cs_top_header_left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.cs_top_cap_icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 170, 0, 0.16);
+  color: #ffaa00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cs_top_ticker {
+  position: relative;
+  height: 22px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.cs_top_ticker_item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cs_top_ticker_item.cs_ticker_active {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cs_top_ticker_item.cs_ticker_prev {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+/* Right: Contact Items & Social Icons */
+.cs_top_header_right {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 14px;
+}
+
+.cs_top_contact_group {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cs_top_contact_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.cs_top_contact_link i {
+  color: #ffaa00;
+  font-size: 14px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.cs_top_contact_link:hover {
+  color: #ffffff;
+}
+
+.cs_top_contact_link:hover i {
+  transform: scale(1.15);
+}
+
+.cs_top_v_sep {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cs_top_social_group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs_top_social_btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cs_top_social_btn:hover {
+  background: #ff8a00;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 138, 0, 0.35);
+}
+
+.cs_top_mobile_call_btn {
+  display: none;
+}
+
+/* Responsive Rules for Top Header */
+@media (max-width: 1199px) {
+
+
+.cs_top_header_in {
+    height: 36px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_top_contact_link.cs_top_email {
+    display: none;
+  }
+  .cs_top_v_sep_email {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+
+
+.cs_top_header_in {
+    height: 34px;
+    gap: 10px;
+  }
+
+  .cs_top_ticker_item {
+    font-size: 12px;
+  }
+
+  .cs_top_contact_group {
+    display: none;
+  }
+
+  .cs_top_v_sep_social {
+    display: none;
+  }
+
+  .cs_top_mobile_call_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #ffaa00;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 50px;
+    background: rgba(255, 170, 0, 0.12);
+    border: 1px solid rgba(255, 170, 0, 0.25);
+    white-space: nowrap;
+  }
+
+  .cs_top_mobile_call_btn:hover {
+    color: #ffffff;
+    background: #ff8a00;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs_top_social_group {
+    display: none;
+  }
+
+  .cs_top_cap_icon {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .cs_top_ticker_item {
+    font-size: 11.5px;
+  }
+}
+
+/* End Top Header */
+.cs_scrollup_btn_placeholder { display: none; }
 .cs_scrollup_btn i {
   font-size: 20px;
 }

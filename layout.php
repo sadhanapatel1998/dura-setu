@@ -92,7 +92,6 @@
             Message:
             ${message}
             `.trim();
-
             const whatsappURL =
                 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
