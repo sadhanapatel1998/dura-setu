@@ -572,11 +572,6 @@ $mca_universities = dura_get_course_universities_list('online-mca', [
                         Find answers to common questions about Online MCA programs, eligibility, labs and job placements.
                     </p>
                 </div>
-                <div>
-                    <a href="#counselling" class="cs_faq_view_all">
-                        View All FAQs <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
             </div>
 
             <!-- 2x2 Accordion Grid -->

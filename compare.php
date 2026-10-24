@@ -339,7 +339,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
                             models.
                         </p>
                     </div>
-                    <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2 d-none">
                         <button type="button" class="btn btn-outline-secondary btn-sm" onclick="window.print()"
                             style="padding:8px 16px; border-radius:6px; font-weight:600;">
                             <i class="ri-printer-line me-1"></i> Print / Save PDF
@@ -898,7 +898,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
                         style="background:#ffffff; border:1px solid #e2e8f0; box-shadow:0 2px 8px rgba(0,0,0,0.02);">
                         <h5
                             style="font-size:14.5px; font-weight:700; color:#0b1e38; margin-bottom:12px; text-align:center;">
-                            Explore Institution Profiles
+                            Explore Universities Profiles
                         </h5>
                         <div class="d-flex flex-column gap-2">
                             <?php foreach ($comparedUnis as $cUni): ?>

@@ -21,9 +21,9 @@ $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) 
                         <i class="ri-graduation-cap-fill"></i>
                     </span>
                     <div class="cs_top_ticker" aria-live="polite">
-                        <span class="cs_top_ticker_item cs_ticker_active">Your Career. Our Mission.</span>
-                        <span class="cs_top_ticker_item">Your Future. Our Priority.</span>
-                        <span class="cs_top_ticker_item">Learn Today. Lead Tomorrow.</span>
+                        <span class="cs_top_ticker_item cs_ticker_active">Build Your Career. Shape Your Future.</span>
+                        <span class="cs_top_ticker_item">Choose the Right Course. Unlock Your Potential.</span>
+                        <span class="cs_top_ticker_item">Learn Online. Grow Professionally. Succeed.</span>
                     </div>
                 </div>
 
@@ -42,11 +42,11 @@ $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) 
                     </div>
                     <span class="cs_top_v_sep cs_top_v_sep_social"></span>
                     <div class="cs_top_social_group">
-                        <a href="#" aria-label="Facebook" class="cs_top_social_btn"><i class="ri-facebook-fill"></i></a>
-                        <a href="#" aria-label="Instagram" class="cs_top_social_btn"><i class="ri-instagram-line"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="cs_top_social_btn"><i class="ri-linkedin-fill"></i></a>
-                        <a href="#" aria-label="YouTube" class="cs_top_social_btn"><i class="ri-youtube-fill"></i></a>
-                        <a href="#" aria-label="X (Twitter)" class="cs_top_social_btn"><i class="ri-twitter-x-line"></i></a>
+                        <a href="javascript:void(0)" aria-label="Facebook" class="cs_top_social_btn"><i class="ri-facebook-fill"></i></a>
+                        <a href="javascript:void(0)" aria-label="Instagram" class="cs_top_social_btn"><i class="ri-instagram-line"></i></a>
+                        <a href="javascript:void(0)" aria-label="LinkedIn" class="cs_top_social_btn"><i class="ri-linkedin-fill"></i></a>
+                        <a href="javascript:void(0)" aria-label="YouTube" class="cs_top_social_btn"><i class="ri-youtube-fill"></i></a>
+                        <a href="javascript:void(0)" aria-label="X (Twitter)" class="cs_top_social_btn"><i class="ri-twitter-x-line"></i></a>
                     </div>
                     <a href="tel:+919315913702" class="cs_top_mobile_call_btn" title="Call Now">
                         <i class="ri-phone-fill"></i>

@@ -24,14 +24,13 @@ if (!isset($univ) || empty($univ)) {
     <section class="cs_unid_hero">
         <div class="container">
             <div class="cs_unid_hero_grid">
-                
                 <!-- Left Hero Details -->
                 <div class="cs_unid_hero_left" data-aos="fade-right">
                     <div class="cs_unid_hero_top_row">
                         <!-- Left Content Info -->
                         <div>
                             <img src="<?= htmlspecialchars($univ['logo']); ?>" alt="<?= htmlspecialchars($univ['name']); ?> Logo" class="cs_unid_logo">
-                            <h1 class="cs_unid_title"><?= htmlspecialchars($univ['name']); ?></h1>
+                            <h2 class="cs_unid_title"><?= htmlspecialchars($univ['name']); ?></h2>
                             <p class="cs_unid_subtitle"><?= htmlspecialchars($univ['subtitle']); ?></p>
                             <p class="cs_unid_desc"><?= htmlspecialchars($univ['hero_desc']); ?></p>
 

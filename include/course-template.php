@@ -454,11 +454,6 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                         Find answers to common questions about <?= htmlspecialchars($course['title']); ?> programs, eligibility, fees and admission.
                     </p>
                 </div>
-                <div>
-                    <a href="#counselling" class="cs_faq_view_all">
-                        View All FAQs <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
             </div>
 
             <!-- 2-Column Accordion Grid -->

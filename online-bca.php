@@ -606,11 +606,6 @@ $bca_universities = dura_get_course_universities_list('online-bca', [
                         Find answers to common questions about Online BCA programs, eligibility, coding labs and IT placements.
                     </p>
                 </div>
-                <div>
-                    <a href="#counselling" class="cs_faq_view_all">
-                        View All FAQs <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
             </div>
 
             <!-- 2x2 Accordion Grid -->

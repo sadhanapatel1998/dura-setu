@@ -101,7 +101,7 @@ $total_count = count($all_courses_data);
                                             <?= htmlspecialchars($course['level'] ?? 'Degree'); ?>
                                         </span>
                                         <?php if (!empty($course['offering_universities'])): ?>
-                                            <span style="font-size:11px; background:#f1f5f9; color:#475569; padding:2px 7px; border-radius:4px; font-weight:600;">
+                                            <span style="font-size:13px; background:#f1f5f9; color:#475569; padding:2px 7px; border-radius:4px; font-weight:600;">
                                                 <?= count($course['offering_universities']); ?> Universities
                                             </span>
                                         <?php endif; ?>

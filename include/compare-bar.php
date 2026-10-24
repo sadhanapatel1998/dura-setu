@@ -100,6 +100,7 @@
 }
 
 .cs_selected_ribbon {
+    display: none;
     position: absolute;
     top: 12px;
     right: 12px;
@@ -109,7 +110,7 @@
     font-weight: 700;
     padding: 3px 8px;
     border-radius: 50px;
-    display: inline-flex;
+    /* display: inline-flex; */
     align-items: center;
     gap: 4px;
     z-index: 3;
@@ -1064,7 +1065,7 @@ const DuraCompare = (function () {
             if (selectedIds.has(id)) {
                 card.classList.add('cs_is_selected');
                 btn.classList.add('cs_btn_selected');
-                btn.innerHTML = `<i class="ri-checkbox-circle-fill"></i> <span class="cs_compare_btn_text">Added</span>`;
+                btn.innerHTML = `<i class="ri-checkbox-circle-fill"></i> <span class="cs_compare_btn_text">Selected</span>`;
 
                 if (!ribbon) {
                     ribbon = document.createElement('span');

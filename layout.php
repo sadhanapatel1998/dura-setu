@@ -1,4 +1,6 @@
-<?php include('seo.php'); ?>
+<?php include('seo.php');
+$canonicalUrl = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +15,10 @@
         content="<?= htmlspecialchars($pageMeta['keywords']) ?>">
     <meta name="robots"
         content="<?= htmlspecialchars($pageMeta['robots']) ?>">
-    <?php if (!empty($pageMeta['canonical'])): ?>
-        <link rel="canonical"
-            href="<?= htmlspecialchars($pageMeta['canonical']) ?>">
-    <?php endif; ?>
+
+
+    <link rel="canonical"
+        href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8') ?>">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -39,14 +41,14 @@
 
 <body>
     <!-- Start Preloader -->
-    <!-- <div class="cs_preloader" aria-hidden="true">
+    <div class="cs_preloader" aria-hidden="true">
         <div class="cs_preloader_in">
             <div class="cs_preloader_spinner">
-                <img src="assets/img/favicon.png" alt="Lerntix">
+                <i class="ri-graduation-cap-fill"></i>
             </div>
             <span class="cs_preloader_text cs_fs_14 cs_medium">Loading...</span>
         </div>
-    </div> -->
+    </div>
     <!-- End Preloader -->
 
     <?php require_once("include/header.php"); ?>
@@ -65,40 +67,8 @@
     <script defer src="assets/js/lightgallery.min.js"></script>
     <script defer src="assets/js/aos.min.js"></script>
     <script defer src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/assets/js/main.js') ? filemtime(__DIR__ . '/assets/js/main.js') : '1.0'; ?>"></script>
-
-<script>
-    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        // Replace with your WhatsApp number
-        // India: 91 + 10 digit number
-        const whatsappNumber = "919315913702";
-
-        const firstName = document.getElementById("fname").value;
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
-
-        const whatsappMessage = `
-Hello DuraSetu,
-
-*New Website Enquiry*
-
-Name: ${firstName}
-Phone: ${phone}
-Email: ${email}
-Subject: ${subject}
-
-Message:
-${message}
-        `.trim();
-
-        const whatsappURL =
-            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-        window.open(whatsappURL, "_blank");
-    });
-</script>
 </body>
+
+</html>
+
 </html>

@@ -365,7 +365,6 @@ if (empty($all_universities_data)) {
                 ['q' => 'Are VIT Online graduates eligible for PhD programs?', 'a' => 'Yes, UGC-DEB recognized master’s degrees from VIT make you completely eligible to apply for PhD entrance examinations.']
             ]
         ],
-
         'uttaranchal-university-online' => [
             'slug' => 'uttaranchal-university-online.php',
             'name' => 'Uttaranchal University Online',

@@ -56,11 +56,11 @@
           <!-- <div class="cs_footer_social_wrap">
             <span class="cs_footer_social_title">Follow Us On</span>
             <div class="cs_footer_social_links">
-              <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-              <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
-              <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+              <a href="javascript:void(0)" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="javascript:void(0)" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="javascript:void(0)" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="javascript:void(0)" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="javascript:void(0)" aria-label="X"><i class="ri-twitter-x-line"></i></a>
             </div>
           </div> -->
         </div>
@@ -178,7 +178,7 @@
       <!-- Footer Bottom -->
       <div class="cs_footer_bottom">
         <p class="cs_footer_copyright mb-0">
-          © 2026 DuraSetu. All rights reserved.
+           © <?=  date('Y') ?> DuraSetu. All rights reserved.
           <span class="ms-2">|</span>
           Designed &amp; Developed by
           <a href="https://hoverbusinessservices.com/" class="cs_footer_developer_link" target="_blank">Hover Business Services LLP</a>
@@ -187,11 +187,11 @@
           <div class="cs_footer_social_wrap">
             <span class="cs_footer_social_title">Follow Us On</span>
             <div class="cs_footer_social_links">
-              <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
-              <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
-              <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+              <a href="javascript:void(0)" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="javascript:void(0)" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="javascript:void(0)" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="javascript:void(0)" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+              <a href="javascript:void(0)" aria-label="X"><i class="ri-twitter-x-line"></i></a>
             </div>
           </div>
         </div>

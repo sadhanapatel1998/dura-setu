@@ -572,11 +572,6 @@ $mcom_universities = dura_get_course_universities_list('online-mcom', [
                         Find answers to common questions about Online M.Com programs, eligibility, UGC-NET validity and career growth.
                     </p>
                 </div>
-                <div>
-                    <a href="#counselling" class="cs_faq_view_all">
-                        View All FAQs <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
             </div>
 
             <!-- 2x2 Accordion Grid -->

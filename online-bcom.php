@@ -606,11 +606,6 @@ $bcom_universities = dura_get_course_universities_list('online-bcom', [
                         Find answers to common questions about Online B.Com programs, eligibility, government exams and CA foundation.
                     </p>
                 </div>
-                <div>
-                    <a href="#counselling" class="cs_faq_view_all">
-                        View All FAQs <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
             </div>
 
             <!-- 2x2 Accordion Grid -->

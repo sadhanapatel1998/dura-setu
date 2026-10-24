@@ -394,7 +394,7 @@ $course_groups = [
 }
 
 .cs_filter_header_title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #0b1e38;
 }
@@ -532,11 +532,12 @@ $course_groups = [
     text-overflow: ellipsis;
     white-space: nowrap;
     padding-right: 6px;
+    font-weight: 600;
 }
 
 .cs_filter_badge_count {
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     padding: 2px 7px;
     border-radius: 50px;
     background: #f1f5f9;

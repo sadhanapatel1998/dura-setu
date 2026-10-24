@@ -2,7 +2,6 @@
 ob_start();
 include("include/data.php");
 ?>
-
 <main>
     <!-- Start Hero Section -->
     <div class="cs_banner_slider_wrap slider-section">
@@ -38,7 +37,7 @@ include("include/data.php");
                 </button>
             </div>
             <!-- Dots -->
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
 
         </div>
     </div>

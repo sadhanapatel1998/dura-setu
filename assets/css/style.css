@@ -218,6 +218,7 @@ body {
 }
 
 @supports not (overflow-x: clip) {
+
   html,
   body {
     overflow-x: hidden;
@@ -7075,7 +7076,7 @@ input[type=number] {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--black-color);
+  background-color: #fff;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
@@ -7100,8 +7101,13 @@ input[type=number] {
   height: 96px;
 }
 
-.cs_preloader .cs_preloader_spinner img {
+/* .cs_preloader .cs_preloader_spinner img {
   width: 42px;
+} */
+
+.cs_preloader .cs_preloader_spinner i {
+  color: #ffaa00;
+  font-size: 30px;
 }
 
 .cs_preloader .cs_preloader_spinner::before {
@@ -7906,7 +7912,7 @@ input[type=number] {
 .cs_page_header {
   display: flex;
   align-items: center;
-  min-height: 400px;
+  min-height: 450px;
   padding: 80px 0 0;
 }
 
@@ -7941,7 +7947,7 @@ input[type=number] {
 @media (max-width: 991px) {
   .cs_page_header {
     min-height: auto;
-    padding: 120px 0 70px;
+    padding: 170px 0 70px;
   }
 }
 
@@ -8890,6 +8896,37 @@ input[type=number] {
 
   .cs_why_learn .cs_learn_art {
     margin: 16px -12px 0;
+  }
+
+  .cs_page_header .cs_breadcrumb li {
+    font-size: 13px;
+  }
+
+  .cs_page_header .cs_page_header_title {
+    margin-bottom: 0px;
+  }
+
+  #courseFilterTabs {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 8px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+  }
+
+  #courseFilterTabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+  }
+
+  #courseFilterTabs .cs_course_filter_btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }
 
@@ -23091,7 +23128,7 @@ button.cs_settings_2fa_option:hover {
   height: auto !important;
   min-height: 0 !important;
   display: block;
-  margin-top: 90px;
+  margin-top: 130px;
   padding: 0;
 }
 
@@ -23315,7 +23352,7 @@ button.cs_settings_2fa_option:hover {
   }
 
   .cs_banner_slider .swiper-slide {
-    margin-top: 70px;
+    margin-top: 105px;
   }
 
   .cs_cat_badge_row {
@@ -23586,8 +23623,8 @@ button.cs_settings_2fa_option:hover {
 
 .cs_uni_logo_box {
   position: absolute;
-  top: 209px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   width: 115px;
   height: auto;
   background: #ffffff;
@@ -23884,7 +23921,7 @@ button.cs_settings_2fa_option:hover {
 .cs_pop_thumb_wrap {
   position: relative;
   width: 100%;
-  height: 190px;
+  height: 250px;
   overflow: hidden;
   background: #f1f4f9;
 }
@@ -27251,11 +27288,66 @@ button.cs_settings_2fa_option:hover {
 }
 
 /* ==============================================================
+   Contact Form Validation Styles
+============================================================== */
+.cs_field_error {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.35;
+}
+
+.cs_field_error.cs_has_error {
+  display: flex !important;
+}
+
+.cs_form_field.cs_input_invalid {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+.cs_form_field.cs_input_invalid:focus {
+  border-color: #b91c1c !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+}
+
+.cs_form_general_error {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs_form_success_msg {
+  color: #166534;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+/* ==============================================================
    DuraSetu Premium Top Header Bar
 ============================================================== */
 .cs_top_header {
   background: #021a3e;
-  background: linear-gradient(90deg, #021533 0%, #03214d 50%, #021533 100%);
+  background: linear-gradient(90deg, #02388e 0%, #03214d 50%, #022e73 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: #cbd5e1;
   font-family: var(--primary-font, "Source Sans Pro", sans-serif);
@@ -27269,6 +27361,7 @@ button.cs_settings_2fa_option:hover {
 .cs_site_header.cs_sticky_active .cs_top_header {
   display: none !important;
 }
+
 /* cleanup-start
 .cs_site_header.cs_sticky_active .cs_top_header {
 
@@ -27323,7 +27416,7 @@ cleanup-end */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 22px;
   flex-shrink: 0;
 }
 
@@ -27345,7 +27438,7 @@ cleanup-end */
   transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
   pointer-events: none;
@@ -27384,9 +27477,9 @@ cleanup-end */
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #cbd5e1;
+  color: #fff;
   text-decoration: none;
-  font-size: 12.5px;
+  font-size: 16px;
   font-weight: 500;
   transition: color 0.25s ease;
   white-space: nowrap;
@@ -27430,7 +27523,7 @@ cleanup-end */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 15px;
   text-decoration: none;
   transition: all 0.25s ease;
 }
@@ -27450,7 +27543,7 @@ cleanup-end */
 @media (max-width: 1199px) {
 
 
-.cs_top_header_in {
+  .cs_top_header_in {
     height: 36px;
   }
 }
@@ -27459,6 +27552,7 @@ cleanup-end */
   .cs_top_contact_link.cs_top_email {
     display: none;
   }
+
   .cs_top_v_sep_email {
     display: none;
   }
@@ -27467,13 +27561,13 @@ cleanup-end */
 @media (max-width: 767px) {
 
 
-.cs_top_header_in {
+  .cs_top_header_in {
     height: 34px;
     gap: 10px;
   }
 
   .cs_top_ticker_item {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .cs_top_contact_group {
@@ -27517,12 +27611,14 @@ cleanup-end */
   }
 
   .cs_top_ticker_item {
-    font-size: 11.5px;
+    font-size: 13px;
   }
 }
 
 /* End Top Header */
-.cs_scrollup_btn_placeholder { display: none; }
+.cs_scrollup_btn_placeholder {
+  display: none;
+}
 
 /* ==============================================================
    DuraSetu Mobile Side Menu Enhancement
@@ -27532,6 +27628,7 @@ cleanup-end */
 }
 
 @media (max-width: 1199px) {
+
   /* Maintain fixed position & width while enabling smooth vertical scrolling */
   .cs_site_header .cs_nav_list_wrapper {
     display: flex !important;
@@ -27569,8 +27666,8 @@ cleanup-end */
   }
 
   .cs_site_header .cs_nav_list_header .cs_site_branding img {
-    height: 44px !important;
-    max-height: 44px !important;
+    height: 60px !important;
+    max-height: 55px !important;
     width: auto !important;
     object-fit: contain;
   }
@@ -27578,7 +27675,7 @@ cleanup-end */
   .cs_site_header .cs_close_nav {
     width: 34px !important;
     height: 34px !important;
-    background: #f8fafc;
+    background: #fff;
     border-radius: 50%;
     display: inline-flex !important;
     align-items: center;
@@ -27610,7 +27707,7 @@ cleanup-end */
     padding: 0;
   }
 
-  .cs_site_header .cs_nav .cs_nav_list > li > a {
+  .cs_site_header .cs_nav .cs_nav_list>li>a {
     display: flex;
     align-items: center;
     padding: 11px 4px;
@@ -27623,14 +27720,17 @@ cleanup-end */
     line-height: 1.4;
   }
 
-  .cs_site_header .cs_nav .cs_nav_list > li > a:hover {
+  .cs_site_header .cs_nav .cs_nav_list>li>a:hover {
     color: var(--primary-color, #02388e);
     padding-left: 6px;
   }
 
-  .cs_site_header .cs_nav .cs_nav_list > li > a.active {
+  .cs_site_header .cs_nav .cs_nav_list>li>a.active {
     color: var(--primary-color, #02388e) !important;
     font-weight: 600;
+    background-color: #f3f7fd;
+    border-left: 2px solid;
+    padding-left: 10px;
   }
 
   /* Contact Information Section */
@@ -27686,7 +27786,7 @@ cleanup-end */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 18px;
     flex-shrink: 0;
     margin-top: 1px;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -27698,8 +27798,8 @@ cleanup-end */
   }
 
   .cs_mobile_contact_text {
-    font-size: 13.5px;
-    line-height: 1.45;
+    font-size: 15px;
+    line-height: 23px;
     font-weight: 500;
     color: #334155;
     word-break: break-word;
@@ -27717,7 +27817,7 @@ cleanup-end */
     padding: 18px 14px 28px;
   }
 
-  .cs_site_header .cs_nav .cs_nav_list > li > a {
+  .cs_site_header .cs_nav .cs_nav_list>li>a {
     font-size: 15px;
     padding: 10px 2px;
   }
@@ -27732,6 +27832,62 @@ cleanup-end */
     font-size: 13px;
   }
 }
+
 .cs_scrollup_btn i {
+  font-size: 20px;
+}
+
+/* ==============================================================
+   Contact Form Validation Styles
+============================================================== */
+.cs_field_error {
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.35;
+}
+
+.cs_field_error.cs_has_error {
+  display: flex !important;
+}
+
+.cs_form_field.cs_input_invalid {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+.cs_form_field.cs_input_invalid:focus {
+  border-color: #b91c1c !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+}
+
+.cs_form_general_error {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cs_form_success_msg {
+  color: #166534;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
 }
