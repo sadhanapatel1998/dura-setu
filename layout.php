@@ -66,37 +66,39 @@
     <script defer src="assets/js/aos.min.js"></script>
     <script defer src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/assets/js/main.js') ? filemtime(__DIR__ . '/assets/js/main.js') : '1.0'; ?>"></script>
 
-    <script>
-        document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-            e.preventDefault();
+<script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+        e.preventDefault();
 
-            // Replace with your WhatsApp number
-            // India: 91 + 10 digit number
-            const whatsappNumber = "919315913702";
+        // Replace with your WhatsApp number
+        // India: 91 + 10 digit number
+        const whatsappNumber = "919315913702";
 
-            const firstName = document.getElementById("fname").value;
-            const lastName = document.getElementById("lname").value;
-            const email = document.getElementById("email").value;
-            const subject = document.getElementById("subject").value;
-            const message = document.getElementById("message").value;
+        const firstName = document.getElementById("fname").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
 
-            const whatsappMessage = `
-            Hello DuraSetu,
-            
-            *New Website Enquiry*
-            
-            Name: ${firstName} ${lastName}
-            Email: ${email}
-            Subject: ${subject}
-            
-            Message:
-            ${message}
-            `.trim();
-            const whatsappURL =
-                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappMessage = `
+Hello DuraSetu,
 
-            window.open(whatsappURL, "_blank");
-        });
-    </script>
+*New Website Enquiry*
+
+Name: ${firstName}
+Phone: ${phone}
+Email: ${email}
+Subject: ${subject}
+
+Message:
+${message}
+        `.trim();
+
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+    });
+</script>
 </body>
 </html>

@@ -140,6 +140,39 @@ $coursePages = array_merge(['courses.php'], array_filter(array_map(function($c) 
                                     </a>
                                 </li>
                             </ul>
+
+                            <!-- Start Mobile Menu Contact Info -->
+                            <div class="cs_mobile_menu_contact">
+                                <div class="cs_mobile_menu_divider"></div>
+                                <span class="cs_mobile_contact_heading">Contact Information</span>
+                                <ul class="cs_mobile_contact_list cs_mp_0">
+                                    <li>
+                                        <a href="tel:+919315913702" class="cs_mobile_contact_item">
+                                            <span class="cs_mobile_contact_icon">
+                                                <i class="ri-phone-fill"></i>
+                                            </span>
+                                            <span class="cs_mobile_contact_text">+91 93159 13702</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:arpansangam01@gmail.com" class="cs_mobile_contact_item">
+                                            <span class="cs_mobile_contact_icon">
+                                                <i class="ri-mail-fill"></i>
+                                            </span>
+                                            <span class="cs_mobile_contact_text">arpansangam01@gmail.com</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://maps.google.com/?q=Sector+16,+Noida+-+201301,+Uttar+Pradesh,+India" target="_blank" rel="noopener noreferrer" class="cs_mobile_contact_item">
+                                            <span class="cs_mobile_contact_icon">
+                                                <i class="ri-map-pin-2-fill"></i>
+                                            </span>
+                                            <span class="cs_mobile_contact_text">Sector 16, Noida – 201301,<br>Uttar Pradesh, India</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Mobile Menu Contact Info -->
                         </div>
                         <div class="cs_sidenav_overlay"></div>
                     </nav>

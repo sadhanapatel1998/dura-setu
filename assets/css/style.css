@@ -27523,6 +27523,215 @@ cleanup-end */
 
 /* End Top Header */
 .cs_scrollup_btn_placeholder { display: none; }
+
+/* ==============================================================
+   DuraSetu Mobile Side Menu Enhancement
+============================================================== */
+.cs_mobile_menu_contact {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  /* Maintain fixed position & width while enabling smooth vertical scrolling */
+  .cs_site_header .cs_nav_list_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    padding: 22px 20px 36px;
+    box-sizing: border-box;
+  }
+
+  .cs_site_header .cs_nav_list_wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .cs_site_header .cs_nav_list_wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .cs_site_header .cs_nav_list_wrapper::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  /* Header Branding & Close Button Alignment */
+  .cs_site_header .cs_nav_list_header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    flex-shrink: 0;
+  }
+
+  .cs_site_header .cs_nav_list_header .cs_site_branding img {
+    height: 44px !important;
+    max-height: 44px !important;
+    width: auto !important;
+    object-fit: contain;
+  }
+
+  .cs_site_header .cs_close_nav {
+    width: 34px !important;
+    height: 34px !important;
+    background: #f8fafc;
+    border-radius: 50%;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .cs_site_header .cs_close_nav:hover {
+    background: #e2e8f0;
+    transform: rotate(90deg);
+  }
+
+  .cs_site_header .cs_close_nav::before,
+  .cs_site_header .cs_close_nav::after {
+    background-color: #0f172a !important;
+    width: 14px !important;
+    height: 2px !important;
+  }
+
+  /* Menu Items Polish */
+  .cs_site_header .cs_nav .cs_nav_list {
+    height: auto !important;
+    overflow-y: visible !important;
+    flex-shrink: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cs_site_header .cs_nav .cs_nav_list > li > a {
+    display: flex;
+    align-items: center;
+    padding: 11px 4px;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #1e293b;
+    border-radius: 6px;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .cs_site_header .cs_nav .cs_nav_list > li > a:hover {
+    color: var(--primary-color, #02388e);
+    padding-left: 6px;
+  }
+
+  .cs_site_header .cs_nav .cs_nav_list > li > a.active {
+    color: var(--primary-color, #02388e) !important;
+    font-weight: 600;
+  }
+
+  /* Contact Information Section */
+  .cs_mobile_menu_contact {
+    display: block !important;
+    margin-top: 8px;
+    padding-top: 14px;
+    flex-shrink: 0;
+  }
+
+  .cs_mobile_menu_divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0 0 16px 0;
+  }
+
+  .cs_mobile_contact_heading {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #64748b;
+    margin-bottom: 12px;
+    padding-left: 2px;
+  }
+
+  .cs_mobile_contact_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cs_mobile_contact_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 4px 2px;
+    text-decoration: none;
+    color: #334155;
+    transition: color 0.2s ease;
+  }
+
+  .cs_mobile_contact_icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: var(--primary-color, #02388e);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .cs_mobile_contact_item:hover .cs_mobile_contact_icon {
+    background: #dbeafe;
+    color: var(--primary-color, #02388e);
+  }
+
+  .cs_mobile_contact_text {
+    font-size: 13.5px;
+    line-height: 1.45;
+    font-weight: 500;
+    color: #334155;
+    word-break: break-word;
+    transition: color 0.2s ease;
+  }
+
+  .cs_mobile_contact_item:hover .cs_mobile_contact_text {
+    color: var(--primary-color, #02388e);
+  }
+}
+
+/* Extra small mobile screens (320px - 360px) */
+@media (max-width: 360px) {
+  .cs_site_header .cs_nav_list_wrapper {
+    padding: 18px 14px 28px;
+  }
+
+  .cs_site_header .cs_nav .cs_nav_list > li > a {
+    font-size: 15px;
+    padding: 10px 2px;
+  }
+
+  .cs_mobile_contact_text {
+    font-size: 12.5px;
+  }
+
+  .cs_mobile_contact_icon {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+}
 .cs_scrollup_btn i {
   font-size: 20px;
 }
