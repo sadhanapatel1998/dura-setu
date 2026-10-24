@@ -23,7 +23,7 @@ if (!empty($courseId)) {
 $comparedUnis = !empty($selectedUnis) ? dura_compare_universities(array_keys($selectedUnis)) : [];
 
 if (!function_exists('dura_render_compare_cell')) {
-    function dura_render_compare_cell($val, $type = 'text')
+    function dura_render_compare_cell($val, $type = 'text', bool $isMobile = false)
     {
         if ($val === null || $val === '' || $val === 'Not Available' || $val === 'NA' || $val === 'N/A') {
             return '<span class="text-muted fst-italic" style="font-size:13.5px;">Not Available</span>';
@@ -54,7 +54,7 @@ if (!function_exists('dura_render_compare_cell')) {
                     $pct = ($num <= 1) ? round($num * 100) : round($num);
                     return '<div class="d-inline-flex flex-column align-items-center w-100" style="max-width:140px; margin:0 auto;">
                                 <div class="d-flex justify-content-between w-100 mb-1" style="font-size:13px; font-weight:700; color:#1e293b;">
-                                    <span>Satisfaction</span>
+                                    <span class="cs_satisfaction_label"' . ($isMobile ? ' style="margin-right:8px;"' : '') . '>Satisfaction</span>
                                     <span style="color:#2563eb;">' . $pct . '%</span>
                                 </div>
                                 <div class="w-100" style="height:7px; background:#e2e8f0; border-radius:4px; overflow:hidden;">
@@ -104,7 +104,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
     <div class="cs_mobile_param_list">
         <?php foreach ($comparedUnis as $cUni):
                     $val = $cUni[$field] ?? 'Not Available';
-                    $rendered = dura_render_compare_cell($val, $type);
+                    $rendered = dura_render_compare_cell($val, $type, true);
                 ?>
         <?php if ($isBlock): ?>
         <div class="py-2 border-bottom border-light">
@@ -300,6 +300,12 @@ if (!function_exists('dura_render_mobile_param_card')) {
 
                 .cs_mobile_param_list>div:last-child {
                     border-bottom: none !important;
+                }
+
+                /* satisfaction mobile label gap */
+                .cs_mobile_param_card .cs_satisfaction_label {
+                    margin-right: 8px !important;
+
                 }
             }
 
