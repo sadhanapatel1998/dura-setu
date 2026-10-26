@@ -37,10 +37,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lastSubmitTime = $_SESSION['dura_last_submit_time'] ?? 0;
     $formRenderTime = isset($_POST['form_ts']) ? (int)$_POST['form_ts'] : 0;
 
+
+
     // Submitting faster than 1 second since page load is typically automated
     if ($formRenderTime > 0 && ($now - $formRenderTime < 1)) {
         $errors['general'] = 'Submission too fast. Please take a moment to review your details.';
     }
+
+    // =====================================================
+    // New. Cloudflare Turnstile Verification
+    // =====================================================
+
+    $turnstileSecretKey = '0x4AAAAAAFmM8iLmlaYme1AFYzY1DBu69jE';
+    $turnstileToken = $_POST['cf-turnstile-response'] ?? '';
+
+    if (empty($turnstileToken)) {
+
+        $errors['general'] = 'Please complete the security verification.';
+    } else {
+
+        $verifyUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+
+        $postData = [
+            'secret'   => $turnstileSecretKey,
+            'response' => $turnstileToken,
+            'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
+        ];
+
+        $ch = curl_init($verifyUrl);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => http_build_query($postData),
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2
+        ]);
+
+        $response = curl_exec($ch);
+
+        if ($response === false) {
+            $turnstileVerified = false;
+        } else {
+            $result = json_decode($response, true);
+            $turnstileVerified = !empty($result['success']);
+        }
+
+        curl_close($ch);
+
+        if (!$turnstileVerified) {
+            $errors['general'] = 'Security verification failed. Please try again.';
+        }
+    }
+
 
     // 3. Collect and sanitize input fields
     $rawName    = isset($_POST['first-name']) ? trim((string)$_POST['first-name']) : '';
@@ -247,7 +297,6 @@ include("include/data.php");
                         <h2 class="cs_fs_32 cs_semibold cs_contact_form_title mb-4">
                             Get in Touch With DuraSetu
                         </h2>
-
                         <form class="cs_contact_form" id="whatsappForm" method="POST" action="contact.php" data-validated="true" novalidate>
 
                             <!-- Anti-Spam Honeypot Field (Hidden from humans) -->
@@ -333,6 +382,17 @@ include("include/data.php");
                                     placeholder="Tell us about the university, course or admission guidance you need..."
                                     maxlength="1000"><?= htmlspecialchars($formData['message'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea>
                                 <div class="cs_field_error<?= !empty($errors['message']) ? ' cs_has_error' : ''; ?>" id="message_error"><?= htmlspecialchars($errors['message'] ?? ''); ?></div>
+                            </div>
+
+                            <!-- Cloudflare Turnstile CAPTCHA -->
+                            <div class="cs_form_input">
+                                <div class="cf-turnstile"
+                                    data-sitekey="0x4AAAAAAFmM8l4dFLTAlpLO"
+                                    data-theme="light"
+                                    data-size="normal">
+                                </div>
+
+                                <div class="cs_field_error" id="captcha_error"></div>
                             </div>
 
                             <!-- Submit Button & Feedback Alerts -->
@@ -558,6 +618,23 @@ include("include/data.php");
                 return;
             }
 
+            // Check Cloudflare Turnstile
+            const turnstileResponse = form.querySelector(
+                '[name="cf-turnstile-response"]'
+            )?.value;
+
+            if (!turnstileResponse) {
+                const captchaError = document.getElementById("captcha_error");
+
+                if (captchaError) {
+                    captchaError.textContent =
+                        "Please complete the security verification.";
+                    captchaError.classList.add("cs_has_error");
+                }
+
+                return;
+            }
+
             isSubmitting = true;
             const originalBtnHTML = submitBtn.innerHTML;
             submitBtn.disabled = true;
@@ -642,4 +719,3 @@ include("include/data.php");
 $content = ob_get_clean();
 require 'layout.php';
 ?>
-

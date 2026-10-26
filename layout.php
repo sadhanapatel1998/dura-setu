@@ -41,14 +41,14 @@ $canonicalUrl = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 <body>
     <!-- Start Preloader -->
-    <div class="cs_preloader" aria-hidden="true">
+    <!-- <div class="cs_preloader" aria-hidden="true">
         <div class="cs_preloader_in">
             <div class="cs_preloader_spinner">
                 <i class="ri-graduation-cap-fill"></i>
             </div>
             <span class="cs_preloader_text cs_fs_14 cs_medium">Loading...</span>
         </div>
-    </div>
+    </div> -->
     <!-- End Preloader -->
 
     <?php require_once("include/header.php"); ?>
@@ -67,6 +67,7 @@ $canonicalUrl = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     <script defer src="assets/js/lightgallery.min.js"></script>
     <script defer src="assets/js/aos.min.js"></script>
     <script defer src="assets/js/main.js?v=<?= file_exists(__DIR__ . '/assets/js/main.js') ? filemtime(__DIR__ . '/assets/js/main.js') : '1.0'; ?>"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 
 </html>

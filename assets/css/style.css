@@ -7119,6 +7119,11 @@ input[type=number] {
   border-radius: 50%;
   animation: cs_preloader_spin 0.8s linear infinite;
 }
+@media (max-width: 1032px) {
+  .cs_banner_slider .swiper-slide {
+    margin-top: 118px;
+}
+}
 
 @media (max-width: 575px) {
   .cs_preloader .cs_preloader_spinner {

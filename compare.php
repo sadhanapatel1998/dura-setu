@@ -28,7 +28,6 @@ if (!function_exists('dura_render_compare_cell')) {
         if ($val === null || $val === '' || $val === 'Not Available' || $val === 'NA' || $val === 'N/A') {
             return '<span class="text-muted fst-italic" style="font-size:13.5px;">Not Available</span>';
         }
-
         switch ($type) {
             case 'currency':
                 $cleaned = trim((string)$val);
@@ -37,7 +36,6 @@ if (!function_exists('dura_render_compare_cell')) {
                     return '<strong style="color:#059669; font-size:15px;">₹' . number_format((int)$rawDigits) . '</strong>';
                 }
                 return '<strong style="color:#059669; font-size:15px;">' . htmlspecialchars($cleaned) . '</strong>';
-
             case 'boolean':
                 $bVal = strtolower(trim((string)$val));
                 if ($bVal === 'yes' || strpos($bVal, 'yes') !== false) {
@@ -47,7 +45,6 @@ if (!function_exists('dura_render_compare_cell')) {
                     return '<span class="badge" style="background:#fee2e2; color:#991b1b; font-size:13px; font-weight:700; padding:5px 12px; border-radius:50px;"><i class="ri-close-circle-line me-1"></i>No</span>';
                 }
                 return '<span class="badge" style="background:#f1f5f9; color:#475569; font-size:13px; font-weight:700; padding:5px 12px; border-radius:50px;">' . htmlspecialchars($val) . '</span>';
-
             case 'satisfaction':
                 $num = (float)$val;
                 if ($num > 0) {
@@ -63,10 +60,8 @@ if (!function_exists('dura_render_compare_cell')) {
                             </div>';
                 }
                 return '<strong class="text-dark" style="font-size:14px;">' . htmlspecialchars((string)$val) . '</strong>';
-
             case 'grade':
                 return '<span class="badge" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; font-size:13.5px; font-weight:700; padding:6px 12px; border-radius:6px;"><i class="ri-award-fill me-1 text-warning"></i>NAAC ' . htmlspecialchars($val) . '</span>';
-
             case 'recruiters':
             case 'pills':
                 $items = array_filter(array_map('trim', preg_split('/[|,]/', (string)$val)));
@@ -85,7 +80,6 @@ if (!function_exists('dura_render_compare_cell')) {
         }
     }
 }
-
 if (!function_exists('dura_render_mobile_param_card')) {
     function dura_render_mobile_param_card(array $comparedUnis, string $title, string $sub, string $field, string $type = 'text', bool $isBlock = false): void
     {
@@ -100,7 +94,6 @@ if (!function_exists('dura_render_mobile_param_card')) {
         <span class="text-muted" style="font-size:12.5px; font-weight:500;"><?= htmlspecialchars($sub); ?></span>
         <?php endif; ?>
     </div>
-
     <div class="cs_mobile_param_list">
         <?php foreach ($comparedUnis as $cUni):
                     $val = $cUni[$field] ?? 'Not Available';
@@ -109,7 +102,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
         <?php if ($isBlock): ?>
         <div class="py-2 border-bottom border-light">
             <div class="d-flex align-items-center gap-2 mb-1">
-                <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt=""
+                <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt="Logo"
                     style="height:22px; max-width:65px; object-fit:contain; border-radius:3px; background:#f8fafc; border:1px solid #e2e8f0; padding:2px;">
                 <strong style="font-size:14.5px; font-weight:700; color:#0b1e38;">
                     <?= htmlspecialchars($cUni['short_name'] ?? $cUni['name']); ?>
@@ -122,7 +115,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
         <?php else: ?>
         <div class="d-flex align-items-center justify-content-between py-2 border-bottom border-light">
             <div class="d-flex align-items-center gap-2" style="max-width:52%;">
-                <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt=""
+                <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt="Logo"
                     style="height:22px; max-width:65px; object-fit:contain; border-radius:3px; background:#f8fafc; border:1px solid #e2e8f0; padding:2px;">
                 <span style="font-size:14px; font-weight:700; color:#0b1e38; line-height:1.25;">
                     <?= htmlspecialchars($cUni['short_name'] ?? $cUni['name']); ?>
@@ -140,7 +133,6 @@ if (!function_exists('dura_render_mobile_param_card')) {
     }
 }
 ?>
-
 <main>
     <!-- Start Page Header -->
     <section class="cs_page_header cs_bg_filed" data-src="assets/img/breadcrumb-bg.jpg">
@@ -809,7 +801,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
                             <div
                                 class="d-flex align-items-center justify-content-between py-2 border-bottom border-light">
                                 <div class="d-flex align-items-center gap-2" style="max-width:52%;">
-                                    <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt=""
+                                    <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt="Logo"
                                         style="height:22px; max-width:65px; object-fit:contain; border-radius:3px; background:#ffffff; border:1px solid #e2e8f0; padding:2px;">
                                     <span style="font-size:14px; font-weight:700; color:#1e293b; line-height:1.25;">
                                         <?= htmlspecialchars($cUni['short_name'] ?? $cUni['name']); ?>
@@ -906,7 +898,7 @@ if (!function_exists('dura_render_mobile_param_card')) {
                                 class="btn btn-primary d-flex align-items-center justify-content-between py-2 px-3 rounded-3"
                                 style="background:#2563eb; border:none; font-size:14px; font-weight:600;">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt=""
+                                    <img src="<?= htmlspecialchars($cUni['logo']); ?>" alt="Logo"
                                         style="height:22px; max-width:65px; object-fit:contain; background:#ffffff; border-radius:3px; padding:2px;">
                                     <span>Explore <?= htmlspecialchars($cUni['short_name'] ?? $cUni['name']); ?></span>
                                 </div>
@@ -915,7 +907,6 @@ if (!function_exists('dura_render_mobile_param_card')) {
                             <?php endforeach; ?>
                         </div>
                     </div>
-
                 </div>
                 <!-- End Mobile-Friendly Vertical Comparison Layout -->
             </div>

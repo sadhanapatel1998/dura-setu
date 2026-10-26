@@ -132,7 +132,7 @@ include("include/data.php");
             <!-- Heading Area -->
             <div class="cs_uni_heading_row" data-aos="fade-up">
                 <div class="cs_uni_heading_text">
-                    <h2 class="cs_uni_title">Explore Top <span>Universities</span></h2>
+                    <h1 class="cs_uni_title">Explore Top <span>Universities</span></h1>
                     <p class="cs_uni_subtitle">Discover UGC-recognized universities offering flexible online degree
                         programs.</p>
                 </div>
@@ -251,7 +251,7 @@ include("include/data.php");
             <div class="cs_course_slider_wrap cs_pop_slider_wrapper slider-section position-relative">
                 <div class="cs_product_filter_slider swiper" data-slides-per-view="responsive" data-gap="20"
                     data-autoplay="0" data-loop="1" data-speed="600" data-pagination-type="bullets" data-xsm-slides="1"
-                    data-sm-slides="2" data-smd-slides="2" data-md-slides="3" data-lg-slides="3" data-xlg-slides="4"
+                    data-sm-slides="2" data-smd-slides="2" data-md-slides="2" data-lg-slides="3" data-xlg-slides="4"
                     data-xxlg-slides="4">
                     <div class="swiper-wrapper">
                         <?php if (!empty($popular_courses)): ?>
@@ -578,17 +578,17 @@ include("include/data.php");
                             </div>
                             <ul class="cs_testimonial_trust cs_mp_0">
                                 <li class="cs_fs_14 cs_white_color">
-                                    <img src="assets/img/icons/learner-satisfaction.svg" alt="">
+                                    <img src="assets/img/icons/learner-satisfaction.svg" alt="Icon">
                                     Expert Course Guidance
                                 </li>
 
                                 <li class="cs_fs_14 cs_white_color">
-                                    <img src="assets/img/icons/active-members.svg" alt="">
+                                    <img src="assets/img/icons/active-members.svg" alt="Icon">
                                     Top Online Universities
                                 </li>
 
                                 <li class="cs_fs_14 cs_white_color">
-                                    <img src="assets/img/icons/industry-recognized.svg" alt="">
+                                    <img src="assets/img/icons/industry-recognized.svg" alt="Icon">
                                     Hassle-Free Admission Support
                                 </li>
                             </ul>

@@ -55,9 +55,9 @@ $offering_universities = dura_get_course_universities_list($course['id']);
                     <span class="cs_mba_badge">
                         <i class="ri-graduation-cap-line"></i> <?= htmlspecialchars($course['program_badge'] ?? 'Degree Program'); ?>
                     </span>
-                    <h1 class="cs_mba_section_title">
+                    <h2 class="cs_mba_section_title">
                         <?= htmlspecialchars($course['full_title'] ?? $course['title']); ?>
-                    </h1>
+                    </h2>
                     <p class="cs_mba_section_subtitle mb-0">
                         <?= htmlspecialchars($course['hero_desc'] ?? ''); ?>
                     </p>
